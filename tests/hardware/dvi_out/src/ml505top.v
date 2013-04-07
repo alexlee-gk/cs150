@@ -1,6 +1,3 @@
-// UC Berkeley CS150
-// Lab 4, Spring 2013
-
 module ml505top (
   input  [4:0]  GPIO_COMPSW,
   output [7:0]  GPIO_LED,
