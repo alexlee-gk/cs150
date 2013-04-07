@@ -4,6 +4,7 @@
 *~
 *.png
 *.avi
+build
 blob_analysis
 test
 
