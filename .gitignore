@@ -5,6 +5,6 @@
 *.png
 *.avi
 build
-blob_analysis
-test
+blob_analysis/blob_analysis
+cc_labeling/cc_labeling
 
