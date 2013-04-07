@@ -1,0 +1,9 @@
+*.o
+*.swp
+*.log
+*~
+*.png
+*.avi
+blob_analysis
+test
+
