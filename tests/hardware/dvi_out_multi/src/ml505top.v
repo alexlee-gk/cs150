@@ -110,9 +110,7 @@ module ml505top (
 	wire video_valid;
 	
 	reg [9:0] i;
-	reg [9:0] i_next;
 	reg [9:0] j;
-	reg [9:0] j_next;
 	
 	always@(posedge cpu_clk_g) begin
 		if (rst)
@@ -123,37 +121,32 @@ module ml505top (
 			end
 		else
 			begin
-				i <= i_next;
-				j <= j_next;
+				if (video_ready) begin
+				 	if ((j == 10'd799) && (i == 10'd599)) begin
+		        j <= 10'd0;
+		        i <= 10'd0;
+		      end else if (j == 10'd799) begin
+		        j <= 10'd0;
+		        i <= i + 10'd1;
+		      end else begin
+		        j <= j + 10'd1; 
+		        i <= i;
+		      end
+        end else begin
+        	i <= i;
+        	j <= j;
+        end
 				video <= video_next;
 			end
 	end
 
 	always@(*) begin
-		if (video_ready)
-			begin
-				if (j<10'd800) 
-					j_next = j+10'd1;
-				else
-					begin
-						j_next = 10'd0;
-						if (i<10'd600) i_next = i+10'd1;
-						else i_next = 10'd0;
-					end
-			end
-		else
-			begin
-				i_next = i;
-				j_next = j;
-			end
-		//if (i < 200) video_next = 24'hFFFF00;
-		//else if (i < 400) video_next = 24'h0000FF;
-		//else video_next = 24'hFF0000;
-		if (i<300) video_next = 24'hFF0000;
-		else video_next = 24'h0000FF;
+		if (i < 10'd200) video_next = 24'hFFFF00;
+		else if (i < 10'd400) video_next = 24'h0000FF;
+		else video_next = 24'hFF0000;
 	end
 
-	assign video_valid = video_ready;
+	assign video_valid = 1'b1;
 
   DVI #(
 		.ClockFreq(                 50000000),
