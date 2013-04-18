@@ -1,0 +1,12 @@
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/lmb_bram_if_funcs.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/xor18.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/parity.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/parityenable.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/checkbit_handler.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/correct_one_bit.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/pselect.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/pselect_mask.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/plb_interface.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/axi_interface.vhd
+vhdl lmb_bram_if_cntlr_v3_00_b /opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_b/hdl/vhdl/lmb_bram_if_cntlr.vhd
+vhdl work ../hdl/vga_config_ilmb_cntlr_wrapper.vhd

@@ -1,0 +1,14 @@
+set -tmpdir /home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_config/synthesis/xst_temp_dir/
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc5vlx110tff1136-1
+-top vga_config_lmb_bram_wrapper
+-ifmt MIXED
+-ifn vga_config_lmb_bram_wrapper_xst.prj
+-ofn ../implementation/vga_config_lmb_bram_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_config/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

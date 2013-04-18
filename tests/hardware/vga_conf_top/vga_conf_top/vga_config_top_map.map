@@ -1,0 +1,422 @@
+Release 14.1 Map P.15xf (lin64)
+Xilinx Map Application Log File for Design 'vga_config_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o vga_config_top_map.ncd vga_config_top.ngd
+vga_config_top.pcf 
+Target Device  : xc5vlx110t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Sat Apr 13 16:39:36 2013
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@license-srv.eecs.berkeley.edu'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:56 - Part 'xc5vlx110t' is not a WebPack part.
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+       please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+Mapping design into LUTs...
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_0_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_1_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_2_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_3_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_4_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_5_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_6_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7
+   of frag REGCLKAU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7
+   of frag REGCLKAL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7
+   of frag REGCLKBU connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7
+   of frag REGCLKBL connected to power/ground net
+   vga_config_i/lmb_bram/lmb_bram/ramb36_7_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBU connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U
+   _RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U
+   _RAMB36
+   of frag REGCLKBL connected to power/ground net
+   ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
+   S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U
+   _RAMB36_REGCLKBL_tiesig
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 55 secs 
+Total CPU  time at the beginning of Placer: 52 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:73fa74f5) REAL time: 1 mins 1 secs 
+
+Phase 2.7  Design Feasibility Check
+INFO:Place:834 - Only a subset of IOs are locked. Out of 48 IOs, 44 are locked
+   and 4 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:73fa74f5) REAL time: 1 mins 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:9849b6b3) REAL time: 1 mins 2 secs 
+
+Phase 4.37  Local Placement Optimization
+Phase 4.37  Local Placement Optimization (Checksum:9849b6b3) REAL time: 1 mins 2 secs 
+
+Phase 5.33  Local Placement Optimization
+Phase 5.33  Local Placement Optimization (Checksum:9849b6b3) REAL time: 2 mins 15 secs 
+
+Phase 6.32  Local Placement Optimization
+Phase 6.32  Local Placement Optimization (Checksum:9849b6b3) REAL time: 2 mins 16 secs 
+
+Phase 7.2  Initial Clock and IO Placement
+........
+Phase 7.2  Initial Clock and IO Placement (Checksum:3fd8537a) REAL time: 2 mins 18 secs 
+
+Phase 8.36  Local Placement Optimization
+Phase 8.36  Local Placement Optimization (Checksum:3fd8537a) REAL time: 2 mins 18 secs 
+
+Phase 9.30  Global Clock Region Assignment
+Phase 9.30  Global Clock Region Assignment (Checksum:3fd8537a) REAL time: 2 mins 18 secs 
+
+Phase 10.3  Local Placement Optimization
+.....
+Phase 10.3  Local Placement Optimization (Checksum:43491b0b) REAL time: 2 mins 20 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:43491b0b) REAL time: 2 mins 20 secs 
+
+Phase 12.8  Global Placement
+.................................................................................................
+................
+...........................................................................................................................
+................
+................
+................
+Phase 12.8  Global Placement (Checksum:eb65f7c2) REAL time: 2 mins 49 secs 
+
+Phase 13.29  Local Placement Optimization
+Phase 13.29  Local Placement Optimization (Checksum:eb65f7c2) REAL time: 2 mins 49 secs 
+
+Phase 14.5  Local Placement Optimization
+Phase 14.5  Local Placement Optimization (Checksum:eb65f7c2) REAL time: 2 mins 50 secs 
+
+Phase 15.18  Placement Optimization
+Phase 15.18  Placement Optimization (Checksum:646cb7a5) REAL time: 5 mins 23 secs 
+
+Phase 16.5  Local Placement Optimization
+Phase 16.5  Local Placement Optimization (Checksum:646cb7a5) REAL time: 5 mins 24 secs 
+
+Phase 17.34  Placement Validation
+Phase 17.34  Placement Validation (Checksum:646cb7a5) REAL time: 5 mins 25 secs 
+
+Total REAL time to Placer completion: 5 mins 25 secs 
+Total CPU  time to Placer completion: 5 mins 21 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net chipscope_control<13> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   47
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,409 out of  69,120    3%
+    Number used as Flip Flops:               2,391
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                 17
+  Number of Slice LUTs:                      2,680 out of  69,120    3%
+    Number used as logic:                    2,421 out of  69,120    3%
+      Number using O6 output only:           2,143
+      Number using O5 output only:             109
+      Number using O5 and O6:                  169
+    Number used as Memory:                     242 out of  17,920    1%
+      Number used as Dual Port RAM:             64
+        Number using O5 and O6:                 64
+      Number used as Shift Register:           178
+        Number using O6 output only:           176
+        Number using O5 output only:             2
+    Number used as exclusive route-thru:        17
+  Number of route-thrus:                       128
+    Number using O6 output only:               121
+    Number using O5 output only:                 2
+    Number using O5 and O6:                      5
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,584 out of  17,280    9%
+  Number of LUT Flip Flop pairs used:        3,835
+    Number with an unused Flip Flop:         1,426 out of   3,835   37%
+    Number with an unused LUT:               1,155 out of   3,835   30%
+    Number of fully used LUT-FF pairs:       1,254 out of   3,835   32%
+    Number of unique control sets:             337
+    Number of slice register sites lost
+      to control set restrictions:             722 out of  69,120    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        48 out of     640    7%
+    Number of LOCed IOBs:                       44 out of      48   91%
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                      16 out of     148   10%
+    Number using BlockRAM only:                 16
+    Total primitives used:
+      Number of 36k BlockRAM used:              15
+      Number of 18k BlockRAM used:               1
+    Total Memory used (KB):                    558 out of   5,328   10%
+  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
+    Number used as BUFGs:                        4
+  Number of BSCANs:                              2 out of       4   50%
+  Number of DSP48Es:                             3 out of      64    4%
+  Number of PLL_ADVs:                            2 out of       6   33%
+
+  Number of RPM macros:            6
+Average Fanout of Non-Clock Nets:                3.95
+
+Peak Memory Usage:  1108 MB
+Total REAL time to MAP completion:  5 mins 36 secs 
+Total CPU time to MAP completion:   5 mins 32 secs 
+
+Mapping completed.
+See MAP report file "vga_config_top_map.mrp" for details.

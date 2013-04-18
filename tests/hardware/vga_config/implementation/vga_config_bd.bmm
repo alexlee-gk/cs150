@@ -1,0 +1,35 @@
+// BMM LOC annotation file.
+//
+// Release 13.4 -  P.15xf, build 2.8 Mar 16, 2012
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'microblaze_0', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP microblaze_0 MICROBLAZE 100
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'microblaze_0' address space 'lmb_bram_combined' 0x00000000:0x00007FFF (32 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE lmb_bram_combined RAMB32 [0x00000000:0x00007FFF]
+        BUS_BLOCK
+            vga_config_i/lmb_bram/lmb_bram/ramb36_0 RAMB32 [31:28] [0:8191] INPUT = lmb_bram_combined_0.mem PLACED = X1Y26;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_1 RAMB32 [27:24] [0:8191] INPUT = lmb_bram_combined_1.mem PLACED = X1Y25;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_2 RAMB32 [23:20] [0:8191] INPUT = lmb_bram_combined_2.mem PLACED = X1Y24;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_3 RAMB32 [19:16] [0:8191] INPUT = lmb_bram_combined_3.mem PLACED = X2Y25;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_4 RAMB32 [15:12] [0:8191] INPUT = lmb_bram_combined_4.mem PLACED = X2Y24;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_5 RAMB32 [11:8] [0:8191] INPUT = lmb_bram_combined_5.mem PLACED = X2Y23;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_6 RAMB32 [7:4] [0:8191] INPUT = lmb_bram_combined_6.mem PLACED = X1Y27;
+            vga_config_i/lmb_bram/lmb_bram/ramb36_7 RAMB32 [3:0] [0:8191] INPUT = lmb_bram_combined_7.mem PLACED = X1Y23;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+

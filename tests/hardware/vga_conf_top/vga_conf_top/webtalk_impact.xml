@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="impact" timeStamp="Sat Apr 13 21:00:32 2013">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="4623d7563df341af9a85c8332cbeb8fd"/>
+<property name="ProjectIteration" value="1"/>
+</section>
+<section name="iMPACT Project Info" visible="true">
+<property name="Use Project File" value="No"/>
+<property name="Project Entry" value="ise"/>
+<property name="OS Name" value="unknown"/>
+<property name="OS Release" value="unknown"/>
+<property name="User Lic. Info" value="__174112198_174112199_174416789"/>
+</section>
+<section name="iMPACT Boundary Scan Mode" visible="true">
+<item name="Chain Summary">
+<property name="Number of device" value="5"/>
+<property name="Number of Xilinx device" value="5"/>
+<property name="Number of Non-Xilinx device" value="0"/>
+</item>
+<item name="Chain Description">
+<property name="Device1" value="xcfp"/>
+<property name="Part1" value="xcf32p"/>
+<property name="Use XCF00P as" value="Regular PROM"/>
+<property name="Device2" value="xcfp"/>
+<property name="Part2" value="xcf32p"/>
+<property name="Use XCF00P as" value="Regular PROM"/>
+<property name="Device3" value="xc9500xl"/>
+<property name="Part3" value="xc95144xl"/>
+<property name="Device4" value="acecf"/>
+<property name="Part4" value="xccace"/>
+<property name="Device5" value="virtex5"/>
+<property name="Part5" value="xc5vlx110t"/>
+</item>
+<item name="Boundary Scan Operations Statistics">
+<property name="BSCAN Operation" value="Program -p 0
+"/>
+<property name="BSCAN Operation" value="ReadIdcode -p 0
+"/>
+<property name="BSCAN Operation" value="Program -p 4
+"/>
+<property name="BSCAN Operation" value="Program -p 4
+"/>
+</item>
+<item name="Cable Summary">
+<property name="Cable Type" value="Platform Cable USB II"/>
+<property name="Cable Speed" value="6 MHz"/>
+<property name="Port" value="usb-hs"/>
+<property name="Local_Server_Mode" value="Local"/>
+</item>
+</section>
+</application>
+</document>

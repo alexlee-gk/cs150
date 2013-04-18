@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<Simulation_deps>
+
+  <Version XPSPNVER="1.0" EDKVER="14.1" />
+  <FPGA family="virtex5" device="xc5vlx110t" package="ff1136" speedgrade="-1" />
+  <File Type="MHS" URL="../../vga_config.mhs" />
+
+
+</Simulation_deps>
