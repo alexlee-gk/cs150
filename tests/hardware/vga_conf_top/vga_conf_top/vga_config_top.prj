@@ -1,4 +1,0 @@
-verilog work "/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_config/hdl/vga_config.v"
-verilog work "../../vga_in/src/chipscope/chipscope_ila.v"
-verilog work "../../vga_in/src/chipscope/chipscope_icon.v"
-verilog work "../../vga_config/vga_config_top.v"

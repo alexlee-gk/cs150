@@ -1,7 +1,0 @@
-xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top/vga_config_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top/vga_config_top.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ../../vga_in/src/chipscope -nt timestamp -uc vga_conf_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 vga_config_top.ngc vga_config_top.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o vga_config_top_map.ncd vga_config_top.ngd vga_config_top.pcf 
-par -w -intstyle ise -ol high -mt off vga_config_top_map.ncd vga_config_top.ncd vga_config_top.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vga_config_top.twx vga_config_top.ncd -o vga_config_top.twr vga_config_top.pcf -ucf vga_conf_top.ucf 
-bitgen -intstyle ise -f vga_config_top.ut vga_config_top.ncd 
-xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top/vga_config_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top/vga_config_top.syr" 

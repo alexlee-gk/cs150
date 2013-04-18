@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top/impact.xsl
-OUTFILE=/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top/impact.xsl
-FAMILY=Multiple
-PART=Multiple
-WORKINGDIR=/home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/vga_conf_top/vga_conf_top
-LICENSE=iMPACT
-USER_INFO=iMPACT

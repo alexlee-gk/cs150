@@ -1,2 +1,0 @@
- -p xc5vlx110tff1136-1 -lang verilog$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT) -toplevel no -ti vga_config_i -msg __xps/ise/xmsgprops.lst
-
