@@ -54,7 +54,7 @@ module ml505top (
     .CLKFBOUT_PHASE(0.0),
     .CLKIN_PERIOD(10.0),
 
-    .CLKOUT0_DIVIDE(12),
+    .CLKOUT0_DIVIDE(8),
     .CLKOUT0_DUTY_CYCLE(0.5),
     .CLKOUT0_PHASE(0.0),
 
@@ -107,33 +107,42 @@ module ml505top (
 	
 	Debouncer rst_parse(
       .clk(cpu_clk_g),
-      .in(GPIO_COMPSW[0]),
+      .in(GPIO_COMPSW[4] | GPIO_COMPSW[3] | GPIO_COMPSW[2] | GPIO_COMPSW[1] | GPIO_COMPSW[0]),
       .out(rst));
-  
-  wire toggle_display;
-  Debouncer toggle_parse(
-      .clk(cpu_clk_g),
-      .in(GPIO_COMPSW[4] | GPIO_COMPSW[3] | GPIO_COMPSW[2] | GPIO_COMPSW[1]),
-      .out(toggle_display));
 	
-	localparam BUFFER_SIZE = 20'd100000;
+	parameter BUFFER_SIZE = 20'd24000;
+
+	parameter Width = 1024;
+	parameter FrontH = 24;
+	parameter PulseH = 136;
+	parameter BackH = 165; //160+5
+	parameter Height = 768;
+	parameter FrontV = 3;
+	parameter PulseV = 6;
+	parameter BackV = 30; //29+1
+	
+	localparam VGA_IDLE = 1'd0,
+						 VGA_ACTIVE = 1'd1;
+
 	reg [23:0] frame_buffer [BUFFER_SIZE-1:0];
-
-	wire [10:0] vga_i, vga_j;
+  
+  reg [10:0] vga_h_counter, vga_v_counter;
+	wire [10:0] vga_j, vga_i;
+	assign vga_j = vga_h_counter - (PulseH+BackH);
+	assign vga_i = vga_v_counter - (PulseV+BackV);
 	wire [19:0] write_addr;
+	assign write_addr = vga_i*Width + {{9{0}},vga_j};
+	
 	wire vga_valid;
-	VGA_INDEX vga_index(
-		.Reset(rst),
-		.VGA_IN_DATA_CLK(VGA_IN_DATA_CLK),
-		.VGA_IN_HSOUT(VGA_IN_HSOUT),
-		.VGA_IN_VSOUT(VGA_IN_VSOUT),
-		.i(vga_i),
-		.j(vga_j),
-		.valid(vga_valid));
-
+	assign vga_valid = (vga_h_counter >= (PulseH+BackH)) & 
+										 (vga_h_counter <  (PulseH+BackH+Width)) & 
+										 (vga_v_counter >= (PulseV+BackV)) & 
+										 (vga_v_counter <  (PulseV+BackV+Height)); 
+	
 	wire fifo_empty;
 	wire fifo_full;
 	wire fifo_rd_en;
+	assign fifo_rd_en = !fifo_empty;
 	wire [43:0] fifo_dout;
 	fifo_generator_v9_1 fifo(
 	  .rst(rst),
@@ -145,42 +154,76 @@ module ml505top (
 	  .dout(fifo_dout),
 	  .empty(fifo_empty),
 	  .full(fifo_full));
-	  
-	assign fifo_rd_en = !fifo_empty; // safe because dvi is faster than vga
-	assign write_addr = vga_i*800 + {{9{0}},vga_j};
+
+	reg vga_in_hsout_delayed;
+	reg vga_in_vsout_delayed;
+	wire vga_in_hsout_posedge;
+	wire vga_in_vsout_posedge;
+	assign vga_in_hsout_posedge = VGA_IN_HSOUT & !vga_in_hsout_delayed;
+	assign vga_in_vsout_posedge = VGA_IN_VSOUT & !vga_in_vsout_delayed;
+	
+	reg vga_state;
+	always@(posedge VGA_IN_DATA_CLK) begin
+		
+		if (rst) begin
+			vga_state <= VGA_IDLE;
+			vga_in_hsout_delayed <= 1; // to prevent posedge at rst if HSOUT happened to be high
+			vga_in_vsout_delayed <= 1; // same
+			vga_h_counter <= 0; // so vga_valid 0 at rst
+			vga_v_counter <= 0;
+		end else begin
+			vga_in_hsout_delayed <= VGA_IN_HSOUT;
+			vga_in_vsout_delayed <= VGA_IN_VSOUT;
+			case (vga_state)
+				VGA_IDLE: begin
+					if (vga_in_vsout_posedge) begin
+						vga_h_counter <= 0;
+						vga_v_counter <= 0;
+						vga_state <= VGA_ACTIVE;
+					end
+				end
+				VGA_ACTIVE: begin
+					if (vga_in_vsout_posedge) begin
+						vga_h_counter <= 0;
+						vga_v_counter <= 0;
+					end else if (vga_in_hsout_posedge) begin
+						vga_h_counter <= 0;
+						vga_v_counter <= vga_v_counter + 1;
+					end else begin
+						vga_h_counter <= vga_h_counter + 1;
+						vga_v_counter <= vga_v_counter;
+					end
+				end
+				default:
+					vga_state <= VGA_IDLE;
+			endcase
+		end
+	end
+
 
 	reg [23:0] video;
+	wire video_next;
 	wire video_ready; // it's an output from DVI
 	wire video_valid;
 	
-	reg [10:0] i, j;
+	reg [10:0] j, i;
 	wire [19:0] read_addr;
-	assign read_addr = i*800 + {{9{0}},j};
-	
-
-	localparam RGB   = 2'd0,
-						 YCRCB = 2'd1,
-						 MASK  = 2'd2;
-	reg [1:0] display_state;
-	reg [1:0] next_display_state;
-	reg [23:0] rgb_video;
-	wire [23:0] ycrcb_video;
-	wire [23:0] mask_video;
+	assign read_addr = i*1024 + {{9{0}},j};
 	
 	always@(posedge cpu_clk_g) begin
 		if (rst)
 			begin
 				j <= 0;
 				i <= 0;
-				rgb_video <= 24'hFFFFFF;
+				video <= 24'hFFFFFF;
 			end
 		else
 			begin
 				if (video_ready) begin
-				 	if ((j == 799) && (i == 599)) begin
+				 	if ((j == 1023) && (i == 767)) begin
 		        j <= 0;
 		        i <= 0;
-		      end else if (j == 799) begin
+		      end else if (j == 1023) begin
 		        j <= 0;
 		        i <= i + 1;
 		      end else begin
@@ -191,57 +234,27 @@ module ml505top (
         	j <= j;
         	i <= i;
         end
-        if (read_addr < BUFFER_SIZE) begin
-					rgb_video <= frame_buffer[read_addr];
-				end else
-					rgb_video <= 24'hFFFFFF;
+        if (read_addr < BUFFER_SIZE)
+					video <= frame_buffer[read_addr];
+				else
+					video <= 24'hFFFFFF;
 			end
 			
 			if (fifo_rd_en)
 				frame_buffer[fifo_dout[43:24]] <= fifo_dout[23:0];
 	end
 
-	always@(posedge cpu_clk_g) begin
-		if (rst) display_state <= RGB;
-		else display_state <= next_display_state;
-	end
-	always@(*) begin
-		video = rgb_video;
-		next_display_state = display_state;
-		case (display_state)
-			RGB: begin
-				video = rgb_video;
-				if (toggle_display) next_display_state = YCRCB;
-			end
-			YCRCB: begin
-				video = ycrcb_video;
-				if (toggle_display) next_display_state = MASK;
-			end
-			MASK: begin
-				video = mask_video;
-				if (toggle_display) next_display_state = RGB;
-			end
-			default: next_display_state = RGB;
-		endcase
-	end
-	
-	RGB2YCrCb color_conversion(rgb_video, ycrcb_video);
-	wire mask;
-	SkinMask skin_mask(ycrcb_video, mask);
-	assign mask_video = {24{mask}};
-
 	assign video_valid = 1'b1;
-
   DVI #(
-		.ClockFreq(                 50000000),
-		.Width(                     1040),   
-		.FrontH(                    56),     
-		.PulseH(                    120),    
-		.BackH(                     64),    
-		.Height(                    666),    
-		.FrontV(                    37),      
+		.ClockFreq(                 75000000),
+		.Width(                     1328),   
+		.FrontH(                    24),     
+		.PulseH(                    136),    
+		.BackH(                     144),    
+		.Height(                    806),    
+		.FrontV(                    3),      
 		.PulseV(                    6),      
-		.BackV(                     23)      
+		.BackV(                     29)      
 	) dvi(         
 		.Clock(                     cpu_clk_g),
 		.Reset(                     rst),
