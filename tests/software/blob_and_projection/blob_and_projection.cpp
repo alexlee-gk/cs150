@@ -246,6 +246,16 @@ int main( int argc, const char** argv )
 			cv::rectangle(frame, Point2i(blobs[0].min_j,blobs[0].min_i), Point2i(blobs[0].max_j,blobs[0].max_i), Scalar(255,0,0));
 			imshow("blob analysis frame", frame);
 
+		    float f = 640; // focal length
+			float h = blobs[0].max_i - blobs[0].min_i; // face height in pixel space
+			float H = 0.25; // face height in centimeters
+			float X = -(blobs[0].min_j + 0.5*(blobs[0].max_j - blobs[0].min_j) - width/2.0)*H/h;
+			float Y = -(blobs[0].min_i + 0.75*(blobs[0].max_i - blobs[0].min_i) - height/2.0)*H/h;
+			float Z = f*H/h;
+			printf("%4.2f %4.2f %4.2f\n", X,Y,Z);
+
+			cout << width << " " << height << endl;
+
 			int key = waitKey(10);
 			if((char)key == 'q') { break; }
 	    }
