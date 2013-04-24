@@ -32,6 +32,7 @@ cv::Mat skinMask(cv::Mat srcBGR) {
 	return mask;
 }
 
+// http://www.electronics.dit.ie/staff/aschwarzbacher/research/mpc08-1Blob.pdf
 const static int BLOBS_SIZE = 256;
 const static int MAX_ARRAY_SIZE = 1024*16;
 struct Blob {
@@ -58,7 +59,7 @@ void update_optimal_blob(const Blob& blob) {
 		blobs[0] = blob;
 }
 
-void foo(int* rl_code0, int* rl_code_label0, int* rl_code1, int* rl_code_label1, int row1, int cols) {
+void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int* rl_code_label1, int row1, int cols) {
 	int ind0 = 0;
 	int ind1 = 0;
 	bool rl_code0_end = (rl_code0[ind0*2]==-1);
@@ -194,7 +195,7 @@ void blobAnalysis(Mat skin_mask) {
 			memcpy(rl_code_label0, rl_code_label1, MAX_ARRAY_SIZE);
 			memcpy(rl_code_label1, rl_code_label, MAX_ARRAY_SIZE);
 
-			foo(rl_code0, rl_code_label0, rl_code1, rl_code_label1, i, skin_mask.cols);
+			blobAnalysisTwoLines(rl_code0, rl_code_label0, rl_code1, rl_code_label1, i, skin_mask.cols);
 
 //					int size0 = 0;
 //					for (size0=0; size0<MAX_ARRAY_SIZE; size0++)
