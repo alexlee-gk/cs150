@@ -115,11 +115,11 @@ module ml505top (
 	parameter Width = 1024;
 	parameter FrontH = 24;
 	parameter PulseH = 136;
-	parameter BackH = 165; //160+5
+	parameter BackH = 31; //160-129
 	parameter Height = 768;
 	parameter FrontV = 3;
 	parameter PulseV = 6;
-	parameter BackV = 30; //29+1
+	parameter BackV = 23; //29-6
 	
 	localparam VGA_IDLE = 1'd0,
 						 VGA_ACTIVE = 1'd1;
