@@ -267,10 +267,10 @@ int main( int argc, const char** argv )
 			Mat projection = Mat::zeros(480,640,CV_8UC3);
 			for (int i=0; i<lines.size()/2; i++) {
 				Point2i pt0, pt1;
-				pt0.x = -((Z*lines[2*i].x - lines[2*i].z*X)/(Z-lines[2*i].z))*f/Z + width/2.0;
-				pt0.y = -((Z*lines[2*i].y - lines[2*i].z*Y)/(Z-lines[2*i].z))*f/Z + height/2.0;
-				pt1.x = -((Z*lines[2*i+1].x - lines[2*i+1].z*X)/(Z-lines[2*i+1].z))*f/Z + width/2.0;
-				pt1.y = -((Z*lines[2*i+1].y - lines[2*i+1].z*Y)/(Z-lines[2*i+1].z))*f/Z + height/2.0;
+				pt0.x = -((Z*lines[2*i].x - lines[2*i].z*X)/(Z-lines[2*i].z))*640/0.143 + width/2.0;
+				pt0.y = -((Z*lines[2*i].y - lines[2*i].z*Y)/(Z-lines[2*i].z))*640/0.143 + height/2.0;
+				pt1.x = -((Z*lines[2*i+1].x - lines[2*i+1].z*X)/(Z-lines[2*i+1].z))*640/0.143 + width/2.0;
+				pt1.y = -((Z*lines[2*i+1].y - lines[2*i+1].z*Y)/(Z-lines[2*i+1].z))*640/0.143 + height/2.0;
 				cv::line(projection, pt0, pt1, Scalar(255,0,0));
 			}
 			imshow("projection", projection);
