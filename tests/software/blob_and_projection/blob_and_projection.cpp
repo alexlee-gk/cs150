@@ -10,7 +10,7 @@
 using namespace std;
 using namespace cv;
 
-static int MIN_Y = 0, MAX_Y = 256, MIN_CR = 136, MAX_CR = 159, MIN_CB = 85, MAX_CB = 135;
+static int MIN_Y = 0, MAX_Y = 256, MIN_CR = 133, MAX_CR = 159, MIN_CB = 85, MAX_CB = 135;
 cv::Mat skinMask(cv::Mat srcBGR) {
 	// transform from BGR to YCrCb
 	// http://opencv.willowgarage.com/documentation/python/miscellaneous_image_transformations.html
@@ -254,7 +254,26 @@ int main( int argc, const char** argv )
 			float Z = f*H/h;
 			printf("%4.2f %4.2f %4.2f\n", X,Y,Z);
 
-			cout << width << " " << height << endl;
+			vector<Point3d> lines;
+			lines.push_back(Point3d(-0.05,0,-0.10));
+			lines.push_back(Point3d(0.05,0,-0.10));
+			lines.push_back(Point3d(0.05,0,-0.10));
+			lines.push_back(Point3d(0.05,0,-0.20));
+			lines.push_back(Point3d(0.05,0,-0.20));
+			lines.push_back(Point3d(-0.05,0,-0.20));
+			lines.push_back(Point3d(-0.05,0,-0.20));
+			lines.push_back(Point3d(-0.05,0,-0.10));
+
+			Mat projection = Mat::zeros(480,640,CV_8UC3);
+			for (int i=0; i<lines.size()/2; i++) {
+				Point2i pt0, pt1;
+				pt0.x = -((Z*lines[2*i].x - lines[2*i].z*X)/(Z-lines[2*i].z))*f/Z + width/2.0;
+				pt0.y = -((Z*lines[2*i].y - lines[2*i].z*Y)/(Z-lines[2*i].z))*f/Z + height/2.0;
+				pt1.x = -((Z*lines[2*i+1].x - lines[2*i+1].z*X)/(Z-lines[2*i+1].z))*f/Z + width/2.0;
+				pt1.y = -((Z*lines[2*i+1].y - lines[2*i+1].z*Y)/(Z-lines[2*i+1].z))*f/Z + height/2.0;
+				cv::line(projection, pt0, pt1, Scalar(255,0,0));
+			}
+			imshow("projection", projection);
 
 			int key = waitKey(10);
 			if((char)key == 'q') { break; }
