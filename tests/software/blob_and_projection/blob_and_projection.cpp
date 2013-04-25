@@ -34,7 +34,9 @@ cv::Mat skinMask(cv::Mat srcBGR) {
 
 // http://www.electronics.dit.ie/staff/aschwarzbacher/research/mpc08-1Blob.pdf
 const static int BLOBS_SIZE = 512;
-const static int MAX_ARRAY_SIZE = 1024*4;
+const static int MAX_RL_CODES = 512; // maximum number of rl codes per image line
+const static int RL_CODE_SIZE = MAX_RL_CODES*2+1;
+const static int RL_CODE_LABEL_SIZE = MAX_RL_CODES;
 struct Blob {
 	bool valid;
 	int eq_ind;
@@ -221,12 +223,12 @@ void blobAnalysis(Mat skin_mask) {
 	for (int i=1; i<BLOBS_SIZE; i++)
 		free_labels.push(i);
 
-	int rl_code[MAX_ARRAY_SIZE];
-	int rl_code0[MAX_ARRAY_SIZE];
-	int rl_code1[MAX_ARRAY_SIZE];
-	int rl_code_label[MAX_ARRAY_SIZE];
-	int rl_code_label0[MAX_ARRAY_SIZE];
-	int rl_code_label1[MAX_ARRAY_SIZE];
+	int rl_code[RL_CODE_SIZE];
+	int rl_code0[RL_CODE_SIZE];
+	int rl_code1[RL_CODE_SIZE];
+	int rl_code_label[RL_CODE_LABEL_SIZE];
+	int rl_code_label0[RL_CODE_LABEL_SIZE];
+	int rl_code_label1[RL_CODE_LABEL_SIZE];
 	for (int i=0; i<skin_mask.rows; i++) {
 		int ind = 0;
 		bool prev_pixel = 0;
@@ -234,7 +236,7 @@ void blobAnalysis(Mat skin_mask) {
 			bool curr_pixel = !!skin_mask.at<uchar>(i,j);
 			if (!prev_pixel && curr_pixel) {
 				rl_code[ind] = j;
-				rl_code_label[ind] = 0;
+				rl_code_label[ind/2] = 0;
 				ind++;
 			}
 			if (prev_pixel && !curr_pixel) rl_code[ind++] = j-1;
@@ -243,24 +245,24 @@ void blobAnalysis(Mat skin_mask) {
 		if (ind - 2*(ind>>1)) rl_code[ind++] = skin_mask.cols-1;
 		rl_code[ind] = -1;
 		if (i==0) {
-			memcpy(rl_code1, rl_code, MAX_ARRAY_SIZE);
-			memcpy(rl_code_label1, rl_code_label, MAX_ARRAY_SIZE);
+			memcpy(rl_code1, rl_code, RL_CODE_SIZE);
+			memcpy(rl_code_label1, rl_code_label, RL_CODE_LABEL_SIZE);
 		} else {
-			memcpy(rl_code0, rl_code1, MAX_ARRAY_SIZE);
-			memcpy(rl_code1, rl_code, MAX_ARRAY_SIZE);
-			memcpy(rl_code_label0, rl_code_label1, MAX_ARRAY_SIZE);
-			memcpy(rl_code_label1, rl_code_label, MAX_ARRAY_SIZE);
+			memcpy(rl_code0, rl_code1, RL_CODE_SIZE);
+			memcpy(rl_code1, rl_code, RL_CODE_SIZE);
+			memcpy(rl_code_label0, rl_code_label1, RL_CODE_LABEL_SIZE);
+			memcpy(rl_code_label1, rl_code_label, RL_CODE_LABEL_SIZE);
 
 			blobAnalysisTwoLines(rl_code0, rl_code_label0, rl_code1, rl_code_label1, i, skin_mask.cols);
 
 			max_blob_size = max(max_blob_size, (int) (BLOBS_SIZE-free_labels.size()));
 
 			int size0 = 0;
-			for (size0=0; size0<MAX_ARRAY_SIZE; size0++)
+			for (size0=0; size0<RL_CODE_SIZE; size0++)
 				if (rl_code0[size0] == -1) break;
 			size0 /= 2;
 			int size1 = 0;
-			for (size1=0; size1<MAX_ARRAY_SIZE; size1++)
+			for (size1=0; size1<RL_CODE_SIZE; size1++)
 				if (rl_code1[size1] == -1) break;
 			size1 /= 2;
 			max_size0 = max(max_size0, size0);
