@@ -126,23 +126,21 @@ module ml505top (
 
 	reg [23:0] frame_buffer [BUFFER_SIZE-1:0];
   
-  reg [10:0] vga_h_counter, vga_v_counter;
-	wire [10:0] vga_j, vga_i;
-	assign vga_j = vga_h_counter - (PulseH+BackH);
-	assign vga_i = vga_v_counter - (PulseV+BackV);
+	wire [10:0] vga_i, vga_j;
 	wire [19:0] write_addr;
-	assign write_addr = vga_i*Width + {{9{0}},vga_j};
-	
 	wire vga_valid;
-	assign vga_valid = (vga_h_counter >= (PulseH+BackH)) & 
-										 (vga_h_counter <  (PulseH+BackH+Width)) & 
-										 (vga_v_counter >= (PulseV+BackV)) & 
-										 (vga_v_counter <  (PulseV+BackV+Height)); 
-	
+	VGAIndex vga_index(
+		.Reset(rst),
+		.VGA_IN_DATA_CLK(VGA_IN_DATA_CLK),
+		.VGA_IN_HSOUT(VGA_IN_HSOUT),
+		.VGA_IN_VSOUT(VGA_IN_VSOUT),
+		.i(vga_i),
+		.j(vga_j),
+		.valid(vga_valid));
+
 	wire fifo_empty;
 	wire fifo_full;
 	wire fifo_rd_en;
-	assign fifo_rd_en = !fifo_empty;
 	wire [43:0] fifo_dout;
 	fifo_generator_v9_1 fifo(
 	  .rst(rst),
@@ -154,52 +152,9 @@ module ml505top (
 	  .dout(fifo_dout),
 	  .empty(fifo_empty),
 	  .full(fifo_full));
-
-	reg vga_in_hsout_delayed;
-	reg vga_in_vsout_delayed;
-	wire vga_in_hsout_posedge;
-	wire vga_in_vsout_posedge;
-	assign vga_in_hsout_posedge = VGA_IN_HSOUT & !vga_in_hsout_delayed;
-	assign vga_in_vsout_posedge = VGA_IN_VSOUT & !vga_in_vsout_delayed;
-	
-	reg vga_state;
-	always@(posedge VGA_IN_DATA_CLK) begin
-		
-		if (rst) begin
-			vga_state <= VGA_IDLE;
-			vga_in_hsout_delayed <= 1; // to prevent posedge at rst if HSOUT happened to be high
-			vga_in_vsout_delayed <= 1; // same
-			vga_h_counter <= 0; // so vga_valid 0 at rst
-			vga_v_counter <= 0;
-		end else begin
-			vga_in_hsout_delayed <= VGA_IN_HSOUT;
-			vga_in_vsout_delayed <= VGA_IN_VSOUT;
-			case (vga_state)
-				VGA_IDLE: begin
-					if (vga_in_vsout_posedge) begin
-						vga_h_counter <= 0;
-						vga_v_counter <= 0;
-						vga_state <= VGA_ACTIVE;
-					end
-				end
-				VGA_ACTIVE: begin
-					if (vga_in_vsout_posedge) begin
-						vga_h_counter <= 0;
-						vga_v_counter <= 0;
-					end else if (vga_in_hsout_posedge) begin
-						vga_h_counter <= 0;
-						vga_v_counter <= vga_v_counter + 1;
-					end else begin
-						vga_h_counter <= vga_h_counter + 1;
-						vga_v_counter <= vga_v_counter;
-					end
-				end
-				default:
-					vga_state <= VGA_IDLE;
-			endcase
-		end
-	end
-
+	  
+	assign fifo_rd_en = !fifo_empty; // safe because dvi is faster than vga
+	assign write_addr = vga_i*800 + {{9{0}},vga_j};
 
 	reg [23:0] video;
 	wire video_next;
