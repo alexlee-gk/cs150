@@ -122,7 +122,7 @@ module ml505top (
 	wire [10:0] vga_i, vga_j;
 	wire [19:0] write_addr;
 	wire vga_valid;
-	VGA_INDEX vga_index(
+	VGAIndex vga_index(
 		.Reset(rst),
 		.VGA_IN_DATA_CLK(VGA_IN_DATA_CLK),
 		.VGA_IN_HSOUT(VGA_IN_HSOUT),
