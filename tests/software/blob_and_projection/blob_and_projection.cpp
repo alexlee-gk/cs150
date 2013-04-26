@@ -10,7 +10,7 @@
 using namespace std;
 using namespace cv;
 
-static int MIN_Y = 0, MAX_Y = 256, MIN_CR = 133, MAX_CR = 159, MIN_CB = 85, MAX_CB = 135;
+static int MIN_Y = 0, MAX_Y = 256, MIN_CR = 131, MAX_CR = 159, MIN_CB = 85, MAX_CB = 135;
 cv::Mat skinMask(cv::Mat srcBGR) {
 	// transform from BGR to YCrCb
 	// http://opencv.willowgarage.com/documentation/python/miscellaneous_image_transformations.html
@@ -33,25 +33,32 @@ cv::Mat skinMask(cv::Mat srcBGR) {
 }
 
 // http://www.electronics.dit.ie/staff/aschwarzbacher/research/mpc08-1Blob.pdf
-const static int BLOBS_SIZE = 256;
-const static int MAX_ARRAY_SIZE = 1024*16;
+const static int BLOBS_SIZE = 512;
+const static int MAX_RL_CODES = 512; // maximum number of rl codes per image line
+const static int RL_CODE_SIZE = MAX_RL_CODES*2+1;
+const static int RL_CODE_LABEL_SIZE = MAX_RL_CODES;
 struct Blob {
 	bool valid;
+	int eq_ind;
 	int count;
 	int min_i, max_i;
 	int min_j, max_j;
+	// after a merge, a blob gets cleared and a label gets freed.
+	//first_clear indicates in the label has already been freed.
+	bool first_clear;
 };
 Blob blobs[BLOBS_SIZE];
 queue<int> free_labels;
 
 // merges blob1 into blob0
 void merge_blobs(Blob& blob0, Blob& blob1) {
+	blob1.valid = 0;
 	blob0.count += blob1.count;
 	blob0.min_i = min(blob0.min_i, blob1.min_i);
 	blob0.max_i = max(blob0.max_i, blob1.max_i);
 	blob0.min_j = min(blob0.min_j, blob1.min_j);
 	blob0.max_j = max(blob0.max_j, blob1.max_j);
-	blob1.valid = 0;
+	blob1.eq_ind = blob0.eq_ind;
 }
 
 void update_optimal_blob(const Blob& blob) {
@@ -64,16 +71,17 @@ void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int
 	int ind1 = 0;
 	bool rl_code0_end = (rl_code0[ind0*2]==-1);
 	bool rl_code1_end = (rl_code1[ind1*2]==-1);
+	int cleared_labels_count = 0;
 	while (!(rl_code0_end && rl_code1_end)) {
 		int s0 = rl_code0_end ? cols+1 : rl_code0[ind0*2];
 		int e0 = rl_code0_end ? cols+2 : rl_code0[ind0*2+1];
 		int s1 = rl_code1_end ? cols+1 : rl_code1[ind1*2];
 		int e1 = rl_code1_end ? cols+2 : rl_code1[ind1*2+1];
 		bool overlap = ((s1<(e0+2)) && (s0<(e1+2)));
-		//cout << overlap << "\t" << " " << s0 << " " << e0 << " " << s1 << " " << e1 << endl;
+		//cout << "overlap " << overlap << "\t" << " " << s0 << " " << e0 << " " << s1 << " " << e1 << endl;
 		if (overlap) {
 			if (rl_code_label0[ind0]==0 && rl_code_label1[ind1]!=0) {
-				rl_code_label0[ind0] = rl_code_label1[ind1];
+				rl_code_label0[ind0] = blobs[rl_code_label1[ind1]].eq_ind;
 				blobs[rl_code_label1[ind1]].count += e0-s0+1;
 				blobs[rl_code_label1[ind1]].min_j = min(blobs[rl_code_label1[ind1]].min_j, s0);
 				blobs[rl_code_label1[ind1]].max_j = max(blobs[rl_code_label1[ind1]].max_j, e0);
@@ -81,7 +89,7 @@ void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int
 				blobs[rl_code_label1[ind1]].max_i = row1;
 				update_optimal_blob(blobs[rl_code_label1[ind1]]);
 			} else if (rl_code_label0[ind0]!=0 && rl_code_label1[ind1]==0) {
-				rl_code_label1[ind1] = rl_code_label0[ind0];
+				rl_code_label1[ind1] = blobs[rl_code_label0[ind0]].eq_ind;
 				blobs[rl_code_label0[ind0]].count += e1-s1+1;
 				blobs[rl_code_label0[ind0]].min_j = min(blobs[rl_code_label0[ind0]].min_j, s1);
 				blobs[rl_code_label0[ind0]].max_j = max(blobs[rl_code_label0[ind0]].max_j, e1);
@@ -89,56 +97,82 @@ void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int
 				blobs[rl_code_label0[ind0]].max_i = row1;
 				update_optimal_blob(blobs[rl_code_label0[ind0]]);
 			} else if (rl_code_label0[ind0]==0 && rl_code_label1[ind1]==0) {
-				int new_label = free_labels.front();
-				free_labels.pop();
-				rl_code_label0[ind0] = new_label;
-				rl_code_label1[ind1] = new_label;
-				blobs[new_label].valid = 1;
-				blobs[new_label].count = e0-s0+e1-s1+2;
-				blobs[new_label].min_j = min(s0,s1);
-				blobs[new_label].max_j = max(e0,e1);
-				blobs[new_label].min_i = row1-1;
-				blobs[new_label].max_i = row1;
-				update_optimal_blob(blobs[new_label]);
+				if ((free_labels.size() - cleared_labels_count) > 0) {
+					int new_label = free_labels.front();
+					free_labels.pop();
+					rl_code_label0[ind0] = new_label;
+					rl_code_label1[ind1] = new_label;
+					blobs[new_label].valid = 1;
+					blobs[new_label].eq_ind = new_label;
+					blobs[new_label].count = e0-s0+e1-s1+2;
+					blobs[new_label].min_j = min(s0,s1);
+					blobs[new_label].max_j = max(e0,e1);
+					blobs[new_label].min_i = row1-1;
+					blobs[new_label].max_i = row1;
+					blobs[new_label].first_clear = 1;
+					update_optimal_blob(blobs[new_label]);
+				} else {
+					cout << "Warning: ran out of new labels." << endl;
+				}
 			} else {
 				if (rl_code_label0[ind0] > rl_code_label1[ind1]) {
 					int cleared_label = rl_code_label0[ind0];
 					merge_blobs(blobs[rl_code_label1[ind1]], blobs[cleared_label]);
 					rl_code_label0[ind0] = rl_code_label1[ind1];
-					free_labels.push(cleared_label);
+					if (blobs[cleared_label].first_clear) {
+						free_labels.push(cleared_label);
+						cleared_labels_count++;
+						blobs[cleared_label].first_clear = 0;
+					}
 					update_optimal_blob(blobs[rl_code_label1[ind1]]);
 				} else if (rl_code_label0[ind0] < rl_code_label1[ind1]) {
 					int cleared_label = rl_code_label1[ind1];
 					merge_blobs(blobs[rl_code_label0[ind0]], blobs[cleared_label]);
 					rl_code_label1[ind1] = rl_code_label0[ind0];
-					free_labels.push(cleared_label);
+					if (blobs[cleared_label].first_clear) {
+						free_labels.push(cleared_label);
+						cleared_labels_count++;
+						blobs[cleared_label].first_clear = 0;
+					}
 					update_optimal_blob(blobs[rl_code_label0[ind0]]);
 				}
 			}
 		} else {
 			if (s0<cols && rl_code_label0[ind0]==0) {
-				int new_label = free_labels.front();
-				free_labels.pop();
-				rl_code_label0[ind0] = new_label;
-				blobs[new_label].valid = 1;
-				blobs[new_label].count = e0-s0+1;
-				blobs[new_label].min_j = s0;
-				blobs[new_label].max_j = e0;
-				blobs[new_label].min_i = row1-1;
-				blobs[new_label].max_i = row1-1;
-				update_optimal_blob(blobs[new_label]);
+				if ((free_labels.size() - cleared_labels_count) > 0) {
+					int new_label = free_labels.front();
+					free_labels.pop();
+					rl_code_label0[ind0] = new_label;
+					blobs[new_label].valid = 1;
+					blobs[new_label].eq_ind = new_label;
+					blobs[new_label].count = e0-s0+1;
+					blobs[new_label].min_j = s0;
+					blobs[new_label].max_j = e0;
+					blobs[new_label].min_i = row1-1;
+					blobs[new_label].max_i = row1-1;
+					blobs[new_label].first_clear = 1;
+					update_optimal_blob(blobs[new_label]);
+				} else {
+					cout << "Warning: ran out of new labels." << endl;
+				}
 			}
 			if (s1<cols && rl_code_label1[ind1]==0) {
-				int new_label = free_labels.front();
-				free_labels.pop();
-				rl_code_label1[ind1] = new_label;
-				blobs[new_label].valid = 1;
-				blobs[new_label].count = e1-s1+1;
-				blobs[new_label].min_j = s1;
-				blobs[new_label].max_j = e1;
-				blobs[new_label].min_i = row1;
-				blobs[new_label].max_i = row1;
-				update_optimal_blob(blobs[new_label]);
+				if ((free_labels.size() - cleared_labels_count) > 0) {
+					int new_label = free_labels.front();
+					free_labels.pop();
+					rl_code_label1[ind1] = new_label;
+					blobs[new_label].valid = 1;
+					blobs[new_label].eq_ind = new_label;
+					blobs[new_label].count = e1-s1+1;
+					blobs[new_label].min_j = s1;
+					blobs[new_label].max_j = e1;
+					blobs[new_label].min_i = row1;
+					blobs[new_label].max_i = row1;
+					blobs[new_label].first_clear = 1;
+					update_optimal_blob(blobs[new_label]);
+				} else {
+					cout << "Warning: ran out of new labels." << endl;
+				}
 			}
 		}
 
@@ -155,21 +189,46 @@ void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int
 	}
 }
 
+Mat drawBlobs(const Mat& mask) {
+	Mat mask_cpy;
+	cv::merge(vector<Mat>(3,mask.clone()), mask_cpy);
+
+	int valid_blobs = 0;
+	for (int k=1; k<BLOBS_SIZE; k++) if (blobs[k].valid) valid_blobs++;
+	int blob_ind = 1;
+	int blob_count = 0;
+	while (blob_count != valid_blobs) {
+		int param = 255.0*(blob_count/(valid_blobs-1.0));
+		if (blobs[blob_ind].valid) {
+			cv::rectangle(mask_cpy, Point2i(blobs[blob_ind].min_j,blobs[blob_ind].min_i),
+					Point2i(blobs[blob_ind].max_j,blobs[blob_ind].max_i), Scalar(0,param,255-param));
+			blob_count++;
+		}
+		blob_ind++;
+	}
+	return mask_cpy;
+}
+
 void blobAnalysis(Mat skin_mask) {
+	int max_blob_size = 0;
+	int max_size0 = 0;
+	int max_size1 = 0;
+
 	// initialize blob analysis
 	for (int i=0; i<BLOBS_SIZE; i++)
 		blobs[i].valid = 0;
+
 	// blobs[0] is reserved for the optimal blob
 	while (!free_labels.empty()) free_labels.pop();
 	for (int i=1; i<BLOBS_SIZE; i++)
 		free_labels.push(i);
 
-	int rl_code[MAX_ARRAY_SIZE];
-	int rl_code0[MAX_ARRAY_SIZE];
-	int rl_code1[MAX_ARRAY_SIZE];
-	int rl_code_label[MAX_ARRAY_SIZE];
-	int rl_code_label0[MAX_ARRAY_SIZE];
-	int rl_code_label1[MAX_ARRAY_SIZE];
+	int rl_code[RL_CODE_SIZE];
+	int rl_code0[RL_CODE_SIZE];
+	int rl_code1[RL_CODE_SIZE];
+	int rl_code_label[RL_CODE_LABEL_SIZE];
+	int rl_code_label0[RL_CODE_LABEL_SIZE];
+	int rl_code_label1[RL_CODE_LABEL_SIZE];
 	for (int i=0; i<skin_mask.rows; i++) {
 		int ind = 0;
 		bool prev_pixel = 0;
@@ -177,7 +236,7 @@ void blobAnalysis(Mat skin_mask) {
 			bool curr_pixel = !!skin_mask.at<uchar>(i,j);
 			if (!prev_pixel && curr_pixel) {
 				rl_code[ind] = j;
-				rl_code_label[ind] = 0;
+				rl_code_label[ind/2] = 0;
 				ind++;
 			}
 			if (prev_pixel && !curr_pixel) rl_code[ind++] = j-1;
@@ -185,32 +244,43 @@ void blobAnalysis(Mat skin_mask) {
 		}
 		if (ind - 2*(ind>>1)) rl_code[ind++] = skin_mask.cols-1;
 		rl_code[ind] = -1;
-
 		if (i==0) {
-			memcpy(rl_code1, rl_code, MAX_ARRAY_SIZE);
-			memcpy(rl_code_label1, rl_code_label, MAX_ARRAY_SIZE);
+			memcpy(rl_code1, rl_code, RL_CODE_SIZE);
+			memcpy(rl_code_label1, rl_code_label, RL_CODE_LABEL_SIZE);
 		} else {
-			memcpy(rl_code0, rl_code1, MAX_ARRAY_SIZE);
-			memcpy(rl_code1, rl_code, MAX_ARRAY_SIZE);
-			memcpy(rl_code_label0, rl_code_label1, MAX_ARRAY_SIZE);
-			memcpy(rl_code_label1, rl_code_label, MAX_ARRAY_SIZE);
+			memcpy(rl_code0, rl_code1, RL_CODE_SIZE);
+			memcpy(rl_code1, rl_code, RL_CODE_SIZE);
+			memcpy(rl_code_label0, rl_code_label1, RL_CODE_LABEL_SIZE);
+			memcpy(rl_code_label1, rl_code_label, RL_CODE_LABEL_SIZE);
 
 			blobAnalysisTwoLines(rl_code0, rl_code_label0, rl_code1, rl_code_label1, i, skin_mask.cols);
 
-//					int size0 = 0;
-//					for (size0=0; size0<MAX_ARRAY_SIZE; size0++)
-//						if (rl_code0[size0] == -1) break;
-//					size0 /= 2;
-//					int size1 = 0;
-//					for (size1=0; size1<MAX_ARRAY_SIZE; size1++)
-//						if (rl_code1[size1] == -1) break;
-//					size1 /= 2;
-//					for (int k=0; k<2*size0; k++) cout << rl_code0[k] << " "; cout << endl;
-//					for (int k=0; k<2*size1; k++) cout << rl_code1[k] << " "; cout << endl;
-//					for (int k=0; k<size0; k++) cout << rl_code_label0[k] << " "; cout << endl;
-//					for (int k=0; k<size1; k++) cout << rl_code_label1[k] << " "; cout << endl;
+			max_blob_size = max(max_blob_size, (int) (BLOBS_SIZE-free_labels.size()));
+
+			int size0 = 0;
+			for (size0=0; size0<RL_CODE_SIZE; size0++)
+				if (rl_code0[size0] == -1) break;
+			size0 /= 2;
+			int size1 = 0;
+			for (size1=0; size1<RL_CODE_SIZE; size1++)
+				if (rl_code1[size1] == -1) break;
+			size1 /= 2;
+			max_size0 = max(max_size0, size0);
+			max_size1 = max(max_size1, size1);
+//			for (int k=0; k<2*size0; k++) cout << rl_code0[k] << " "; cout << endl;
+//			for (int k=0; k<2*size1; k++) cout << rl_code1[k] << " "; cout << endl;
+//			for (int k=0; k<size0; k++) cout << rl_code_label0[k] << " "; cout << endl;
+//			for (int k=0; k<size1; k++) cout << rl_code_label1[k] << " "; cout << endl;
+
+//			cv::Mat prog_skin_mask = drawBlobs(skin_mask);
+//			cv::rectangle(prog_skin_mask, Point2i(0,i+2), Point2i(prog_skin_mask.cols-1,i+2), Scalar(255,0,0));
+//			imshow("progressive blob analysis", prog_skin_mask);
+//			int key = waitKey(10);
+//			while((char)key != 'c') key = waitKey(10);
 		}
 	}
+	cout << "max_blob_size " << max_blob_size << endl;
+	cout << "max_size " << max_size0 << " " << max_size1 << endl;
 }
 
 int main( int argc, const char** argv )
@@ -225,6 +295,7 @@ int main( int argc, const char** argv )
 	    int height = capture.get(CV_CAP_PROP_FRAME_HEIGHT);
 	    cout << "FPS: " << fps << ", width: " << width << ", height: " << height << endl;
 
+	    bool enable = false;
 		while(true) {
 		    cv::namedWindow("YCrCb thresholds");
 		    cv::createTrackbar("min Y", "YCrCb thresholds", &MIN_Y, 255);
@@ -242,10 +313,13 @@ int main( int argc, const char** argv )
 
 			blobAnalysis(skin_mask);
 			printf("blob analysis: %d (%d,%d) (%d,%d)\n", blobs[0].count, blobs[0].min_i, blobs[0].min_j, blobs[0].max_i, blobs[0].max_j);
-			cv::rectangle(skin_mask, Point2i(blobs[0].min_j,blobs[0].min_i), Point2i(blobs[0].max_j,blobs[0].max_i), Scalar(127));
-			imshow("blob analysis skin mask", skin_mask);
+			cv::Mat skin_mask2 = skin_mask.clone();
+			cv::rectangle(skin_mask2, Point2i(blobs[0].min_j,blobs[0].min_i), Point2i(blobs[0].max_j,blobs[0].max_i), Scalar(127));
 			cv::rectangle(frame, Point2i(blobs[0].min_j,blobs[0].min_i), Point2i(blobs[0].max_j,blobs[0].max_i), Scalar(255,0,0));
-			imshow("blob analysis frame", frame);
+			//imshow("blob analysis frame", frame);
+
+			//skin_mask2 = drawBlobs(skin_mask);
+			imshow("blob analysis skin mask", skin_mask2);
 
 		    float f = 640; // focal length
 			float h = blobs[0].max_i - blobs[0].min_i; // face height in pixel space
