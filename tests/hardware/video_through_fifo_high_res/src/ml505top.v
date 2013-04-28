@@ -112,15 +112,6 @@ module ml505top (
 	
 	parameter BUFFER_SIZE = 20'd24000;
 
-	parameter Width = 1024;
-	parameter FrontH = 24;
-	parameter PulseH = 136;
-	parameter BackH = 31; //160-129
-	parameter Height = 768;
-	parameter FrontV = 3;
-	parameter PulseV = 6;
-	parameter BackV = 23; //29-6
-	
 	localparam VGA_IDLE = 1'd0,
 						 VGA_ACTIVE = 1'd1;
 
@@ -129,7 +120,16 @@ module ml505top (
 	wire [10:0] vga_i, vga_j;
 	wire [19:0] write_addr;
 	wire vga_valid;
-	VGAIndex vga_index(
+	VGAIndex #(
+		.Width(1024),
+		.FrontH(24),
+		.PulseH(136),
+		.BackH(31), //160-129
+		.Height(768),
+		.FrontV(3),
+		.PulseV(6),
+		.BackV(23) //29-6
+	) vga_index (
 		.Reset(rst),
 		.VGA_IN_DATA_CLK(VGA_IN_DATA_CLK),
 		.VGA_IN_HSOUT(VGA_IN_HSOUT),
@@ -154,7 +154,7 @@ module ml505top (
 	  .full(fifo_full));
 	  
 	assign fifo_rd_en = !fifo_empty; // safe because dvi is faster than vga
-	assign write_addr = vga_i*800 + {{9{0}},vga_j};
+	assign write_addr = vga_i*1024 + {{9{0}},vga_j};
 
 	reg [23:0] video;
 	wire video_next;
