@@ -69,14 +69,14 @@ void update_optimal_blob(const Blob& blob) {
 void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int* rl_code_label1, int row1, int cols) {
 	int ind0 = 0;
 	int ind1 = 0;
-	bool rl_code0_end = (rl_code0[ind0*2]==-1);
-	bool rl_code1_end = (rl_code1[ind1*2]==-1);
+	bool rl_code0_end = (rl_code0[ind0*2]==2047);
+	bool rl_code1_end = (rl_code1[ind1*2]==2047);
 	int cleared_labels_count = 0;
 	while (!(rl_code0_end && rl_code1_end)) {
-		int s0 = rl_code0_end ? cols+1 : rl_code0[ind0*2];
-		int e0 = rl_code0_end ? cols+2 : rl_code0[ind0*2+1];
-		int s1 = rl_code1_end ? cols+1 : rl_code1[ind1*2];
-		int e1 = rl_code1_end ? cols+2 : rl_code1[ind1*2+1];
+		int s0 = rl_code0[ind0*2];
+		int e0 = rl_code0[ind0*2+1];
+		int s1 = rl_code1[ind1*2];
+		int e1 = rl_code1[ind1*2+1];
 		bool overlap = ((s1<(e0+2)) && (s0<(e1+2)));
 		//cout << "overlap " << overlap << "\t" << " " << s0 << " " << e0 << " " << s1 << " " << e1 << endl;
 		if (overlap) {
@@ -179,13 +179,13 @@ void blobAnalysisTwoLines(int* rl_code0, int* rl_code_label0, int* rl_code1, int
 		if (rl_code1_end) ind0++;
 		else if (rl_code0_end) ind1++;
 		else {
-			int s0_next = (rl_code0[ind0*2+2]==-1) ? cols+1 : rl_code0[ind0*2+2];
-			int s1_next = (rl_code1[ind1*2+2]==-1) ? cols+1 : rl_code1[ind1*2+2];
+			int s0_next = rl_code0[ind0*2+2];
+			int s1_next = rl_code1[ind1*2+2];
 			if (s0_next <= s1_next) ind0++;
 			else ind1++;
 		}
-		rl_code0_end = (rl_code0[ind0*2]==-1);
-		rl_code1_end = (rl_code1[ind1*2]==-1);
+		rl_code0_end = (rl_code0[ind0*2]==2047);
+		rl_code1_end = (rl_code1[ind1*2]==2047);
 	}
 }
 
@@ -193,14 +193,14 @@ bool blobAnalysisTwoPartialLines(int& ind0, int* rl_code0, int* rl_code_label0,
 		int& ind1, int* rl_code1, int* rl_code_label1,
 		int cleared_labels_count, int row1, int valid_ind, int cols) {
 	if ((ind1+2) > valid_ind) return false;
-	bool rl_code0_end = (rl_code0[ind0*2]==-1);
-	bool rl_code1_end = (rl_code1[ind1*2]==-1);
+	bool rl_code0_end = (rl_code0[ind0*2]==2047);
+	bool rl_code1_end = (rl_code1[ind1*2]==2047);
 	if (rl_code0_end && rl_code1_end) return true;
 
-	int s0 = rl_code0_end ? cols+1 : rl_code0[ind0*2];
-	int e0 = rl_code0_end ? cols+2 : rl_code0[ind0*2+1];
-	int s1 = rl_code1_end ? cols+1 : rl_code1[ind1*2];
-	int e1 = rl_code1_end ? cols+2 : rl_code1[ind1*2+1];
+	int s0 = rl_code0[ind0*2];
+	int e0 = rl_code0[ind0*2+1];
+	int s1 = rl_code1[ind1*2];
+	int e1 = rl_code1[ind1*2+1];
 	bool overlap = ((s1<(e0+2)) && (s0<(e1+2)));
 	//cout << "overlap " << overlap << "\t" << " " << s0 << " " << e0 << " " << s1 << " " << e1 << endl;
 	if (overlap) {
@@ -303,13 +303,13 @@ bool blobAnalysisTwoPartialLines(int& ind0, int* rl_code0, int* rl_code_label0,
 	if (rl_code1_end) ind0++;
 	else if (rl_code0_end) ind1++;
 	else {
-		int s0_next = (rl_code0[ind0*2+2]==-1) ? cols+1 : rl_code0[ind0*2+2];
-		int s1_next = (rl_code1[ind1*2+2]==-1) ? cols+1 : rl_code1[ind1*2+2];
+		int s0_next = rl_code0[ind0*2+2];
+		int s1_next = rl_code1[ind1*2+2];
 		if (s0_next <= s1_next) ind0++;
 		else ind1++;
 	}
-	rl_code0_end = (rl_code0[ind0*2]==-1);
-	rl_code1_end = (rl_code1[ind1*2]==-1);
+	rl_code0_end = (rl_code0[ind0*2]==2047);
+	rl_code1_end = (rl_code1[ind1*2]==2047);
 
 	return false;
 }
@@ -375,7 +375,8 @@ void blobAnalysis(Mat skin_mask) {
 					if (curr_pixel && (j==(skin_mask.cols-1))) rl_code1[ind++] = j;
 					prev_pixel = curr_pixel;
 				} else if (j==skin_mask.cols) {
-					rl_code1[ind] = -1;
+					rl_code1[ind] = 2047;
+					rl_code1[ind+1] = 2047;
 					ind += 2;
 					other++;
 				} else {
@@ -391,22 +392,22 @@ void blobAnalysis(Mat skin_mask) {
 				cout << "other : " << other << endl;
 				for (int k=0; k<RL_CODE_SIZE; k++) {
 					cout << rl_code0[k] << " ";
-					if (rl_code0[k] == -1) break;
+					if (rl_code0[k] == 2047) break;
 				}
 				cout << endl;
 				for (int k=0; k<RL_CODE_SIZE; k++) {
 					cout << rl_code1[k] << " ";
-					if (rl_code1[k] == -1) break;
+					if (rl_code1[k] == 2047) break;
 				}
 				cout << endl;
 				for (int k=0; k<RL_CODE_LABEL_SIZE; k++) {
 					cout << rl_code_label0[k] << " ";
-					if (rl_code0[2*k] == -1) break;
+					if (rl_code0[2*k] == 2047) break;
 				}
 				cout << endl;
 				for (int k=0; k<RL_CODE_LABEL_SIZE; k++) {
 					cout << rl_code_label1[k] << " ";
-					if (rl_code1[2*k] == -1) break;
+					if (rl_code1[2*k] == 2047) break;
 				}
 				cout << endl;
 			}
@@ -422,7 +423,7 @@ void blobAnalysis(Mat skin_mask) {
 				if (curr_pixel && (j==(skin_mask.cols-1))) rl_code0[ind++] = j;
 				prev_pixel = curr_pixel;
 			}
-			rl_code0[ind] = -1;
+			rl_code0[ind] = 2047;
 			if (i!=0)
 				blobAnalysisTwoLines(rl_code1, rl_code_label1, rl_code0, rl_code_label0, i, skin_mask.cols);
 
