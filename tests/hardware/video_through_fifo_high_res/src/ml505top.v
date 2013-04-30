@@ -124,11 +124,11 @@ module ml505top (
 		.Width(1024),
 		.FrontH(24),
 		.PulseH(136),
-		.BackH(31), //160-129
+		.BackH(28), //160-126
 		.Height(768),
 		.FrontV(3),
 		.PulseV(6),
-		.BackV(23) //29-6
+		.BackV(24) //29-5
 	) vga_index (
 		.Reset(rst),
 		.VGA_IN_DATA_CLK(VGA_IN_DATA_CLK),
