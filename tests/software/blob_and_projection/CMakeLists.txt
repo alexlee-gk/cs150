@@ -8,3 +8,6 @@ target_link_libraries( blob_and_projection ${OpenCV_LIBS} )
 
 add_executable( blob_analysis_pipelined blob_analysis_pipelined.cpp )
 target_link_libraries( blob_analysis_pipelined ${OpenCV_LIBS} ) 
+
+add_executable( generate_image generate_image.cpp )
+target_link_libraries( generate_image ${OpenCV_LIBS} ) 
