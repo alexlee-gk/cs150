@@ -20,6 +20,7 @@ module ml505top (
 	wire [10:0] vga_i, vga_j;
 	wire vga_valid;
 	wire pre_pre_row;
+	wire pre_frame;
 	wire [10:0] h_counter;
 	wire [10:0] v_counter;
 	VGAIndex #(
@@ -40,6 +41,7 @@ module ml505top (
 		.j(vga_j),
 		.valid(vga_valid),
 		.pre_pre_row(pre_pre_row),
+		.pre_frame(pre_frame),
 		.h_counter(h_counter),
 		.v_counter(v_counter));
 	
@@ -51,10 +53,11 @@ module ml505top (
 	//SkinMask skin_mask(ycrcb_pixel, mask_pixel);
 	assign mask_pixel = (VGA_IN_GREEN > 8'd127);
 
-	localparam IDLE      = 2'd0,
-						 PRE_FRAME = 2'd1,
-						 PRE_ROW   = 2'd2,
-						 ROW       = 2'd3;
+	localparam IDLE        = 3'd0,
+						 PRE_FRAME   = 3'd1,
+						 PRE_PRE_ROW = 3'd2,
+						 PRE_ROW     = 3'd3,
+						 ROW         = 3'd4;
 
 	//reg start_row;
 	//wire finish_row;
@@ -65,8 +68,6 @@ module ml505top (
 	reg [10:0] ind;
 	reg [10:0] ind0, ind1;
 	
-	wire [10:0] valid_ind_ahead;
-	assign valid_ind_ahead = (ind+1)>>1;
 	reg [10:0] valid_ind;
 	
 	wire [8:0] rlcl_ind;
@@ -100,15 +101,16 @@ module ml505top (
 	wire odd_row;
 	assign odd_row = (vga_i - 2*(vga_i>>1));
 
+	reg [2:0] state;
+
+	reg [10:0] row_ind;
 	wire analyze_two_partial_lines;
 	assign analyze_two_partial_lines = (( ((odd_row)?ind1:ind0) + 2) <= valid_ind) & 
-		!(rl_code0_end && rl_code1_end) & !(vga_i==0);
+		!((s0_next == 2047) & (s1_next == 2047)) & !(row_ind==0) & (state==ROW);
 
 	reg [10:0] rl_code_ind;
 	
-	reg [1:0] state;
 	always@(posedge VGA_IN_DATA_CLK) begin
-		valid_ind <= valid_ind_ahead;
 		if (rst) begin
 			state <= IDLE;
 		end else begin
@@ -123,17 +125,24 @@ module ml505top (
 					//rl_code0[rl_code_ind] <= 2000;
 					//rl_code1[rl_code_ind] <= 2000;
 					rl_code_ind <= rl_code_ind + 1;
-					if (pre_pre_row & (vga_i == 0))
+					if (pre_pre_row & pre_frame)
+						state <= PRE_ROW;
+				end
+				PRE_PRE_ROW: begin
+					if (pre_pre_row)
 						state <= PRE_ROW;
 				end
 				PRE_ROW: begin
 					ind <= 0;
+					valid_ind <= 0;
 					ind0 <= 0;
 					ind1 <= 0;
 					prev_mask_pixel <= 0;
 					state <= ROW;
 				end
 				ROW: begin
+					row_ind <= vga_i;
+					valid_ind <= (vga_j==0)?0:((ind+1)>>1);
 					if (vga_j<1024) begin
 						if (!prev_mask_pixel & mask_pixel) begin
 							//if (odd_row)  rl_code1[ind] <= vga_j;
@@ -183,9 +192,9 @@ module ml505top (
 					end
 					
 					if (analyze_two_partial_lines) begin
-						if (rl_code1_end) begin
+						if (s1 == 2047) begin
 							ind0 <= ind0+1;
-						end else if (rl_code0_end) begin
+						end else if (s0 == 2047) begin
 							ind1 <= ind1+1;
 						end else begin
 							if (s0_next <= s1_next)
@@ -195,12 +204,15 @@ module ml505top (
 						end
 					end
 					
-					if (pre_pre_row & (vga_i == 768)) begin
-						rl_code_ind <= 0;
-						state <= PRE_FRAME;
+					if (((s0_next == 2047) & (s1_next == 2047)) | pre_pre_row) begin
+						if (vga_i == 768) begin
+							rl_code_ind <= 0;
+							state <= PRE_FRAME;
+						end else begin
+							if (pre_pre_row) state <= PRE_ROW;
+							else state <= PRE_PRE_ROW;
+						end
 					end
-					else if (pre_pre_row)
-						state <= PRE_ROW;
 				end
 				default:
 					state <= IDLE;
@@ -500,7 +512,10 @@ module ml505top (
   	.doutb(rl_code1_at_4)
   );
   
-  
+  wire rl_code_label0_we;
+  wire [74:0] blob;
+  assign rl_code_label0_we = ((state == ROW) & (vga_j<1024) & (!prev_mask_pixel & mask_pixel) & !odd_row);
+  foo foo_instance(VGA_IN_DATA_CLK, s0, e0, s0_next, ind0, rl_code_label0_we, rlcl_ind, 9'b0, blob);
 
   assign GPIO_LED = {4'b1111, rst, rst, rst, rst};
 
@@ -512,7 +527,11 @@ module ml505top (
 	chipscope_ila ila(
 	.CONTROL(chipscope_control),
 	.CLK(VGA_IN_DATA_CLK),
-	.DATA({740'b0,
+	.DATA({660'b0,
+				 state,
+				 blob,
+				 rl_code_label0_we,       
+	       we_rl_code0,
 	       
 				 analyze_two_partial_lines,
 				 s0, e0, s0_next, 
@@ -536,7 +555,7 @@ module ml505top (
 				 rl_code_label0[0], rl_code_label0[1], 
 				 rl_code_label1[0], rl_code_label1[1], 
 				 
-				 ind, state, vga_i, vga_j, mask_pixel}),
+				 ind, 2'b0, vga_i, vga_j, mask_pixel}),
 	.TRIG0(v_counter),
 	.TRIG1(h_counter)
 	) /* synthesis syn_noprune=1 */;

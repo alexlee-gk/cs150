@@ -25,6 +25,7 @@ module	VGAIndex(
 		//	Others
 		//--------------------------------------------------------------------------
 		pre_pre_row,
+		pre_frame,
 		h_counter,
 		v_counter
 		//--------------------------------------------------------------------------
@@ -68,6 +69,7 @@ module	VGAIndex(
 	//	Others
 	//--------------------------------------------------------------------------
 	output pre_pre_row;
+	output pre_frame;
   output reg [10:0] h_counter;
   output reg [10:0] v_counter;
 	//--------------------------------------------------------------------------
@@ -76,14 +78,15 @@ module	VGAIndex(
 						 ACTIVE = 1'd1;
 
 	assign j = h_counter - (PulseH+BackH);
-	assign i = v_counter - (PulseV+BackV);
+	assign i = (h_counter < (PulseH+BackH)) ? (v_counter - (PulseV+BackV) - 1) : (v_counter - (PulseV+BackV));
 	
 	assign valid = (h_counter >= (PulseH+BackH)) & 
 								 (h_counter <  (PulseH+BackH+Width)) & 
 								 (v_counter >= (PulseV+BackV)) & 
 								 (v_counter <  (PulseV+BackV+Height)); 
 
-	assign pre_pre_row = (h_counter == (PulseH+BackH - 10'd2));
+	assign pre_pre_row = (h_counter == (PulseH+BackH - 11'd2));
+	assign pre_frame = (v_counter == (PulseV+BackV - 11'd2));
 	
 	reg hsout_delayed;
 	reg vsout_delayed;
