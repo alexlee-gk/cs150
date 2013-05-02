@@ -86,7 +86,7 @@ module	VGAIndex(
 								 (v_counter <  (PulseV+BackV+Height)); 
 
 	assign pre_pre_row = (h_counter == (PulseH+BackH - 11'd2));
-	assign pre_frame = (v_counter == (PulseV+BackV - 11'd2));
+	assign pre_frame = ( (h_counter >= (PulseH+BackH)) & (v_counter == (PulseV+BackV - 11'd1)) | (h_counter < (PulseH+BackH)) & (v_counter == (PulseV+BackV)) );
 	
 	reg hsout_delayed;
 	reg vsout_delayed;

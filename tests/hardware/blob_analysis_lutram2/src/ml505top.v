@@ -18,6 +18,7 @@ module ml505top (
       .out(rst));
 	
 	wire [10:0] vga_i, vga_j;
+	reg [10:0] vga_i_delayed;
 	wire vga_valid;
 	wire pre_pre_row;
 	wire pre_frame;
@@ -68,7 +69,8 @@ module ml505top (
 	reg [10:0] ind;
 	reg [10:0] ind0, ind1;
 	
-	reg [10:0] valid_ind;
+	wire [10:0] valid_ind;
+	assign valid_ind = ((ind+1)>>1);
 	
 	wire [8:0] rlcl_ind;
 	reg prev_mask_pixel;
@@ -77,6 +79,8 @@ module ml505top (
 
 	//reg [10:0] rl_code0 [1039:0];
 	//reg [10:0] rl_code1 [1039:0];
+	reg [10:0] rl_code0 [15:0];
+	reg [10:0] rl_code1 [15:0];
 	reg [8:0]  rl_code_label0 [11:0];
 	reg [8:0]  rl_code_label1 [11:0];
 	
@@ -87,12 +91,12 @@ module ml505top (
 	
 	wire [10:0] s0, e0, s0_next;
 	wire [10:0] s1, e1, s1_next;
-	//assign s0      = rl_code0[ind0*2];
-	//assign e0      = rl_code0[ind0*2+1];
-	//assign s0_next = rl_code0[ind0*2+2];
-	//assign s1      = rl_code1[ind1*2];
-	//assign e1      = rl_code1[ind1*2+1];
-	//assign s1_next = rl_code1[ind1*2+2];
+	assign s0      = rl_code0[ind0*2];
+	assign e0      = rl_code0[ind0*2+1];
+	assign s0_next = rl_code0[ind0*2+2];
+	assign s1      = rl_code1[ind1*2];
+	assign e1      = rl_code1[ind1*2+1];
+	assign s1_next = rl_code1[ind1*2+2];
 	
 	wire rl_code0_end, rl_code1_end;
 	assign rl_code0_end = (s0 == 2047);
@@ -105,61 +109,59 @@ module ml505top (
 
 	reg [10:0] row_ind;
 	wire analyze_two_partial_lines;
-	assign analyze_two_partial_lines = (( ((odd_row)?ind1:ind0) + 2) <= valid_ind) & 
-		!((s0_next == 2047) & (s1_next == 2047)) & !(row_ind==0) & (state==ROW);
+	wire proceed_ind;
+	assign proceed_ind = ((((odd_row)?ind1:ind0) + 2) <= valid_ind);
+	assign analyze_two_partial_lines = !(vga_i == 0) & (state == ROW) & proceed_ind & !(rl_code0_end & rl_code1_end);
+	//assign analyze_two_partial_lines = (( ((odd_row)?ind1:ind0) + 2) <= valid_ind) & 
+	//	!((s0_next == 2047) & (s1_next == 2047)) & !(row_ind==0) & (state==ROW);
 
 	reg [10:0] rl_code_ind;
 	
+	always@(posedge VGA_IN_DATA_CLK) begin
+		vga_i_delayed <= vga_i;
+	end
+		
 	always@(posedge VGA_IN_DATA_CLK) begin
 		if (rst) begin
 			state <= IDLE;
 		end else begin
 			case (state)
-				IDLE: begin
+				IDLE: begin // 0
 					if (pre_pre_row & (vga_i == 768)) begin
 						rl_code_ind <= 0;
 						state <= PRE_FRAME;
 					end
 				end
-				PRE_FRAME: begin
-					//rl_code0[rl_code_ind] <= 2000;
-					//rl_code1[rl_code_ind] <= 2000;
+				PRE_FRAME: begin // 1
+					rl_code0[rl_code_ind] <= 2000;
+					rl_code1[rl_code_ind] <= 2000;
 					rl_code_ind <= rl_code_ind + 1;
 					if (pre_pre_row & pre_frame)
 						state <= PRE_ROW;
 				end
-				PRE_PRE_ROW: begin
+				PRE_PRE_ROW: begin // 2
 					if (pre_pre_row)
 						state <= PRE_ROW;
 				end
-				PRE_ROW: begin
+				PRE_ROW: begin // 3
 					ind <= 0;
-					valid_ind <= 0;
 					ind0 <= 0;
 					ind1 <= 0;
 					prev_mask_pixel <= 0;
 					state <= ROW;
 				end
-				ROW: begin
+				ROW: begin // 4
 					row_ind <= vga_i;
-					valid_ind <= (vga_j==0)?0:((ind+1)>>1);
 					if (vga_j<1024) begin
 						if (!prev_mask_pixel & mask_pixel) begin
-							//if (odd_row)  rl_code1[ind] <= vga_j;
-							//else          rl_code0[ind] <= vga_j;
+							if (odd_row)  rl_code1[ind] <= vga_j;
+							else          rl_code0[ind] <= vga_j;
 							if (odd_row)  begin
-								if (rlcl_ind > 0) 
-									rl_code_label1[rlcl_ind] <= next_rl_code_label1;
-								else 
-									rl_code_label1[rlcl_ind] <= 0;
+								rl_code_label1[rlcl_ind] <= (rlcl_ind > 0) ? next_rl_code_label1 : 0;
 							end else begin
-								if (rlcl_ind > 0) 
-									rl_code_label0[rlcl_ind] <= next_rl_code_label0;
-								else 
-									rl_code_label0[rlcl_ind] <= 0;
+								rl_code_label0[rlcl_ind] <= (rlcl_ind > 0) ? next_rl_code_label0 : 0;
 							end
 						end
-						/*
 						if (prev_mask_pixel & !mask_pixel) begin
 							if (odd_row)  rl_code1[ind] <= vga_j-1;
 							else          rl_code0[ind] <= vga_j-1;
@@ -173,7 +175,6 @@ module ml505top (
 								else          rl_code0[ind] <= vga_j;
 							end
 						end
-						*/
 						
 						if ((!prev_mask_pixel & mask_pixel) & (mask_pixel & (vga_j==1023)))
 							ind <= ind+2;
@@ -184,17 +185,18 @@ module ml505top (
 					
 						prev_mask_pixel <= mask_pixel; 
 					end else if (vga_j==1024 || vga_j==1025) begin
-						//if (odd_row)  rl_code1[ind] <= 2047;
-						//else          rl_code0[ind] <= 2047;
+						if (odd_row)  rl_code1[ind] <= 2047;
+						else          rl_code0[ind] <= 2047;
 						ind <= ind+1;
 					end else begin
 						ind <= ind+2;
 					end
-					
+
+					///*
 					if (analyze_two_partial_lines) begin
-						if (s1 == 2047) begin
+						if (rl_code1_end) begin
 							ind0 <= ind0+1;
-						end else if (s0 == 2047) begin
+						end else if (rl_code0_end) begin
 							ind1 <= ind1+1;
 						end else begin
 							if (s0_next <= s1_next)
@@ -203,8 +205,7 @@ module ml505top (
 								ind1 <= ind1+1;
 						end
 					end
-					
-					if (((s0_next == 2047) & (s1_next == 2047)) | pre_pre_row) begin
+					if ((proceed_ind & rl_code0_end & rl_code1_end) | pre_pre_row) begin
 						if (vga_i == 768) begin
 							rl_code_ind <= 0;
 							state <= PRE_FRAME;
@@ -213,6 +214,30 @@ module ml505top (
 							else state <= PRE_PRE_ROW;
 						end
 					end
+					//*/
+					/*
+					if (analyze_two_partial_lines) begin
+						if ((s1==2047) || (s1_next==2047)) begin
+							ind0 <= ind0+1;
+						end else if ((s0==2047) || (s0_next==2047)) begin
+							ind1 <= ind1+1;
+						end else begin
+							if (s0_next <= s1_next)
+								ind0 <= ind0+1;
+							else
+								ind1 <= ind1+1;
+						end
+					end
+					if ((((s0==2047) || (s0_next==2047)) & ((s1==2047) || (s1_next==2047))) | pre_pre_row) begin
+						if (vga_i == 768) begin
+							rl_code_ind <= 0;
+							state <= PRE_FRAME;
+						end else begin
+							if (pre_pre_row) state <= PRE_ROW;
+							else state <= PRE_PRE_ROW;
+						end
+					end
+					*/
 				end
 				default:
 					state <= IDLE;
@@ -220,302 +245,10 @@ module ml505top (
 		end
 	end
 
-  reg we_rl_code0;
-  reg we_rl_code1;
-  reg [10:0] addr_rl_code0;
-  reg [10:0] addr_rl_code1;
-  reg [10:0] din_rl_code0;
-  reg [10:0] din_rl_code1;
-  always@(*) begin
-  	we_rl_code0 = 0;
-  	we_rl_code1 = 0;
-  	addr_rl_code0 = ind;
-  	addr_rl_code1 = ind;
-  	din_rl_code0 = 0;
-  	din_rl_code1 = 0;
-		if (!rst) begin
-			case (state)
-				PRE_FRAME: begin
-					we_rl_code0 = 1;
-					we_rl_code1 = 1;
-					addr_rl_code0 = rl_code_ind;
-					addr_rl_code1 = rl_code_ind;
-					din_rl_code0 = 2000;
-					din_rl_code1 = 2000;
-				end
-				ROW: begin
-					if (vga_j<1024) begin
-						if (!prev_mask_pixel & mask_pixel) begin
-							if (odd_row) begin
-								we_rl_code1 = 1;
-								addr_rl_code1 = ind;
-								din_rl_code1 = vga_j;
-							end else begin
-								we_rl_code0 = 1;
-								addr_rl_code0 = ind;
-								din_rl_code0 = vga_j;
-							end
-						end
-						if (prev_mask_pixel & !mask_pixel) begin
-							if (odd_row) begin
-								we_rl_code1 = 1;
-								addr_rl_code1 = ind;
-								din_rl_code1 = vga_j-1;
-							end else begin
-								we_rl_code0 = 1;
-								addr_rl_code0 = ind;
-								din_rl_code0 = vga_j-1;
-							end
-						end
-						if (mask_pixel & (vga_j==1023)) begin
-							if (!prev_mask_pixel & mask_pixel) begin
-								if (odd_row) begin
-									we_rl_code1 = 1;
-									addr_rl_code1 = ind+1;
-									din_rl_code1 = vga_j;
-								end else begin
-									we_rl_code0 = 1;
-									addr_rl_code0 = ind+1;
-									din_rl_code0 = vga_j;
-								end
-							end else begin
-								if (odd_row) begin
-									we_rl_code1 = 1;
-									addr_rl_code1 = ind;
-									din_rl_code1 = vga_j;
-								end else begin
-									we_rl_code0 = 1;
-									addr_rl_code0 = ind;
-									din_rl_code0 = vga_j;
-								end
-							end
-						end
-					end else if (vga_j==1024 || vga_j==1025) begin
-						if (odd_row) begin
-							we_rl_code1 = 1;
-							addr_rl_code1 = ind;
-							din_rl_code1 = 2047;
-						end else begin
-							we_rl_code0 = 1;
-							addr_rl_code0 = ind;
-							din_rl_code0 = 2047;
-						end
-					end
-				end
-			endcase
-		end
-	end
-	
-	wire [10:0] s0_addr, e0_addr, s0_next_addr, s1_addr, e1_addr, s1_next_addr;
-	assign s0_addr = ind0*2;
-	assign e0_addr = ind0*2+1;
-	assign s0_next_addr = ind0*2+2;
-	assign s1_addr = ind1*2;
-	assign e1_addr = ind1*2+1;
-	assign s1_next_addr = ind1*2+2;
-	
-	bram_1040x11 rl_code0_0 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(s0_addr), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(s0)
-  );
-	bram_1040x11 rl_code0_1 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(e0_addr), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(e0)
-  );
-	bram_1040x11 rl_code0_2 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(s0_next_addr), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(s0_next)
-  );
-  wire [10:0] rl_code0_at_0, rl_code0_at_1, rl_code0_at_2, rl_code0_at_3, rl_code0_at_4;
-	bram_1040x11 rl_code0_3 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(11'd0), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code0_at_0)
-  );
-	bram_1040x11 rl_code0_4 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(11'd1), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code0_at_1)
-  );
-	bram_1040x11 rl_code0_5 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(11'd2), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code0_at_2)
-  );
-	bram_1040x11 rl_code0_6 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(11'd3), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code0_at_3)
-  );
-	bram_1040x11 rl_code0_7 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code0), 
-  	.addra(addr_rl_code0), 
-  	.dina(din_rl_code0), 
-  	.web(1'b0), 
-  	.addrb(11'd4), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code0_at_4)
-  );
-  
-  
-  
-  bram_1040x11 rl_code1_0 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(s1_addr), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(s1)
-  );
-	bram_1040x11 rl_code1_1 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(e1_addr), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(e1)
-  );
-	bram_1040x11 rl_code1_2 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(s1_next_addr), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(s1_next)
-  );
-  wire [10:0] rl_code1_at_0, rl_code1_at_1, rl_code1_at_2, rl_code1_at_3, rl_code1_at_4;
-	bram_1040x11 rl_code1_3 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(11'd0), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code1_at_0)
-  );
-	bram_1040x11 rl_code1_4 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(11'd1), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code1_at_1)
-  );
-	bram_1040x11 rl_code1_5 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(11'd2), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code1_at_2)
-  );
-	bram_1040x11 rl_code1_6 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(11'd3), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code1_at_3)
-  );
-	bram_1040x11 rl_code1_7 (
-  	.clka(VGA_IN_DATA_CLK), 
-  	.clkb(VGA_IN_DATA_CLK), 
-  	.wea(we_rl_code1), 
-  	.addra(addr_rl_code1), 
-  	.dina(din_rl_code1), 
-  	.web(1'b0), 
-  	.addrb(11'd4), 
-  	.dinb(11'd0), 
-  	//.douta(), 
-  	.doutb(rl_code1_at_4)
-  );
-  
   wire rl_code_label0_we;
   wire [74:0] blob;
   assign rl_code_label0_we = ((state == ROW) & (vga_j<1024) & (!prev_mask_pixel & mask_pixel) & !odd_row);
-  foo foo_instance(VGA_IN_DATA_CLK, s0, e0, s0_next, ind0, rl_code_label0_we, rlcl_ind, 9'b0, blob);
+  //foo foo_instance(VGA_IN_DATA_CLK, s0, e0, s0_next, ind0, rl_code_label0_we, rlcl_ind, 9'b0, blob);
 
   assign GPIO_LED = {4'b1111, rst, rst, rst, rst};
 
@@ -527,11 +260,14 @@ module ml505top (
 	chipscope_ila ila(
 	.CONTROL(chipscope_control),
 	.CLK(VGA_IN_DATA_CLK),
-	.DATA({660'b0,
+	.DATA({658'b0,
+				 pre_frame,
+				 proceed_ind,
+	
 				 state,
 				 blob,
 				 rl_code_label0_we,       
-	       we_rl_code0,
+	       1'b0,
 	       
 				 analyze_two_partial_lines,
 				 s0, e0, s0_next, 
@@ -543,14 +279,18 @@ module ml505top (
 				 vga_valid,
 				 pre_pre_row,
 				 
-				 // 67 + 35 + 146 + 36
+				 // 80 + 67 + 35 + 146 + 36
+				 // 3+75+1+1 = 80
 				 // 1+11*6 = 67
 				 // 11*3+1+1 = 35
 				 // 2*11*5+2*9*2 = 146
 				 // 11+2+11+11+1 = 36
 				 
-				 rl_code0_at_0, rl_code0_at_1, rl_code0_at_2, rl_code0_at_3, rl_code0_at_4, 
-				 rl_code1_at_0, rl_code1_at_1, rl_code1_at_2, rl_code1_at_3, rl_code1_at_4, 
+				 rl_code0[0], rl_code0[1], rl_code0[2], rl_code0[3], rl_code0[4], 
+				 rl_code1[0], rl_code1[1], rl_code1[2], rl_code1[3], rl_code1[4], 
+				 
+				 //rl_code0_at_0, rl_code0_at_1, rl_code0_at_2, rl_code0_at_3, rl_code0_at_4, 
+				 //rl_code1_at_0, rl_code1_at_1, rl_code1_at_2, rl_code1_at_3, rl_code1_at_4, 
 				 
 				 rl_code_label0[0], rl_code_label0[1], 
 				 rl_code_label1[0], rl_code_label1[1], 
