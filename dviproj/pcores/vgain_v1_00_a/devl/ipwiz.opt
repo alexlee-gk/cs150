@@ -1,0 +1,14 @@
+-batch 
+-create vgain 
+-ver 1.00.a 
+-dir /home/cc/cs150/sp13/class/cs150-ax/dviproj/ 
+-lang verilog 
+-bus fsl ms 
+-xps 
+-ise 
+-driver 
+-totalin 1
+-totalout 1
+-argin 1
+-argout 1
+-desc "new FSL core"

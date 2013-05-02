@@ -1,0 +1,11 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn /home/cc/cs150/sp13/class/cs150-ax/finalproject/pcores/readcop_v1_00_a/devl/synthesis/readcop_xst.prj
+-top readcop
+-p virtex6
+-ofn /home/cc/cs150/sp13/class/cs150-ax/finalproject/pcores/readcop_v1_00_a/devl/synthesis/readcop_xst.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /

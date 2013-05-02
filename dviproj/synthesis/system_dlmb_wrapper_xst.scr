@@ -1,0 +1,14 @@
+set -tmpdir /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc5vlx110tff1136-1
+-top system_dlmb_wrapper
+-ifmt MIXED
+-ifn system_dlmb_wrapper_xst.prj
+-ofn ../implementation/system_dlmb_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

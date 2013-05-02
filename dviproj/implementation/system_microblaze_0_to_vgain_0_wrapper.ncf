@@ -1,0 +1,2 @@
+INST "microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram*" TNM = "microblaze_0_to_vgain_0_fsl"; 
+TIMESPEC "TS_ASYNC_FIFO_microblaze_0_to_vgain_0" = FROM "microblaze_0_to_vgain_0_fsl" 8000 ps DATAPATHONLY; 

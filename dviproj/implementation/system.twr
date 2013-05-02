@@ -1,0 +1,800 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.1/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3 -xml system.twx
+system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc5vlx110t,ff1136,-1 (PRODUCTION 1.73 2012-04-23, STEPPING level 0)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<7>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.527ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<6>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<5>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<4>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<3>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<2>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.521ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<1>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.528ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<0>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[7].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[6].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[5].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[4].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[3].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[2].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[1].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[0].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ASYNC_FIFO_vgain_0_to_microblaze_0 = MAXDELAY FROM 
+TIMEGRP         "vgain_0_to_microblaze_0_fsl" 16 ns DATAPATHONLY;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 196 paths analyzed, 196 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   5.384ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ASYNC_FIFO_readcop_0_to_microblaze_0 = MAXDELAY FROM 
+TIMEGRP         "readcop_0_to_microblaze_0_fsl" 16 ns DATAPATHONLY;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 196 paths analyzed, 196 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   5.284ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP "TNM_RD_DATA_SEL" 
+TO TIMEGRP "FFS"         TS_sys_clk_pin * 2;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 384 paths analyzed, 384 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   4.726ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_PHY_INIT_DATA_SEL_0 = MAXDELAY FROM TIMEGRP 
+"TNM_PHY_INIT_DATA_SEL" TO         TIMEGRP "FFS" TS_sys_clk_pin * 2;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FROM TIMEGRP 
+"TNM_PHY_INIT_DATA_SEL" TO         TIMEGRP "FFS" TS_sys_clk_pin * 2;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 51 paths analyzed, 51 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   4.672ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "TNM_GATE_DLY" TO 
+TIMEGRP "FFS"         TS_sys_clk_pin * 2;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 40 paths analyzed, 40 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.106ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "TNM_RDEN_DLY" TO 
+TIMEGRP "FFS"         TS_sys_clk_pin * 2;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.876ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGRP 
+"TNM_CAL_RDEN_DLY" TO TIMEGRP "FFS"         TS_sys_clk_pin * 2;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.865ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_CE_IDDR" TO TIMEGRP 
+"TNM_DQS_FLOPS"         1.9 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 128 paths analyzed, 64 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   3.676ns.
+ Maximum delay is   1.862ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" 
+TS_sys_clk_pin         * 1.25 PHASE 2 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 898 paths analyzed, 764 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.548ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1" 
+TS_sys_clk_pin         * 1.25 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 24854 paths analyzed, 10922 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.845ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" 
+TS_sys_clk_pin         * 2 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.666ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3" 
+TS_sys_clk_pin         * 0.625 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3850636518735 paths analyzed, 16753 endpoints analyzed, 24 failing endpoints
+ 24 timing errors detected. (24 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  18.379ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.379ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
+  Destination:          readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      18.194ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.094ns (1.539 - 1.633)
+  Source Clock:         clk_62_5000MHzPLL0 rising at 0.000ns
+  Destination Clock:    clk_62_5000MHzPLL0 rising at 16.000ns
+  Clock Uncertainty:    0.091ns
+
+  Clock Uncertainty:          0.091ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.168ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP to readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y2.DOBDOL0  Trcko_DOPB            2.190   readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+                                                       readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+    SLICE_X94Y17.D3      net (fanout=1)        1.710   readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ram_doutb10<0>
+    SLICE_X94Y17.D       Tilo                  0.094   readcop_0/readcop_0/video_32<23>
+                                                       readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_mux<23>1
+    SLICE_X94Y17.A1      net (fanout=12)       0.805   readcop_0/readcop_0/video_32<23>
+    SLICE_X94Y17.A       Tilo                  0.094   readcop_0/readcop_0/video_32<23>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_cy<12>11
+    SLICE_X97Y19.B4      net (fanout=1)        0.670   readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_cy<12>
+    SLICE_X97Y19.CMUX    Topbc                 0.673   readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<15>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<13>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<15>
+    SLICE_X99Y23.B6      net (fanout=2)        0.619   readcop_0/readcop_0/color_conversion/Y_tmp_mult0000<14>
+    SLICE_X99Y23.CMUX    Topbc                 0.673   readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<16>
+                                                       readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<14>
+                                                       readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<16>
+    SLICE_X98Y26.D5      net (fanout=1)        0.691   readcop_0/readcop_0/color_conversion/Y_tmp_addsub0001<15>
+    SLICE_X98Y26.COUT    Topcyd                0.392   readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+                                                       readcop_0/readcop_0/color_conversion/Y_tmp_addsub0001<15>_rt
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+    SLICE_X98Y27.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+    SLICE_X98Y27.CMUX    Tcinc                 0.334   readcop_0/readcop_0/color_conversion/Y_tmp<8>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18>
+    SLICE_X97Y30.A6      net (fanout=32)       0.564   readcop_0/readcop_0/color_conversion/Y_tmp<8>
+    SLICE_X97Y30.COUT    Topcya                0.509   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<0>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+    SLICE_X97Y31.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+    SLICE_X97Y31.CMUX    Tcinc                 0.334   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<7>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<7>
+    SLICE_X96Y29.C2      net (fanout=14)       0.986   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd2_lut<12>
+    SLICE_X96Y29.C       Tilo                  0.094   readcop_0/readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_lut<13>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_731
+    SLICE_X99Y30.AX      net (fanout=1)        0.463   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_73
+    SLICE_X99Y30.COUT    Taxcy                 0.439   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+    SLICE_X99Y31.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+    SLICE_X99Y31.AMUX    Tcina                 0.271   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>
+    SLICE_X98Y32.B6      net (fanout=2)        0.460   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_117
+    SLICE_X98Y32.COUT    Topcyb                0.501   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<11>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+    SLICE_X98Y33.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+    SLICE_X98Y33.DMUX    Tcind                 0.402   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>
+    SLICE_X98Y34.D2      net (fanout=9)        0.850   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_17
+    SLICE_X98Y34.D       Tilo                  0.094   readcop_0/readcop_0/ycrcb_video<12>
+                                                       readcop_0/readcop_0/color_conversion/Cr<4>1
+    SLICE_X99Y34.B1      net (fanout=2)        0.718   readcop_0/readcop_0/ycrcb_video<12>
+    SLICE_X99Y34.B       Tilo                  0.094   readcop_0/N108
+                                                       readcop_0/readcop_0/video<0>2190_SW0
+    SLICE_X96Y34.B5      net (fanout=1)        0.384   readcop_0/N108
+    SLICE_X96Y34.B       Tilo                  0.094   readcop_0/readcop_0/video<0>2190
+                                                       readcop_0/readcop_0/video<0>2190
+    SLICE_X98Y36.C6      net (fanout=34)       0.574   readcop_0/readcop_0/video<0>2190
+    SLICE_X98Y36.CMUX    Tilo                  0.392   readcop_0/readcop_0/video<0>
+                                                       readcop_0/readcop_0/video<23>11
+                                                       readcop_0/readcop_0/video<23>1_f7
+    OLOGIC_X2Y79.D1      net (fanout=1)        0.592   readcop_0/readcop_0/video<23>
+    OLOGIC_X2Y79.CLK     Todck                 0.434   DVI_D_11_OBUF
+                                                       readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+    -------------------------------------------------  ---------------------------
+    Total                                     18.194ns (8.108ns logic, 10.086ns route)
+                                                       (44.6% logic, 55.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.377ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
+  Destination:          readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      18.192ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.094ns (1.539 - 1.633)
+  Source Clock:         clk_62_5000MHzPLL0 rising at 0.000ns
+  Destination Clock:    clk_62_5000MHzPLL0 rising at 16.000ns
+  Clock Uncertainty:    0.091ns
+
+  Clock Uncertainty:          0.091ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.168ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP to readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y2.DOBDOL0  Trcko_DOPB            2.190   readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+                                                       readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+    SLICE_X94Y17.D3      net (fanout=1)        1.710   readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ram_doutb10<0>
+    SLICE_X94Y17.D       Tilo                  0.094   readcop_0/readcop_0/video_32<23>
+                                                       readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_mux<23>1
+    SLICE_X94Y17.A1      net (fanout=12)       0.805   readcop_0/readcop_0/video_32<23>
+    SLICE_X94Y17.A       Tilo                  0.094   readcop_0/readcop_0/video_32<23>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_cy<12>11
+    SLICE_X97Y19.B4      net (fanout=1)        0.670   readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_cy<12>
+    SLICE_X97Y19.CMUX    Topbc                 0.673   readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<15>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<13>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<15>
+    SLICE_X99Y23.B6      net (fanout=2)        0.619   readcop_0/readcop_0/color_conversion/Y_tmp_mult0000<14>
+    SLICE_X99Y23.CMUX    Topbc                 0.673   readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<16>
+                                                       readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<14>
+                                                       readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<16>
+    SLICE_X98Y26.D5      net (fanout=1)        0.691   readcop_0/readcop_0/color_conversion/Y_tmp_addsub0001<15>
+    SLICE_X98Y26.COUT    Topcyd                0.392   readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+                                                       readcop_0/readcop_0/color_conversion/Y_tmp_addsub0001<15>_rt
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+    SLICE_X98Y27.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+    SLICE_X98Y27.CMUX    Tcinc                 0.334   readcop_0/readcop_0/color_conversion/Y_tmp<8>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18>
+    SLICE_X97Y30.A6      net (fanout=32)       0.564   readcop_0/readcop_0/color_conversion/Y_tmp<8>
+    SLICE_X97Y30.COUT    Topcya                0.509   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<0>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+    SLICE_X97Y31.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+    SLICE_X97Y31.CMUX    Tcinc                 0.334   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<7>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<7>
+    SLICE_X96Y29.C2      net (fanout=14)       0.986   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd2_lut<12>
+    SLICE_X96Y29.C       Tilo                  0.094   readcop_0/readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_lut<13>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_731
+    SLICE_X99Y30.AX      net (fanout=1)        0.463   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_73
+    SLICE_X99Y30.COUT    Taxcy                 0.439   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+    SLICE_X99Y31.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+    SLICE_X99Y31.AMUX    Tcina                 0.271   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>
+    SLICE_X98Y32.B6      net (fanout=2)        0.460   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_117
+    SLICE_X98Y32.COUT    Topcyb                0.501   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<11>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+    SLICE_X98Y33.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+    SLICE_X98Y33.DMUX    Tcind                 0.402   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>
+    SLICE_X98Y34.D2      net (fanout=9)        0.850   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_17
+    SLICE_X98Y34.D       Tilo                  0.094   readcop_0/readcop_0/ycrcb_video<12>
+                                                       readcop_0/readcop_0/color_conversion/Cr<4>1
+    SLICE_X99Y34.B1      net (fanout=2)        0.718   readcop_0/readcop_0/ycrcb_video<12>
+    SLICE_X99Y34.B       Tilo                  0.094   readcop_0/N108
+                                                       readcop_0/readcop_0/video<0>2190_SW0
+    SLICE_X96Y34.B5      net (fanout=1)        0.384   readcop_0/N108
+    SLICE_X96Y34.B       Tilo                  0.094   readcop_0/readcop_0/video<0>2190
+                                                       readcop_0/readcop_0/video<0>2190
+    SLICE_X98Y36.D6      net (fanout=34)       0.575   readcop_0/readcop_0/video<0>2190
+    SLICE_X98Y36.CMUX    Topdc                 0.389   readcop_0/readcop_0/video<0>
+                                                       readcop_0/readcop_0/video<23>12
+                                                       readcop_0/readcop_0/video<23>1_f7
+    OLOGIC_X2Y79.D1      net (fanout=1)        0.592   readcop_0/readcop_0/video<23>
+    OLOGIC_X2Y79.CLK     Todck                 0.434   DVI_D_11_OBUF
+                                                       readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+    -------------------------------------------------  ---------------------------
+    Total                                     18.192ns (8.105ns logic, 10.087ns route)
+                                                       (44.6% logic, 55.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.374ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
+  Destination:          readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      18.189ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.094ns (1.539 - 1.633)
+  Source Clock:         clk_62_5000MHzPLL0 rising at 0.000ns
+  Destination Clock:    clk_62_5000MHzPLL0 rising at 16.000ns
+  Clock Uncertainty:    0.091ns
+
+  Clock Uncertainty:          0.091ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.168ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP to readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y2.DOBDOL0  Trcko_DOPB            2.190   readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+                                                       readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+    SLICE_X94Y17.D3      net (fanout=1)        1.710   readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ram_doutb10<0>
+    SLICE_X94Y17.D       Tilo                  0.094   readcop_0/readcop_0/video_32<23>
+                                                       readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_mux<23>1
+    SLICE_X94Y17.A1      net (fanout=12)       0.805   readcop_0/readcop_0/video_32<23>
+    SLICE_X94Y17.A       Tilo                  0.094   readcop_0/readcop_0/video_32<23>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_cy<12>11
+    SLICE_X97Y19.B4      net (fanout=1)        0.670   readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_cy<12>
+    SLICE_X97Y19.CMUX    Topbc                 0.673   readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<15>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<13>
+                                                       readcop_0/readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<15>
+    SLICE_X99Y23.B6      net (fanout=2)        0.619   readcop_0/readcop_0/color_conversion/Y_tmp_mult0000<14>
+    SLICE_X99Y23.CMUX    Topbc                 0.673   readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<16>
+                                                       readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<14>
+                                                       readcop_0/readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<16>
+    SLICE_X98Y26.D5      net (fanout=1)        0.691   readcop_0/readcop_0/color_conversion/Y_tmp_addsub0001<15>
+    SLICE_X98Y26.COUT    Topcyd                0.392   readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+                                                       readcop_0/readcop_0/color_conversion/Y_tmp_addsub0001<15>_rt
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+    SLICE_X98Y27.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>
+    SLICE_X98Y27.CMUX    Tcinc                 0.334   readcop_0/readcop_0/color_conversion/Y_tmp<8>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18>
+    SLICE_X97Y30.B6      net (fanout=32)       0.567   readcop_0/readcop_0/color_conversion/Y_tmp<8>
+    SLICE_X97Y30.COUT    Topcyb                0.501   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<1>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+    SLICE_X97Y31.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>
+    SLICE_X97Y31.CMUX    Tcinc                 0.334   readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<7>
+                                                       readcop_0/readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<7>
+    SLICE_X96Y29.C2      net (fanout=14)       0.986   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd2_lut<12>
+    SLICE_X96Y29.C       Tilo                  0.094   readcop_0/readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_lut<13>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_731
+    SLICE_X99Y30.AX      net (fanout=1)        0.463   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_73
+    SLICE_X99Y30.COUT    Taxcy                 0.439   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+    SLICE_X99Y31.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>
+    SLICE_X99Y31.AMUX    Tcina                 0.271   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>
+    SLICE_X98Y32.B6      net (fanout=2)        0.460   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_117
+    SLICE_X98Y32.COUT    Topcyb                0.501   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<11>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+    SLICE_X98Y33.CIN     net (fanout=1)        0.000   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<13>
+    SLICE_X98Y33.DMUX    Tcind                 0.402   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>
+                                                       readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>
+    SLICE_X98Y34.D2      net (fanout=9)        0.850   readcop_0/readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_17
+    SLICE_X98Y34.D       Tilo                  0.094   readcop_0/readcop_0/ycrcb_video<12>
+                                                       readcop_0/readcop_0/color_conversion/Cr<4>1
+    SLICE_X99Y34.B1      net (fanout=2)        0.718   readcop_0/readcop_0/ycrcb_video<12>
+    SLICE_X99Y34.B       Tilo                  0.094   readcop_0/N108
+                                                       readcop_0/readcop_0/video<0>2190_SW0
+    SLICE_X96Y34.B5      net (fanout=1)        0.384   readcop_0/N108
+    SLICE_X96Y34.B       Tilo                  0.094   readcop_0/readcop_0/video<0>2190
+                                                       readcop_0/readcop_0/video<0>2190
+    SLICE_X98Y36.C6      net (fanout=34)       0.574   readcop_0/readcop_0/video<0>2190
+    SLICE_X98Y36.CMUX    Tilo                  0.392   readcop_0/readcop_0/video<0>
+                                                       readcop_0/readcop_0/video<23>11
+                                                       readcop_0/readcop_0/video<23>1_f7
+    OLOGIC_X2Y79.D1      net (fanout=1)        0.592   readcop_0/readcop_0/video<23>
+    OLOGIC_X2Y79.CLK     Todck                 0.434   DVI_D_11_OBUF
+                                                       readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+    -------------------------------------------------  ---------------------------
+    Total                                     18.189ns (8.100ns logic, 10.089ns route)
+                                                       (44.5% logic, 55.5% route)
+
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|     11.487ns|            0|           24|            0|3850636544972|
+| TS_MC_RD_DATA_SEL             |      5.000ns|      4.726ns|          N/A|            0|            0|          384|            0|
+| TS_MC_PHY_INIT_DATA_SEL_0     |      5.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_MC_PHY_INIT_DATA_SEL_90    |      5.000ns|      4.672ns|          N/A|            0|            0|           51|            0|
+| TS_MC_GATE_DLY                |      5.000ns|      3.106ns|          N/A|            0|            0|           40|            0|
+| TS_MC_RDEN_DLY                |      5.000ns|      1.876ns|          N/A|            0|            0|            5|            0|
+| TS_MC_CAL_RDEN_DLY            |      5.000ns|      1.865ns|          N/A|            0|            0|            5|            0|
+| TS_clock_generator_0_clock_gen|      8.000ns|      5.548ns|          N/A|            0|            0|          898|            0|
+| erator_0_SIG_PLL0_CLKOUT0     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      8.000ns|      7.845ns|          N/A|            0|            0|        24854|            0|
+| erator_0_SIG_PLL0_CLKOUT1     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      1.666ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|     16.000ns|     18.379ns|          N/A|           24|            0|3850636518735|            0|
+| erator_0_SIG_PLL0_CLKOUT3     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>|         |    1.809|         |    1.833|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>  |         |    1.809|         |    1.833|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>|         |    1.772|         |    1.796|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>  |         |    1.772|         |    1.796|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>|         |    1.822|         |    1.846|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>  |         |    1.822|         |    1.846|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<3>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<3>|         |    1.772|         |    1.796|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>  |         |    1.772|         |    1.796|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<4>|         |    1.823|         |    1.847|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>  |         |    1.823|         |    1.847|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<5>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<5>|         |    1.838|         |    1.862|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>  |         |    1.838|         |    1.862|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<6>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<6>|         |    1.792|         |    1.816|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>  |         |    1.792|         |    1.816|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<7>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<7>|         |    1.825|         |    1.849|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>  |         |    1.825|         |    1.849|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>|         |    1.809|         |    1.833|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>  |         |    1.809|         |    1.833|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>|         |    1.772|         |    1.796|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>  |         |    1.772|         |    1.796|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>|         |    1.822|         |    1.846|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>  |         |    1.822|         |    1.846|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<3>|         |    1.772|         |    1.796|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>  |         |    1.772|         |    1.796|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<4>|         |    1.823|         |    1.847|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>  |         |    1.823|         |    1.847|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<5>|         |    1.838|         |    1.862|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>  |         |    1.838|         |    1.862|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<6>|         |    1.792|         |    1.816|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>  |         |    1.792|         |    1.816|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<7>|         |    1.825|         |    1.849|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>  |         |    1.825|         |    1.849|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_clk_1_sys_clk_pin
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+fpga_0_clk_1_sys_clk_pin|   18.379|    2.582|    3.916|    4.327|
+------------------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 24  Score: 47643  (Setup/Max: 47643, Hold: 0)
+
+Constraints cover 3850636545492 paths, 16 nets, and 37974 connections
+
+Design statistics:
+   Minimum period:  18.379ns   (Maximum frequency:  54.410MHz)
+   Maximum path delay from/to any node:   5.384ns
+   Maximum net delay:   0.805ns
+
+
+Analysis completed Thu May  2 16:06:27 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 783 MB
+
+
+

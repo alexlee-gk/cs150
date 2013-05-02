@@ -1,0 +1,11 @@
+-p
+xc5vlx110tff1136-1
+-lang
+vhdl
+-intstyle
+default
+-lp
+/home/cc/cs150/sp13/class/cs150-ax/labs/lab5B/lib/
+-msg
+__xps/ise/xmsgprops.lst
+system.mhs
