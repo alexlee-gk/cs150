@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> 
 
@@ -298,12 +298,12 @@ Delay:               0.000ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.26 secs
+Total CPU time to Xst completion: 17.27 secs
  
 --> 
 
 
-Total memory usage is 650364 kilobytes
+Total memory usage is 650360 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

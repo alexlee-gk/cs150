@@ -9,12 +9,6 @@ Reading NGO file
 "/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation/vgain_0_wrapper/syste
 m_vgain_0_wrapper.ngc" ...
 Loading design module
-"/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation/vgain_0_wrapper/chips
-cope_ila.ngc"...
-Loading design module
-"/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation/vgain_0_wrapper/chips
-cope_icon.ngc"...
-Loading design module
 "/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation/vgain_0_wrapper/fifo_
 generator_v9_4.ngc"...
 
@@ -29,7 +23,7 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 507644 kilobytes
+Total memory usage is 500136 kilobytes
 
 Writing NGC file "../system_vgain_0_wrapper.ngc" ...
 Total REAL time to NGCBUILD completion:  9 sec

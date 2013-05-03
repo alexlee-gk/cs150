@@ -26,4 +26,8 @@ lib readcop_v1_00_a SDR2DDR verilog
 lib readcop_v1_00_a ShiftRegister verilog
 lib readcop_v1_00_a RGB2YCrCb verilog
 lib readcop_v1_00_a SkinMask verilog
+lib readcop_v1_00_a Gray verilog
+lib readcop_v1_00_a ButtonParse verilog
+lib readcop_v1_00_a Background verilog
+lib readcop_v1_00_a EdgeDetect verilog
 

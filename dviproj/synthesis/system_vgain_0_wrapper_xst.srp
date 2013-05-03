@@ -67,7 +67,9 @@ Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_
 Module <chipscope_icon> compiled
 Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/VGAIndex.v" in library vgain_v1_00_a
 Module <Debouncer> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/dram_write_frame.v" in library vgain_v1_00_a
 Module <VGAIndex> compiled
+Module <dram_write_frame> compiled
 Compiling verilog file "../hdl/system_vgain_0_wrapper.v" in library work
 Module <system_vgain_0_wrapper> compiled
 No errors in compilation
@@ -84,13 +86,6 @@ Analyzing hierarchy for module <vgain> in library <vgain_v1_00_a> with parameter
 	C_PI_BE_WIDTH = "00000000000000000000000000001000"
 	C_PI_DATA_WIDTH = "00000000000000000000000001000000"
 	C_PI_RDWDADDR_WIDTH = "00000000000000000000000000000100"
-	FLUSH = "00011"
-	INIT = "00001"
-	RDADDR = "00010"
-	RDDATA = "00100"
-	WAIT = "00101"
-	WRDATA = "01000"
-	WRDATA2 = "10000"
 
 Analyzing hierarchy for module <Debouncer> in library <vgain_v1_00_a>.
 
@@ -106,6 +101,19 @@ Analyzing hierarchy for module <VGAIndex> in library <vgain_v1_00_a> with parame
 	PulseV = "00000000000000000000000000000110"
 	Width = "00000000000000000000010000000000"
 
+Analyzing hierarchy for module <dram_write_frame> in library <vgain_v1_00_a> with parameters.
+	C_PI_ADDR_WIDTH = "00000000000000000000000000100000"
+	C_PI_BE_WIDTH = "00000000000000000000000000001000"
+	C_PI_DATA_WIDTH = "00000000000000000000000001000000"
+	C_PI_RDWDADDR_WIDTH = "00000000000000000000000000000100"
+	FLUSH = "00011"
+	INIT = "00001"
+	RDADDR = "00010"
+	RDDATA = "00100"
+	WAIT = "00101"
+	WRDATA = "01000"
+	WRDATA2 = "10000"
+
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -118,22 +126,8 @@ Analyzing module <vgain> in library <vgain_v1_00_a>.
 	C_PI_BE_WIDTH = 32'b00000000000000000000000000001000
 	C_PI_DATA_WIDTH = 32'b00000000000000000000000001000000
 	C_PI_RDWDADDR_WIDTH = 32'b00000000000000000000000000000100
-	FLUSH = 5'b00011
-	INIT = 5'b00001
-	RDADDR = 5'b00010
-	RDDATA = 5'b00100
-	WAIT = 5'b00101
-	WRDATA = 5'b01000
-	WRDATA2 = 5'b10000
-WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/vgain.v" line 293: Instantiating black box module <fifo_generator_v9_4>.
-WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/vgain.v" line 306: Instantiating black box module <chipscope_icon>.
-WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/vgain.v" line 309: Instantiating black box module <chipscope_ila>.
 Module <vgain> is correct for synthesis.
  
-    Set user-defined property "SYN_NOPRUNE =  1" for instance <icon> in unit <vgain>.
-    Set user-defined property "SYN_NOPRUNE =  1" for instance <ila> in unit <vgain>.
-    Set property "SYN_NOPRUNE = 1" for instance <icon> in unit <vgain>.
-    Set property "SYN_NOPRUNE = 1" for instance <ila> in unit <vgain>.
 Analyzing module <Debouncer> in library <vgain_v1_00_a>.
 Module <Debouncer> is correct for synthesis.
  
@@ -150,13 +144,27 @@ Analyzing module <VGAIndex> in library <vgain_v1_00_a>.
 	Width = 32'sb00000000000000000000010000000000
 Module <VGAIndex> is correct for synthesis.
  
+Analyzing module <dram_write_frame> in library <vgain_v1_00_a>.
+	C_PI_ADDR_WIDTH = 32'sb00000000000000000000000000100000
+	C_PI_BE_WIDTH = 32'sb00000000000000000000000000001000
+	C_PI_DATA_WIDTH = 32'sb00000000000000000000000001000000
+	C_PI_RDWDADDR_WIDTH = 32'sb00000000000000000000000000000100
+	FLUSH = 5'b00011
+	INIT = 5'b00001
+	RDADDR = 5'b00010
+	RDDATA = 5'b00100
+	WAIT = 5'b00101
+	WRDATA = 5'b01000
+	WRDATA2 = 5'b10000
+WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/vgain.v" line 170: Instantiating black box module <fifo_generator_v9_4>.
+Module <dram_write_frame> is correct for synthesis.
+ 
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <data_84<64>> in unit <vgain> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <Debouncer>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/Debouncer.v".
@@ -188,6 +196,45 @@ Synthesizing Unit <VGAIndex>.
 Unit <VGAIndex> synthesized.
 
 
+Synthesizing Unit <dram_write_frame>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/dram_write_frame.v".
+WARNING:Xst:647 - Input <XIL_NPI_WrFIFO_Empty> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_RdWdAddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_RdFIFO_Flush> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_Latency> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_RdFIFO_Pop> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_Data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <fifo_full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fifo_empty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State 10000 is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | dram_clk                  (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00011                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <ADDR_MB>.
+    Found 32-bit adder for signal <ADDR_MB$add0000> created at line 140.
+    Found 1-bit register for signal <fifo_rd_en>.
+    Found 5-bit register for signal <rd_counter>.
+    Found 5-bit subtractor for signal <rd_counter$addsub0000> created at line 131.
+    Found 13-bit comparator greater for signal <state$cmp_gt0000> created at line 120.
+    Found 5-bit comparator less for signal <XIL_NPI_WrFIFO_Push$cmp_lt0000> created at line 93.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <dram_write_frame> synthesized.
+
+
 Synthesizing Unit <vgain>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/vgain.v".
 WARNING:Xst:647 - Input <system_dcm_locked> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -196,53 +243,21 @@ WARNING:Xst:647 - Input <FSL_M_Clk> is never used. This port will be preserved a
 WARNING:Xst:1305 - Output <FSL_S_Read> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <FSL_S_Exists> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <VGA_IN_ODDEVEN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_RdWdAddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1305 - Output <XIL_NPI_RdFIFO_Flush> is never assigned. Tied to value 0.
-WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_Latency> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <VGA_IN_SOGOUT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <FSL_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <FSL_S_Control> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <FSL_M_Full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1305 - Output <XIL_NPI_RdFIFO_Pop> is never assigned. Tied to value 0.
 WARNING:Xst:1305 - Output <FSL_M_Write> is never assigned. Tied to value 0.
-WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_Data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <FSL_M_Control> is never assigned. Tied to value 0.
 WARNING:Xst:1305 - Output <FSL_M_Data> is never assigned. Tied to value 00000000000000000000000000000000.
 WARNING:Xst:646 - Signal <vga_i<10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <fifo_full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <fifo_empty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <cpu_clk> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-INFO:Xst:1799 - State 10000 is never reached in FSM <state>.
-    Found finite state machine <FSM_0> for signal <state>.
-    -----------------------------------------------------------------------
-    | States             | 5                                              |
-    | Transitions        | 13                                             |
-    | Inputs             | 6                                              |
-    | Outputs            | 6                                              |
-    | Clock              | FSL_S_Clk                 (rising_edge)        |
-    | Reset              | state$or0000              (positive)           |
-    | Reset type         | synchronous                                    |
-    | Reset State        | 00011                                          |
-    | Encoding           | automatic                                      |
-    | Implementation     | automatic                                      |
-    -----------------------------------------------------------------------
-    Using one-hot encoding for signal <data_mask>.
-    Found 32-bit register for signal <ADDR_MB>.
-    Found 32-bit adder for signal <ADDR_MB$add0000> created at line 263.
-    Found 19-bit register for signal <data_84<83:65>>.
-    Found 64-bit register for signal <data_84<63:0>>.
-    Found 2-bit register for signal <data_mask>.
-    Found 1-bit register for signal <fifo_rd_en>.
+    Found 84-bit register for signal <data_84>.
+    Found 64-bit register for signal <data_mask>.
     Found 20-bit adder for signal <pixel_ind>.
-    Found 5-bit register for signal <rd_counter>.
-    Found 5-bit subtractor for signal <rd_counter$addsub0000> created at line 254.
-    Found 13-bit comparator greater for signal <state$cmp_gt0000> created at line 243.
-    Found 5-bit comparator less for signal <XIL_NPI_WrFIFO_Push$cmp_lt0000> created at line 216.
     Summary:
-	inferred   1 Finite State Machine(s).
-	inferred 123 D-type flip-flop(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred   2 Comparator(s).
+	inferred 148 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
 Unit <vgain> synthesized.
 
 
@@ -263,12 +278,12 @@ Macro Statistics
  5-bit subtractor                                      : 1
 # Counters                                             : 1
  22-bit up counter                                     : 1
-# Registers                                            : 92
- 1-bit register                                        : 87
+# Registers                                            : 93
+ 1-bit register                                        : 88
  11-bit register                                       : 2
- 2-bit register                                        : 1
  32-bit register                                       : 1
  5-bit register                                        : 1
+ 64-bit register                                       : 1
 # Comparators                                          : 6
  11-bit comparator greatequal                          : 2
  11-bit comparator less                                : 2
@@ -282,18 +297,17 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <vgain_0/state/FSM> on signal <state[1:3]> with gray encoding.
+Optimizing FSM <vgain_0/write_vga_signal/state/FSM> on signal <state[1:3]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
- 00011 | 000
- 00101 | 001
  00010 | 011
+ 00011 | 000
  00100 | 010
+ 00101 | 001
  01000 | 110
  10000 | unreached
 -------------------
-WARNING:Xst:2677 - Node <data_mask_0> of sequential type is unconnected in block <vgain>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -308,8 +322,8 @@ Macro Statistics
  5-bit subtractor                                      : 1
 # Counters                                             : 1
  22-bit up counter                                     : 1
-# Registers                                            : 147
- Flip-Flops                                            : 147
+# Registers                                            : 211
+ Flip-Flops                                            : 211
 # Comparators                                          : 6
  11-bit comparator greatequal                          : 2
  11-bit comparator less                                : 2
@@ -321,22 +335,35 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <data_84_61> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_84_64> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_24> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_26> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_27> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_25> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_29> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_30> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_28> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_31> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_57> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_58> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_56> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_60> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_61> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_59> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_63> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_62> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_58> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_60> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_59> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_57> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_56> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_31> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_28> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_30> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_29> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_25> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_27> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_26> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_84_24> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <data_mask_0> in Unit <vgain> is equivalent to the following 63 FFs/Latches, which will be removed : <data_mask_1> <data_mask_2> <data_mask_3> <data_mask_4> <data_mask_5> <data_mask_6> <data_mask_7> <data_mask_8> <data_mask_9> <data_mask_10> <data_mask_11> <data_mask_12> <data_mask_13> <data_mask_14> <data_mask_15> <data_mask_16> <data_mask_17> <data_mask_18> <data_mask_19> <data_mask_20> <data_mask_21> <data_mask_22> <data_mask_23> <data_mask_24> <data_mask_25> <data_mask_26> <data_mask_27> <data_mask_28> <data_mask_29> <data_mask_30> <data_mask_31> <data_mask_32> <data_mask_33> <data_mask_34> <data_mask_35> <data_mask_36> <data_mask_37> <data_mask_38> <data_mask_39> <data_mask_40> <data_mask_41> <data_mask_42> <data_mask_43> <data_mask_44> <data_mask_45> <data_mask_46> <data_mask_47> <data_mask_48> <data_mask_49> <data_mask_50> <data_mask_51> <data_mask_52> <data_mask_53> <data_mask_54> <data_mask_55> <data_mask_56> <data_mask_57> <data_mask_58> <data_mask_59> <data_mask_60>
+   <data_mask_61> <data_mask_62> <data_mask_63> 
+WARNING:Xst:1710 - FF/Latch <ADDR_MB_0> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_1> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_22> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_23> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_24> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_25> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_26> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_27> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_29> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_30> (without init value) has a constant value of 0 in block <dram_write_frame>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rst_parse/count_21> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rst_parse/count_20> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rst_parse/count_19> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
@@ -359,21 +386,13 @@ WARNING:Xst:1710 - FF/Latch <rst_parse/count_3> (without init value) has a const
 WARNING:Xst:1710 - FF/Latch <rst_parse/count_2> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rst_parse/count_1> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rst_parse/count_0> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_30> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_29> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_27> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_26> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_25> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_24> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_23> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_22> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_1> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ADDR_MB_0> (without init value) has a constant value of 0 in block <vgain>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ADDR_MB_28> in Unit <vgain> is equivalent to the following FF/Latch, which will be removed : <ADDR_MB_31> 
+INFO:Xst:2261 - The FF/Latch <ADDR_MB_28> in Unit <dram_write_frame> is equivalent to the following FF/Latch, which will be removed : <ADDR_MB_31> 
 
 Optimizing unit <system_vgain_0_wrapper> ...
 
 Optimizing unit <VGAIndex> ...
+
+Optimizing unit <dram_write_frame> ...
 
 Optimizing unit <vgain> ...
 
@@ -415,25 +434,23 @@ Design Statistics
 # IOs                              : 295
 
 Cell Usage :
-# BELS                             : 186
+# BELS                             : 171
 #      GND                         : 1
-#      INV                         : 3
-#      LUT2                        : 9
-#      LUT3                        : 13
-#      LUT4                        : 74
-#      LUT5                        : 22
-#      LUT6                        : 62
-#      MUXF7                       : 1
+#      LUT2                        : 5
+#      LUT3                        : 59
+#      LUT4                        : 13
+#      LUT5                        : 25
+#      LUT6                        : 65
+#      MUXF7                       : 2
 #      VCC                         : 1
 # FlipFlops/Latches                : 123
-#      FD                          : 73
-#      FDR                         : 25
+#      FD                          : 70
+#      FDE                         : 1
+#      FDR                         : 26
 #      FDRE                        : 21
-#      FDRS                        : 2
+#      FDRS                        : 3
 #      FDS                         : 2
-# Others                           : 3
-#      chipscope_icon              : 1
-#      chipscope_ila               : 1
+# Others                           : 1
 #      fifo_generator_v9_4         : 1
 =========================================================================
 
@@ -445,15 +462,15 @@ Selected Device : 5vlx110tff1136-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:             123  out of  69120     0%  
- Number of Slice LUTs:                  183  out of  69120     0%  
-    Number used as Logic:               183  out of  69120     0%  
+ Number of Slice LUTs:                  167  out of  69120     0%  
+    Number used as Logic:               167  out of  69120     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    198
-   Number with an unused Flip Flop:      75  out of    198    37%  
-   Number with an unused LUT:            15  out of    198     7%  
-   Number of fully used LUT-FF pairs:   108  out of    198    54%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    187
+   Number with an unused Flip Flop:      64  out of    187    34%  
+   Number with an unused LUT:            20  out of    187    10%  
+   Number of fully used LUT-FF pairs:   103  out of    187    55%  
+   Number of unique control sets:         9
 
 IO Utilization: 
  Number of IOs:                         295
@@ -479,12 +496,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+--------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                | Load  |
------------------------------------+--------------------------------------+-------+
-VGA_IN_DATA_CLK                    | NONE(vgain_0/vga_index/hsout_delayed)| 93    |
-FSL_S_Clk                          | NONE(vgain_0/state_FSM_FFd1)         | 30    |
------------------------------------+--------------------------------------+-------+
+-----------------------------------+------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                    | Load  |
+-----------------------------------+------------------------------------------+-------+
+FSL_S_Clk                          | NONE(vgain_0/write_vga_signal/fifo_rd_en)| 30    |
+VGA_IN_DATA_CLK                    | NONE(vgain_0/vga_index/hsout_delayed)    | 93    |
+-----------------------------------+------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -495,19 +512,42 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.486ns (Maximum Frequency: 286.880MHz)
-   Minimum input arrival time before clock: 3.199ns
-   Maximum output required time after clock: 3.486ns
-   Maximum combinational path delay: 0.827ns
+   Minimum period: 3.486ns (Maximum Frequency: 286.874MHz)
+   Minimum input arrival time before clock: 3.024ns
+   Maximum output required time after clock: 1.945ns
+   Maximum combinational path delay: 0.731ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
+  Clock period: 2.761ns (frequency: 362.188MHz)
+  Total number of paths / destination ports: 274 / 32
+-------------------------------------------------------------------------
+Delay:               2.761ns (Levels of Logic = 2)
+  Source:            vgain_0/write_vga_signal/rd_counter_0 (FF)
+  Destination:       vgain_0/write_vga_signal/rd_counter_2 (FF)
+  Source Clock:      FSL_S_Clk rising
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: vgain_0/write_vga_signal/rd_counter_0 to vgain_0/write_vga_signal/rd_counter_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.471   1.033  vgain_0/write_vga_signal/rd_counter_0 (vgain_0/write_vga_signal/rd_counter_0)
+     LUT5:I0->O            1   0.094   1.069  vgain_0/write_vga_signal/rd_counter_mux0000<2>1_SW1 (N14)
+     LUT6:I0->O            1   0.094   0.000  vgain_0/write_vga_signal/rd_counter_mux0000<2>1 (vgain_0/write_vga_signal/rd_counter_mux0000<2>1)
+     FD:D                     -0.018          vgain_0/write_vga_signal/rd_counter_2
+    ----------------------------------------
+    Total                      2.761ns (0.659ns logic, 2.102ns route)
+                                       (23.9% logic, 76.1% route)
+
+=========================================================================
 Timing constraint: Default period analysis for Clock 'VGA_IN_DATA_CLK'
-  Clock period: 3.486ns (frequency: 286.880MHz)
-  Total number of paths / destination ports: 1922 / 92
+  Clock period: 3.486ns (frequency: 286.874MHz)
+  Total number of paths / destination ports: 1886 / 93
 -------------------------------------------------------------------------
 Delay:               3.486ns (Levels of Logic = 4)
   Source:            vgain_0/vga_index/h_counter_6 (FF)
@@ -519,129 +559,103 @@ Delay:               3.486ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              6   0.471   1.000  vgain_0/vga_index/h_counter_6 (vgain_0/vga_index/h_counter_6)
-     LUT5:I0->O           12   0.094   0.540  vgain_0/vga_index/Msub_j_xor<7>121 (vgain_0/vga_index/N44)
-     LUT5:I4->O            2   0.094   0.485  vgain_0/vga_index/valid_SW2 (N43)
-     LUT5:I4->O           67   0.094   0.614  vgain_0/vga_index/valid (vgain_0/vga_valid)
-     LUT4:I3->O            1   0.094   0.000  vgain_0/data_84_32_rstpot (vgain_0/data_84_32_rstpot)
-     FD:D                     -0.018          vgain_0/data_84_32
+     FDR:C->Q              5   0.471   0.995  vgain_0/vga_index/h_counter_6 (vgain_0/vga_index/h_counter_6)
+     LUT5:I0->O            8   0.094   0.518  vgain_0/vga_index/Msub_j_xor<7>121 (vgain_0/vga_index/N44)
+     LUT5:I4->O            8   0.094   0.518  vgain_0/vga_index/valid_SW2 (N31)
+     LUT6:I5->O           35   0.094   0.608  vgain_0/data_84_31_not00011 (vgain_0/data_84_31_not0001)
+     LUT3:I2->O            1   0.094   0.000  vgain_0/data_84_65_rstpot (vgain_0/data_84_65_rstpot)
+     FD:D                     -0.018          vgain_0/data_84_65
     ----------------------------------------
     Total                      3.486ns (0.847ns logic, 2.639ns route)
                                        (24.3% logic, 75.7% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
-  Clock period: 2.605ns (frequency: 383.877MHz)
-  Total number of paths / destination ports: 265 / 31
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 84 / 56
 -------------------------------------------------------------------------
-Delay:               2.605ns (Levels of Logic = 2)
-  Source:            vgain_0/state_FSM_FFd3 (FF)
-  Destination:       vgain_0/fifo_rd_en (FF)
-  Source Clock:      FSL_S_Clk rising
+Offset:              3.024ns (Levels of Logic = 4)
+  Source:            vgain_0/write_vga_signal/fifo:rd_data_count<11> (PAD)
+  Destination:       vgain_0/write_vga_signal/state_FSM_FFd3 (FF)
   Destination Clock: FSL_S_Clk rising
 
-  Data Path: vgain_0/state_FSM_FFd3 to vgain_0/fifo_rd_en
+  Data Path: vgain_0/write_vga_signal/fifo:rd_data_count<11> to vgain_0/write_vga_signal/state_FSM_FFd3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             17   0.471   0.877  vgain_0/state_FSM_FFd3 (vgain_0/state_FSM_FFd3)
-     LUT4:I0->O            1   0.094   1.069  vgain_0/fifo_rd_en_mux00001_SW1 (N36)
-     LUT6:I0->O            1   0.094   0.000  vgain_0/fifo_rd_en_mux00001 (vgain_0/fifo_rd_en_mux0000)
-     FDR:D                    -0.018          vgain_0/fifo_rd_en
+    fifo_generator_v9_4:rd_data_count<11>    2   0.000   0.715  vgain_0/write_vga_signal/fifo (vgain_0/write_vga_signal/data_count<11>)
+     LUT3:I0->O            1   0.094   0.973  vgain_0/write_vga_signal/state_FSM_FFd3-In69 (vgain_0/write_vga_signal/state_FSM_FFd3-In69)
+     LUT6:I1->O            1   0.094   0.480  vgain_0/write_vga_signal/state_FSM_FFd3-In92 (vgain_0/write_vga_signal/state_FSM_FFd3-In92)
+     LUT2:I1->O            1   0.094   0.480  vgain_0/write_vga_signal/state_FSM_FFd3-In1251 (vgain_0/write_vga_signal/state_FSM_FFd3-In125)
+     LUT6:I5->O            1   0.094   0.000  vgain_0/write_vga_signal/state_FSM_FFd3_rstpot (vgain_0/write_vga_signal/state_FSM_FFd3_rstpot)
+     FDR:D                    -0.018          vgain_0/write_vga_signal/state_FSM_FFd3
     ----------------------------------------
-    Total                      2.605ns (0.659ns logic, 1.946ns route)
-                                       (25.3% logic, 74.7% route)
+    Total                      3.024ns (0.376ns logic, 2.648ns route)
+                                       (12.4% logic, 87.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'VGA_IN_DATA_CLK'
-  Total number of paths / destination ports: 102 / 73
+  Total number of paths / destination ports: 104 / 73
 -------------------------------------------------------------------------
-Offset:              1.631ns (Levels of Logic = 2)
+Offset:              1.579ns (Levels of Logic = 2)
   Source:            VGA_IN_HSOUT (PAD)
-  Destination:       vgain_0/vga_index/h_counter_3 (FF)
+  Destination:       vgain_0/vga_index/h_counter_5 (FF)
   Destination Clock: VGA_IN_DATA_CLK rising
 
-  Data Path: VGA_IN_HSOUT to vgain_0/vga_index/h_counter_3
+  Data Path: VGA_IN_HSOUT to vgain_0/vga_index/h_counter_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT6:I0->O            1   0.094   0.710  vgain_0/vga_index/h_counter_mux0000<7>_SW4 (N87)
-     LUT5:I2->O            1   0.094   0.000  vgain_0/vga_index/h_counter_mux0000<7> (vgain_0/vga_index/h_counter_mux0000<7>)
-     FDR:D                    -0.018          vgain_0/vga_index/h_counter_3
+     LUT4:I1->O            9   0.094   1.017  vgain_0/vga_index/h_counter_mux0000<2>31 (vgain_0/vga_index/N28)
+     LUT6:I1->O            1   0.094   0.000  vgain_0/vga_index/h_counter_mux0000<5>1 (vgain_0/vga_index/h_counter_mux0000<5>)
+     FDR:D                    -0.018          vgain_0/vga_index/h_counter_5
     ----------------------------------------
-    Total                      1.631ns (0.921ns logic, 0.710ns route)
-                                       (56.5% logic, 43.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
-  Total number of paths / destination ports: 92 / 54
--------------------------------------------------------------------------
-Offset:              3.199ns (Levels of Logic = 4)
-  Source:            vgain_0/fifo:rd_data_count<4> (PAD)
-  Destination:       vgain_0/state_FSM_FFd3 (FF)
-  Destination Clock: FSL_S_Clk rising
-
-  Data Path: vgain_0/fifo:rd_data_count<4> to vgain_0/state_FSM_FFd3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    fifo_generator_v9_4:rd_data_count<4>    1   0.000   0.789  vgain_0/fifo (vgain_0/data_count<4>)
-     LUT4:I0->O            1   0.094   0.480  vgain_0/fifo_rd_en_mux00003_SW0 (N38)
-     LUT6:I5->O            2   0.094   0.581  vgain_0/fifo_rd_en_mux00003 (vgain_0/fifo_rd_en_mux0000_bdd3)
-     LUT3:I1->O            1   0.094   0.973  vgain_0/state_FSM_FFd3-In1_SW0 (N6)
-     LUT6:I1->O            1   0.094   0.000  vgain_0/state_FSM_FFd3-In1 (vgain_0/state_FSM_FFd3-In)
-     FDR:D                    -0.018          vgain_0/state_FSM_FFd3
-    ----------------------------------------
-    Total                      3.199ns (0.376ns logic, 2.823ns route)
-                                       (11.8% logic, 88.2% route)
+    Total                      1.579ns (0.562ns logic, 1.017ns route)
+                                       (35.6% logic, 64.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
-  Total number of paths / destination ports: 80 / 59
+  Total number of paths / destination ports: 39 / 25
 -------------------------------------------------------------------------
-Offset:              2.391ns (Levels of Logic = 2)
-  Source:            vgain_0/rd_counter_4 (FF)
+Offset:              1.945ns (Levels of Logic = 2)
+  Source:            vgain_0/write_vga_signal/rd_counter_4 (FF)
   Destination:       XIL_NPI_AddrReq (PAD)
   Source Clock:      FSL_S_Clk rising
 
-  Data Path: vgain_0/rd_counter_4 to XIL_NPI_AddrReq
+  Data Path: vgain_0/write_vga_signal/rd_counter_4 to XIL_NPI_AddrReq
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.471   1.011  vgain_0/rd_counter_4 (vgain_0/rd_counter_4)
-     LUT5:I0->O            3   0.094   0.721  vgain_0/XIL_NPI_AddrReq21 (vgain_0/XIL_NPI_AddrReq_bdd0)
-     LUT3:I0->O            0   0.094   0.000  vgain_0/XIL_NPI_AddrReq11 (XIL_NPI_AddrReq)
+     FD:C->Q              12   0.471   1.129  vgain_0/write_vga_signal/rd_counter_4 (vgain_0/write_vga_signal/rd_counter_4)
+     LUT6:I0->O            1   0.094   0.000  vgain_0/write_vga_signal/XIL_NPI_AddrReq2 (vgain_0/write_vga_signal/XIL_NPI_AddrReq1)
+     MUXF7:I0->O           0   0.251   0.000  vgain_0/write_vga_signal/XIL_NPI_AddrReq_f7 (XIL_NPI_AddrReq)
     ----------------------------------------
-    Total                      2.391ns (0.659ns logic, 1.732ns route)
-                                       (27.6% logic, 72.4% route)
+    Total                      1.945ns (0.816ns logic, 1.129ns route)
+                                       (42.0% logic, 58.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_IN_DATA_CLK'
-  Total number of paths / destination ports: 426 / 156
+  Total number of paths / destination ports: 68 / 68
 -------------------------------------------------------------------------
-Offset:              3.486ns (Levels of Logic = 3)
-  Source:            vgain_0/vga_index/v_counter_2 (FF)
-  Destination:       vgain_0/ila:DATA<245> (PAD)
+Offset:              0.812ns (Levels of Logic = 0)
+  Source:            vgain_0/data_84_72 (FF)
+  Destination:       vgain_0/write_vga_signal/fifo:din<72> (PAD)
   Source Clock:      VGA_IN_DATA_CLK rising
 
-  Data Path: vgain_0/vga_index/v_counter_2 to vgain_0/ila:DATA<245>
+  Data Path: vgain_0/data_84_72 to vgain_0/write_vga_signal/fifo:din<72>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             13   0.471   1.039  vgain_0/vga_index/v_counter_2 (vgain_0/vga_index/v_counter_2)
-     LUT5:I0->O            1   0.094   0.576  vgain_0/Madd_pixel_ind_xor<15>111_SW0 (N89)
-     LUT6:I4->O           10   0.094   1.118  vgain_0/Madd_pixel_ind_xor<15>111 (vgain_0/N10)
-     LUT6:I0->O            0   0.094   0.000  vgain_0/Madd_pixel_ind_xor<19>11 (vgain_0/pixel_ind<19>)
-    chipscope_ila:DATA<245>        0.000          vgain_0/ila
+     FD:C->Q               2   0.471   0.341  vgain_0/data_84_72 (vgain_0/data_84_72)
+    fifo_generator_v9_4:din<72>        0.000          vgain_0/write_vga_signal/fifo
     ----------------------------------------
-    Total                      3.486ns (0.753ns logic, 2.733ns route)
-                                       (21.6% logic, 78.4% route)
+    Total                      0.812ns (0.471ns logic, 0.341ns route)
+                                       (58.0% logic, 42.0% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 172 / 170
+  Total number of paths / destination ports: 70 / 68
 -------------------------------------------------------------------------
-Delay:               0.827ns (Levels of Logic = 1)
+Delay:               0.731ns (Levels of Logic = 1)
   Source:            XIL_NPI_InitDone (PAD)
   Destination:       XIL_NPI_WrFIFO_Push (PAD)
 
@@ -649,25 +663,23 @@ Delay:               0.827ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT6:I0->O            0   0.094   0.000  vgain_0/XIL_NPI_WrFIFO_Push11 (XIL_NPI_WrFIFO_Push)
+     LUT6:I1->O            0   0.094   0.000  vgain_0/write_vga_signal/XIL_NPI_WrFIFO_Push1 (XIL_NPI_WrFIFO_Push)
     ----------------------------------------
-    Total                      0.827ns (0.827ns logic, 0.000ns route)
+    Total                      0.731ns (0.731ns logic, 0.000ns route)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
-WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to vgain_0/ila.
-WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to vgain_0/icon.
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.15 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.32 secs
  
 --> 
 
 
-Total memory usage is 649092 kilobytes
+Total memory usage is 649032 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   77 (   0 filtered)
+Number of warnings :   73 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

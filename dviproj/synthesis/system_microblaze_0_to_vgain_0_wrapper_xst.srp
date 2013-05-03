@@ -4,8 +4,8 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> 
 
@@ -441,16 +441,16 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
   Total number of paths / destination ports: 139 / 36
 -------------------------------------------------------------------------
 Offset:              1.948ns (Levels of Logic = 2)
-  Source:            microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3 (FF)
+  Source:            microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2 (FF)
   Destination:       FSL_Control_IRQ (PAD)
   Source Clock:      FSL_S_Clk rising
 
-  Data Path: microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3 to FSL_Control_IRQ
+  Data Path: microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2 to FSL_Control_IRQ
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            25   0.471   0.462  microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3 (microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3)
-     RAM32M:ADDRA3->DOA0    1   0.345   0.576  microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram_Memory1 (FSL_S_Control)
+     FDCE:C->Q            25   0.471   0.462  microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2 (microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2)
+     RAM32M:ADDRA2->DOA0    1   0.345   0.576  microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram_Memory1 (FSL_S_Control)
      LUT2:I0->O            0   0.094   0.000  microblaze_0_to_vgain_0/FSL_Control_IRQ1 (FSL_Control_IRQ)
     ----------------------------------------
     Total                      1.948ns (0.910ns logic, 1.038ns route)
@@ -478,8 +478,8 @@ Offset:              2.310ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.10 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 18.93 secs
  
 --> 
 

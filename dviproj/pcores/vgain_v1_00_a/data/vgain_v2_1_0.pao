@@ -7,3 +7,4 @@
 lib vgain_v1_00_a vgain verilog
 lib vgain_v1_00_a Debouncer verilog
 lib vgain_v1_00_a VGAIndex verilog
+lib vgain_v1_00_a dram_write_frame verilog

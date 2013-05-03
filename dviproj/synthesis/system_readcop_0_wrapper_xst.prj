@@ -20,4 +20,8 @@ verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readco
 verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v
 verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/RGB2YCrCb.v
 verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SkinMask.v
+verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Gray.v
+verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ButtonParse.v
+verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Background.v
+verilog readcop_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/EdgeDetect.v
 verilog work ../hdl/system_readcop_0_wrapper.v

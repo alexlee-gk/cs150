@@ -8,7 +8,7 @@ Loading device for application Rf_Device from file '5vlx110t.nph' in environment
    "system" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
 Opened constraints file system.pcf.
 
-Thu May  2 16:06:53 2013
+Fri May  3 13:36:35 2013
 
 /opt/Xilinx/14.1/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w -g TdoPin:PULLNONE -g DriveDone:No -g StartUpClk:JTAGCLK -g DONE_cycle:4 -g GTS_cycle:5 -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g DonePipe:No -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
 
@@ -125,60 +125,55 @@ There were 0 CONFIG constraint(s) processed from system.pcf.
 
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_0' at 'RAMB36_X1Y0' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_0' at 'RAMB36_X1Y13' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_1' at 'RAMB36_X1Y2' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_1' at 'RAMB36_X1Y16' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_2' at 'RAMB36_X0Y2' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_2' at 'RAMB36_X1Y12' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_3' at 'RAMB36_X1Y1' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_3' at 'RAMB36_X1Y11' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_4' at 'RAMB36_X1Y3' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_4' at 'RAMB36_X1Y14' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_5' at 'RAMB36_X2Y6' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_5' at 'RAMB36_X1Y15' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_6' at 'RAMB36_X1Y9' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_6' at 'RAMB36_X1Y18' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_7' at 'RAMB36_X1Y13' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_7' at 'RAMB36_X1Y17' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_8' at 'RAMB36_X0Y13' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_8' at 'RAMB36_X2Y18' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_9' at 'RAMB36_X1Y10' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_9' at 'RAMB36_X2Y17' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_10' at 'RAMB36_X1Y8' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_10' at 'RAMB36_X2Y16' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_11' at 'RAMB36_X1Y7' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_11' at 'RAMB36_X1Y24' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_12' at 'RAMB36_X1Y6' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_12' at 'RAMB36_X1Y23' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_13' at 'RAMB36_X1Y5' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_13' at 'RAMB36_X1Y19' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_14' at 'RAMB36_X0Y4' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_14' at 'RAMB36_X1Y20' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_15' at 'RAMB36_X1Y4' location successfully updated with design data.
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb36_15' at 'RAMB36_X1Y21' location successfully updated with design data.
 
 Running DRC.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   vgain_0/vgain_0/chipscope_control<13> is sourced by a combinatorial pin. This
-   is not good design practice. Use the CE pin to control the loading of data
-   into the flip-flop.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 '2100@license-srv.eecs.berkeley.edu'.
 INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.

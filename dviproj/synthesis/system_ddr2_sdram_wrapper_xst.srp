@@ -4,8 +4,8 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 
@@ -14378,13 +14378,13 @@ WARNING:Xst:616 - Invalid property "SYN_PRESERVE 1": Did not attach to DDR2_SDRA
 WARNING:Xst:616 - Invalid property "SYN_PRESERVE 1": Did not attach to DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[7].u_iob_dm/u_dm_ce.
 
 
-Total REAL time to Xst completion: 412.00 secs
-Total CPU time to Xst completion: 403.86 secs
+Total REAL time to Xst completion: 399.00 secs
+Total CPU time to Xst completion: 393.60 secs
  
 --> 
 
 
-Total memory usage is 1004776 kilobytes
+Total memory usage is 1004780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 3446 (   0 filtered)

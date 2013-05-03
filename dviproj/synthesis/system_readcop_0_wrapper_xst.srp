@@ -4,8 +4,8 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 
@@ -78,6 +78,7 @@ Module <DVIData> compiled
 Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CDRAMMaster.constants"
 Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.constants"
 Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Debouncer.v" in library readcop_v1_00_a
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
 Module <DVIInitial> compiled
 Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFOInitial.v" in library readcop_v1_00_a
 WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFOInitial.v" line 43 Macro 'MACROSAFE' redefined
@@ -122,7 +123,15 @@ Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readco
 Module <ShiftRegister> compiled
 Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SkinMask.v" in library readcop_v1_00_a
 Module <RGB2YCrCb> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Gray.v" in library readcop_v1_00_a
 Module <SkinMask> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ButtonParse.v" in library readcop_v1_00_a
+Module <Gray> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Background.v" in library readcop_v1_00_a
+Module <ButtonParse> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/EdgeDetect.v" in library readcop_v1_00_a
+Module <Background> compiled
+Module <EdgeDetect> compiled
 Compiling verilog file "../hdl/system_readcop_0_wrapper.v" in library work
 Module <system_readcop_0_wrapper> compiled
 No errors in compilation
@@ -135,25 +144,45 @@ Analysis of file <"system_readcop_0_wrapper_xst.prj"> succeeded.
 Analyzing hierarchy for module <system_readcop_0_wrapper> in library <work>.
 
 Analyzing hierarchy for module <readcop> in library <readcop_v1_00_a> with parameters.
+	BACKGROUND = "111"
+	BLUE = "101"
 	C_PI_ADDR_WIDTH = "00000000000000000000000000100000"
 	C_PI_BE_WIDTH = "00000000000000000000000000001000"
 	C_PI_DATA_WIDTH = "00000000000000000000000001000000"
 	C_PI_RDWDADDR_WIDTH = "00000000000000000000000000000100"
 	FTDATA = "000100"
+	GRAY = "110"
+	GREEN = "100"
 	INIT = "000001"
 	INIT2 = "100000"
-	MASK = "10"
+	MASK = "010"
 	RDADDR = "000010"
-	RGB = "00"
+	RED = "011"
+	RGB = "000"
 	WAITEMP = "001000"
 	WAITLAT = "010000"
-	YCRCB = "01"
+	YCRCB = "001"
 
-Analyzing hierarchy for module <Debouncer> in library <readcop_v1_00_a>.
+Analyzing hierarchy for module <ButtonParse> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	Continuous = "00000000000000000000000000000000"
+	DebSimWidth = "00000000000000000000000000000100"
+	DebWidth = "00000000000000000000000000010100"
+	EdgeOutWidth = "00000000000000000000000000000001"
+	EdgeType = "00000000000000000000000000000000"
+	EdgeUpWidth = "00000000000000000000000000000010"
+	EdgeWidth = "00000000000000000000000000000011"
+	EnableEdge = "00000000000000000000000000000000"
+	Related = "00000000000000000000000000000001"
+	Width = "00000000000000000000000000000001"
 
 Analyzing hierarchy for module <RGB2YCrCb> in library <readcop_v1_00_a>.
 
 Analyzing hierarchy for module <SkinMask> in library <readcop_v1_00_a>.
+
+Analyzing hierarchy for module <Gray> in library <readcop_v1_00_a>.
+
+Analyzing hierarchy for module <Background> in library <readcop_v1_00_a>.
 
 Analyzing hierarchy for module <DVI> in library <readcop_v1_00_a> with parameters.
 	BackH = "00000000000000000000000010010000"
@@ -167,6 +196,19 @@ Analyzing hierarchy for module <DVI> in library <readcop_v1_00_a> with parameter
 	PulseH = "00000000000000000000000010001000"
 	PulseV = "00000000000000000000000000000110"
 	Width = "00000000000000000000010100110000"
+
+Analyzing hierarchy for module <Debouncer> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	Continuous = "00000000000000000000000000000000"
+	SimWidth = "00000000000000000000000000000100"
+	Width = "00000000000000000000000000010100"
+	XWidth = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <EdgeDetect> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	Type = "00000000000000000000000000000000"
+	UpWidth = "00000000000000000000000000000010"
+	Width = "00000000000000000000000000000011"
 
 Analyzing hierarchy for module <DVIData> in library <readcop_v1_00_a> with parameters.
 	BackH = "00000000000000000000000010010000"
@@ -190,6 +232,30 @@ Analyzing hierarchy for module <DVIInitial> in library <readcop_v1_00_a> with pa
 	I2CMCMD_Restart = "11"
 	I2CMCMD_Write = "10"
 	I2CRate = "00000000000000011000011010100000"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "00000000000000000000000000000000"
+	ResetValue = "00000000000000000000"
+	SetValue = "11111111111111111111"
+	Width = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "X"
+	ResetValue = "0"
+	SetValue = "1"
+	Width = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	ResetValue = "000"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
 
 Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
 	AsyncReset = "00000000000000000000000000000000"
@@ -647,30 +713,94 @@ Analyzing top module <system_readcop_0_wrapper>.
 Module <system_readcop_0_wrapper> is correct for synthesis.
  
 Analyzing module <readcop> in library <readcop_v1_00_a>.
+	BACKGROUND = 3'b111
+	BLUE = 3'b101
 	C_PI_ADDR_WIDTH = 32'b00000000000000000000000000100000
 	C_PI_BE_WIDTH = 32'b00000000000000000000000000001000
 	C_PI_DATA_WIDTH = 32'b00000000000000000000000001000000
 	C_PI_RDWDADDR_WIDTH = 32'b00000000000000000000000000000100
 	FTDATA = 6'b000100
+	GRAY = 3'b110
+	GREEN = 3'b100
 	INIT = 6'b000001
 	INIT2 = 6'b100000
-	MASK = 2'b10
+	MASK = 3'b010
 	RDADDR = 6'b000010
-	RGB = 2'b00
+	RED = 3'b011
+	RGB = 3'b000
 	WAITEMP = 6'b001000
 	WAITLAT = 6'b010000
-	YCRCB = 2'b01
-WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/readcop.v" line 385: Instantiating black box module <fifo_generator_v9_1>.
+	YCRCB = 3'b001
+WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/readcop.v" line 406: Instantiating black box module <fifo_generator_v9_1>.
 Module <readcop> is correct for synthesis.
  
+Analyzing module <ButtonParse> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	Continuous = 32'sb00000000000000000000000000000000
+	DebSimWidth = 32'sb00000000000000000000000000000100
+	DebWidth = 32'sb00000000000000000000000000010100
+	EdgeOutWidth = 32'sb00000000000000000000000000000001
+	EdgeType = 32'sb00000000000000000000000000000000
+	EdgeUpWidth = 32'sb00000000000000000000000000000010
+	EdgeWidth = 32'sb00000000000000000000000000000011
+	EnableEdge = 32'sb00000000000000000000000000000000
+	Related = 32'sb00000000000000000000000000000001
+	Width = 32'sb00000000000000000000000000000001
+Module <ButtonParse> is correct for synthesis.
+ 
 Analyzing module <Debouncer> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	Continuous = 32'sb00000000000000000000000000000000
+	SimWidth = 32'sb00000000000000000000000000000100
+	Width = 32'sb00000000000000000000000000010100
+	XWidth = 32'sb00000000000000000000000000010100
 Module <Debouncer> is correct for synthesis.
+ 
+Analyzing module <Register.1> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 32'sb00000000000000000000000000000000
+	ResetValue = 20'b00000000000000000000
+	SetValue = 20'b11111111111111111111
+	Width = 32'sb00000000000000000000000000010100
+Module <Register.1> is correct for synthesis.
+ 
+Analyzing module <Register.2> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 1'bX
+	ResetValue = 1'b0
+	SetValue = 1'b1
+	Width = 32'sb00000000000000000000000000000001
+Module <Register.2> is correct for synthesis.
+ 
+Analyzing module <EdgeDetect> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	Type = 32'sb00000000000000000000000000000000
+	UpWidth = 32'sb00000000000000000000000000000010
+	Width = 32'sb00000000000000000000000000000011
+Module <EdgeDetect> is correct for synthesis.
+ 
+Analyzing module <Register.3> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	ResetValue = 3'b000
+	SetValue = 3'b111
+	Width = 32'sb00000000000000000000000000000011
+Module <Register.3> is correct for synthesis.
  
 Analyzing module <RGB2YCrCb> in library <readcop_v1_00_a>.
 Module <RGB2YCrCb> is correct for synthesis.
  
 Analyzing module <SkinMask> in library <readcop_v1_00_a>.
 Module <SkinMask> is correct for synthesis.
+ 
+Analyzing module <Gray> in library <readcop_v1_00_a>.
+Module <Gray> is correct for synthesis.
+ 
+Analyzing module <Background> in library <readcop_v1_00_a>.
+Module <Background> is correct for synthesis.
  
 Analyzing module <DVI> in library <readcop_v1_00_a>.
 	BackH = 32'sb00000000000000000000000010010000
@@ -697,14 +827,14 @@ Analyzing module <DVIData> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000010100110000
 Module <DVIData> is correct for synthesis.
  
-Analyzing module <Register.1> in library <readcop_v1_00_a>.
+Analyzing module <Register.4> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 1'bX
 	ResetValue = 1'b0
 	SetValue = 1'b1
 	Width = 32'sb00000000000000000000000000000001
-Module <Register.1> is correct for synthesis.
+Module <Register.4> is correct for synthesis.
  
 Analyzing module <SDR2DDR.1> in library <readcop_v1_00_a>.
 	DDRWidth = 32'sb00000000000000000000000000000010
@@ -795,14 +925,14 @@ Analyzing module <Counter.1> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000001011
 Module <Counter.1> is correct for synthesis.
  
-Analyzing module <Register.3> in library <readcop_v1_00_a>.
+Analyzing module <Register.6> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 11'bXXXXXXXXXXX
 	ResetValue = 11'b00000000000
 	SetValue = 11'b11111111111
 	Width = 32'sb00000000000000000000000000001011
-Module <Register.3> is correct for synthesis.
+Module <Register.6> is correct for synthesis.
  
 Analyzing module <CountCompare.1> in library <readcop_v1_00_a>.
 	CWidth = 32'sb00000000000000000000000000001011
@@ -822,14 +952,14 @@ Analyzing module <Counter.2> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000001010
 Module <Counter.2> is correct for synthesis.
  
-Analyzing module <Register.4> in library <readcop_v1_00_a>.
+Analyzing module <Register.7> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 10'bXXXXXXXXXX
 	ResetValue = 10'b0000000000
 	SetValue = 10'b1111111111
 	Width = 32'sb00000000000000000000000000001010
-Module <Register.4> is correct for synthesis.
+Module <Register.7> is correct for synthesis.
  
 Analyzing module <CountCompare.2> in library <readcop_v1_00_a>.
 	CWidth = 32'sb00000000000000000000000000001010
@@ -848,14 +978,14 @@ Analyzing module <CountRegion.1> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000001011
 Module <CountRegion.1> is correct for synthesis.
  
-Analyzing module <Register.5> in library <readcop_v1_00_a>.
+Analyzing module <Register.8> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 3'bXXX
 	ResetValue = 3'b010
 	SetValue = 3'b111
 	Width = 32'sb00000000000000000000000000000011
-Module <Register.5> is correct for synthesis.
+Module <Register.8> is correct for synthesis.
  
 Analyzing module <CountCompare.3> in library <readcop_v1_00_a>.
 	CWidth = 32'sb00000000000000000000000000001010
@@ -891,14 +1021,14 @@ Analyzing module <CountRegion.3> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000001011
 Module <CountRegion.3> is correct for synthesis.
  
-Analyzing module <Register.6> in library <readcop_v1_00_a>.
+Analyzing module <Register.9> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 3'bXXX
 	ResetValue = 3'b001
 	SetValue = 3'b111
 	Width = 32'sb00000000000000000000000000000011
-Module <Register.6> is correct for synthesis.
+Module <Register.9> is correct for synthesis.
  
 Analyzing module <CountCompare.5> in library <readcop_v1_00_a>.
 	CWidth = 32'sb00000000000000000000000000001011
@@ -961,14 +1091,14 @@ Analyzing module <FIFOInitial.1> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000001000
 Module <FIFOInitial.1> is correct for synthesis.
  
-Analyzing module <Register.2> in library <readcop_v1_00_a>.
+Analyzing module <Register.5> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 1'b0
 	ResetValue = 1'b0
 	SetValue = 1'b1
 	Width = 32'sb00000000000000000000000000000001
-Module <Register.2> is correct for synthesis.
+Module <Register.5> is correct for synthesis.
  
 Analyzing module <ShiftRegister.1> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
@@ -981,14 +1111,14 @@ Analyzing module <ShiftRegister.1> in library <readcop_v1_00_a>.
 	SetValue = 40'b1111111111111111111111111111111111111111
 Module <ShiftRegister.1> is correct for synthesis.
  
-Analyzing module <Register.7> in library <readcop_v1_00_a>.
+Analyzing module <Register.10> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 40'b0100100100100001001100110011010000110110
 	ResetValue = 40'bXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	SetValue = 40'b1111111111111111111111111111111111111111
 	Width = 32'sb00000000000000000000000000101000
-Module <Register.7> is correct for synthesis.
+Module <Register.10> is correct for synthesis.
  
 Analyzing module <ShiftRegister.2> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
@@ -1001,14 +1131,14 @@ Analyzing module <ShiftRegister.2> in library <readcop_v1_00_a>.
 	SetValue = 6'b111111
 Module <ShiftRegister.2> is correct for synthesis.
  
-Analyzing module <Register.8> in library <readcop_v1_00_a>.
+Analyzing module <Register.11> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 6'b111110
 	ResetValue = 5'bXXXXX
 	SetValue = 6'b111111
 	Width = 32'sb00000000000000000000000000000110
-Module <Register.8> is correct for synthesis.
+Module <Register.11> is correct for synthesis.
  
 Analyzing module <FIFOInitial.2> in library <readcop_v1_00_a>.
 	A0Width = 32'sb00000000000000000000000000000011
@@ -1030,14 +1160,14 @@ Analyzing module <ShiftRegister.3> in library <readcop_v1_00_a>.
 	SetValue = 40'b1111111111111111111111111111111111111111
 Module <ShiftRegister.3> is correct for synthesis.
  
-Analyzing module <Register.9> in library <readcop_v1_00_a>.
+Analyzing module <Register.12> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 40'b1100000000001001000001100010011010100000
 	ResetValue = 40'bXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	SetValue = 40'b1111111111111111111111111111111111111111
 	Width = 32'sb00000000000000000000000000101000
-Module <Register.9> is correct for synthesis.
+Module <Register.12> is correct for synthesis.
  
 Analyzing module <I2CDRAMMaster> in library <readcop_v1_00_a>.
 	CAWidth = 32'sb00000000000000000000000000001000
@@ -1100,14 +1230,14 @@ Analyzing module <ShiftRegister.4> in library <readcop_v1_00_a>.
 	SetValue = 3'b111
 Module <ShiftRegister.4> is correct for synthesis.
  
-Analyzing module <Register.12> in library <readcop_v1_00_a>.
+Analyzing module <Register.15> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 3'bXXX
 	ResetValue = 3'b000
 	SetValue = 3'b111
 	Width = 32'sb00000000000000000000000000000011
-Module <Register.12> is correct for synthesis.
+Module <Register.15> is correct for synthesis.
  
 Analyzing module <ShiftRegister.5> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
@@ -1120,14 +1250,14 @@ Analyzing module <ShiftRegister.5> in library <readcop_v1_00_a>.
 	SetValue = 8'b11111111
 Module <ShiftRegister.5> is correct for synthesis.
  
-Analyzing module <Register.13> in library <readcop_v1_00_a>.
+Analyzing module <Register.16> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 8'bXXXXXXXX
 	ResetValue = 8'b00000000
 	SetValue = 8'b11111111
 	Width = 32'sb00000000000000000000000000001000
-Module <Register.13> is correct for synthesis.
+Module <Register.16> is correct for synthesis.
  
 Analyzing module <Counter.3> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
@@ -1158,14 +1288,14 @@ Analyzing module <Counter.4> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000000010
 Module <Counter.4> is correct for synthesis.
  
-Analyzing module <Register.14> in library <readcop_v1_00_a>.
+Analyzing module <Register.17> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 2'bXX
 	ResetValue = 2'b00
 	SetValue = 2'b11
 	Width = 32'sb00000000000000000000000000000010
-Module <Register.14> is correct for synthesis.
+Module <Register.17> is correct for synthesis.
  
 Analyzing module <Counter.5> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
@@ -1189,14 +1319,14 @@ Analyzing module <FIFORegister.1> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000010001
 Module <FIFORegister.1> is correct for synthesis.
  
-Analyzing module <Register.10> in library <readcop_v1_00_a>.
+Analyzing module <Register.13> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 17'bXXXXXXXXXXXXXXXXX
 	ResetValue = 17'b00000000000000000
 	SetValue = 17'b11111111111111111
 	Width = 32'sb00000000000000000000000000010001
-Module <Register.10> is correct for synthesis.
+Module <Register.13> is correct for synthesis.
  
 Analyzing module <FIFORegControl> in library <readcop_v1_00_a>.
 	BWLatency = 32'sb00000000000000000000000000000000
@@ -1205,14 +1335,14 @@ Analyzing module <FIFORegControl> in library <readcop_v1_00_a>.
 	ResetValid = 1'b0
 Module <FIFORegControl> is correct for synthesis.
  
-Analyzing module <Register.15> in library <readcop_v1_00_a>.
+Analyzing module <Register.18> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 1'b0
 	ResetValue = 1'b0
 	SetValue = 1'b1
 	Width = 32'sb00000000000000000000000000000001
-Module <Register.15> is correct for synthesis.
+Module <Register.18> is correct for synthesis.
  
 Analyzing module <FIFORegister.2> in library <readcop_v1_00_a>.
 	BWLatency = 32'sb00000000000000000000000000000000
@@ -1225,14 +1355,14 @@ Analyzing module <FIFORegister.2> in library <readcop_v1_00_a>.
 	Width = 32'sb00000000000000000000000000001000
 Module <FIFORegister.2> is correct for synthesis.
  
-Analyzing module <Register.11> in library <readcop_v1_00_a>.
+Analyzing module <Register.14> in library <readcop_v1_00_a>.
 	AsyncReset = 32'sb00000000000000000000000000000000
 	AsyncSet = 32'sb00000000000000000000000000000000
 	Initial = 8'bXXXXXXXX
 	ResetValue = 8'b00000000
 	SetValue = 8'b11111111
 	Width = 32'sb00000000000000000000000000001000
-Module <Register.11> is correct for synthesis.
+Module <Register.14> is correct for synthesis.
  
 
 =========================================================================
@@ -1240,14 +1370,6 @@ Module <Register.11> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-
-Synthesizing Unit <Debouncer>.
-    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Debouncer.v".
-    Found 22-bit up counter for signal <count>.
-    Summary:
-	inferred   1 Counter(s).
-Unit <Debouncer> synthesized.
-
 
 Synthesizing Unit <RGB2YCrCb>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/RGB2YCrCb.v".
@@ -1283,12 +1405,63 @@ WARNING:Xst:646 - Signal <Y> is assigned but never used. This unconnected signal
 Unit <SkinMask> synthesized.
 
 
+Synthesizing Unit <Gray>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Gray.v".
+    Found 17-bit adder for signal <Scale$add0000> created at line 13.
+    Found 16-bit adder carry out for signal <Scale$addsub0001> created at line 13.
+    Found 8x6-bit multiplier for signal <Scale$mult0000> created at line 13.
+    Found 8x8-bit multiplier for signal <Scale$mult0001> created at line 13.
+    Found 8x5-bit multiplier for signal <Scale$mult0002> created at line 13.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+Unit <Gray> synthesized.
+
+
+Synthesizing Unit <Background>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Background.v".
+WARNING:Xst:647 - Input <col<10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <col<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit adder for signal <$sub0000> created at line 12.
+    Found 8-bit comparator greater for signal <background$cmp_gt0000> created at line 16.
+    Found 8-bit comparator greater for signal <background$cmp_gt0001> created at line 16.
+    Found 8-bit comparator greater for signal <background$cmp_gt0002> created at line 16.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <Background> synthesized.
+
+
 Synthesizing Unit <Register_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 20-bit register for signal <Out>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <Register_1> synthesized.
+
+
+Synthesizing Unit <Register_2>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 1-bit register for signal <Out<0>>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <Register_1> synthesized.
+Unit <Register_2> synthesized.
+
+
+Synthesizing Unit <Register_3>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 3-bit register for signal <Out>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <Register_3> synthesized.
+
+
+Synthesizing Unit <Register_4>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 1-bit register for signal <Out<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_4> synthesized.
 
 
 Synthesizing Unit <IORegister>.
@@ -1315,28 +1488,28 @@ WARNING:Xst:647 - Input <Count<1>> is never used. This port will be preserved an
 Unit <CountCompare_2> synthesized.
 
 
-Synthesizing Unit <Register_3>.
+Synthesizing Unit <Register_6>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 11-bit register for signal <Out>.
     Summary:
 	inferred  11 D-type flip-flop(s).
-Unit <Register_3> synthesized.
+Unit <Register_6> synthesized.
 
 
-Synthesizing Unit <Register_4>.
+Synthesizing Unit <Register_7>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 10-bit register for signal <Out>.
     Summary:
 	inferred  10 D-type flip-flop(s).
-Unit <Register_4> synthesized.
+Unit <Register_7> synthesized.
 
 
-Synthesizing Unit <Register_5>.
+Synthesizing Unit <Register_8>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 3-bit register for signal <Out>.
     Summary:
 	inferred   3 D-type flip-flop(s).
-Unit <Register_5> synthesized.
+Unit <Register_8> synthesized.
 
 
 Synthesizing Unit <CountCompare_3>.
@@ -1351,12 +1524,12 @@ WARNING:Xst:647 - Input <Count<8>> is never used. This port will be preserved an
 Unit <CountCompare_4> synthesized.
 
 
-Synthesizing Unit <Register_6>.
+Synthesizing Unit <Register_9>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 3-bit register for signal <Out>.
     Summary:
 	inferred   3 D-type flip-flop(s).
-Unit <Register_6> synthesized.
+Unit <Register_9> synthesized.
 
 
 Synthesizing Unit <CountCompare_5>.
@@ -1387,36 +1560,36 @@ WARNING:Xst:647 - Input <Count<2:0>> is never used. This port will be preserved 
 Unit <CountCompare_8> synthesized.
 
 
-Synthesizing Unit <Register_2>.
+Synthesizing Unit <Register_5>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 1-bit register for signal <Out<0>>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <Register_2> synthesized.
+Unit <Register_5> synthesized.
 
 
-Synthesizing Unit <Register_7>.
+Synthesizing Unit <Register_10>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 40-bit register for signal <Out>.
     Summary:
 	inferred  40 D-type flip-flop(s).
-Unit <Register_7> synthesized.
+Unit <Register_10> synthesized.
 
 
-Synthesizing Unit <Register_8>.
+Synthesizing Unit <Register_11>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 6-bit register for signal <Out>.
     Summary:
 	inferred   6 D-type flip-flop(s).
-Unit <Register_8> synthesized.
+Unit <Register_11> synthesized.
 
 
-Synthesizing Unit <Register_9>.
+Synthesizing Unit <Register_12>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 40-bit register for signal <Out>.
     Summary:
 	inferred  40 D-type flip-flop(s).
-Unit <Register_9> synthesized.
+Unit <Register_12> synthesized.
 
 
 Synthesizing Unit <CountCompare_9>.
@@ -1426,52 +1599,65 @@ WARNING:Xst:647 - Input <Count<2>> is never used. This port will be preserved an
 Unit <CountCompare_9> synthesized.
 
 
-Synthesizing Unit <Register_12>.
+Synthesizing Unit <Register_15>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 3-bit register for signal <Out>.
     Summary:
 	inferred   3 D-type flip-flop(s).
-Unit <Register_12> synthesized.
+Unit <Register_15> synthesized.
 
 
-Synthesizing Unit <Register_13>.
+Synthesizing Unit <Register_16>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 8-bit register for signal <Out>.
     Summary:
 	inferred   8 D-type flip-flop(s).
-Unit <Register_13> synthesized.
+Unit <Register_16> synthesized.
 
 
-Synthesizing Unit <Register_14>.
+Synthesizing Unit <Register_17>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 2-bit register for signal <Out>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <Register_14> synthesized.
+Unit <Register_17> synthesized.
 
 
-Synthesizing Unit <Register_10>.
+Synthesizing Unit <Register_13>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 17-bit register for signal <Out>.
     Summary:
 	inferred  17 D-type flip-flop(s).
-Unit <Register_10> synthesized.
+Unit <Register_13> synthesized.
 
 
-Synthesizing Unit <Register_15>.
+Synthesizing Unit <Register_18>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 1-bit register for signal <Out<0>>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <Register_15> synthesized.
+Unit <Register_18> synthesized.
 
 
-Synthesizing Unit <Register_11>.
+Synthesizing Unit <Register_14>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
     Found 8-bit register for signal <Out>.
     Summary:
 	inferred   8 D-type flip-flop(s).
-Unit <Register_11> synthesized.
+Unit <Register_14> synthesized.
+
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Debouncer.v".
+    Found 20-bit addsub for signal <NextCount$share0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Debouncer> synthesized.
+
+
+Synthesizing Unit <EdgeDetect>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/EdgeDetect.v".
+Unit <EdgeDetect> synthesized.
 
 
 Synthesizing Unit <SDR2DDR_1>.
@@ -1572,6 +1758,12 @@ Unit <Counter_5> synthesized.
 Synthesizing Unit <FIFORegControl>.
     Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFORegControl.v".
 Unit <FIFORegControl> synthesized.
+
+
+Synthesizing Unit <ButtonParse>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ButtonParse.v".
+WARNING:Xst:646 - Signal <Half<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ButtonParse> synthesized.
 
 
 Synthesizing Unit <PixelCounter>.
@@ -1700,6 +1892,10 @@ WARNING:Xst:1780 - Signal <dvi_rst_counter> is never used or assigned. This unco
 WARNING:Xst:1780 - Signal <dram_data_counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <DATA_MB> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <display_state> of Case statement line 432 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <display_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
     Found finite state machine <FSM_2> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -1715,29 +1911,32 @@ WARNING:Xst:1780 - Signal <DATA_MB> is never used or assigned. This unconnected 
     -----------------------------------------------------------------------
     Found finite state machine <FSM_3> for signal <display_state>.
     -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 6                                              |
+    | States             | 8                                              |
+    | Transitions        | 16                                             |
     | Inputs             | 1                                              |
-    | Outputs            | 3                                              |
+    | Outputs            | 8                                              |
     | Clock              | FSL_S_Clk                 (rising_edge)        |
     | Reset              | rst                       (positive)           |
     | Reset type         | synchronous                                    |
-    | Reset State        | 00                                             |
+    | Reset State        | 000                                            |
     | Encoding           | automatic                                      |
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
     Found 32-bit adder for signal <ADDR_MB>.
     Found 1-bit register for signal <dvi_rst>.
     Found 1-bit register for signal <dvi_rst_pending>.
+    Found 11-bit up counter for signal <i>.
+    Found 11-bit up counter for signal <j>.
     Found 2-bit register for signal <latency_counter>.
-    Found 2-bit subtractor for signal <latency_counter$share0000> created at line 285.
+    Found 2-bit subtractor for signal <latency_counter$share0000> created at line 295.
     Found 20-bit register for signal <pixel_ind>.
-    Found 20-bit adder for signal <pixel_ind$share0000> created at line 285.
+    Found 20-bit adder for signal <pixel_ind$share0000> created at line 295.
     Found 1-bit register for signal <pixel_rdf_valid>.
     Found 64-bit register for signal <rdf_dout>.
-    Found 13-bit comparator less for signal <state$cmp_lt0000> created at line 288.
+    Found 13-bit comparator less for signal <state$cmp_lt0000> created at line 298.
     Summary:
 	inferred   2 Finite State Machine(s).
+	inferred   2 Counter(s).
 	inferred  89 D-type flip-flop(s).
 	inferred   3 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
@@ -1754,40 +1953,47 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 5
+# Multipliers                                          : 8
  8x10-bit multiplier                                   : 1
+ 8x5-bit multiplier                                    : 1
+ 8x6-bit multiplier                                    : 1
  8x7-bit multiplier                                    : 1
+ 8x8-bit multiplier                                    : 1
  8x9-bit multiplier                                    : 1
  9x11-bit multiplier                                   : 2
-# Adders/Subtractors                                   : 14
+# Adders/Subtractors                                   : 19
  10-bit adder                                          : 1
  11-bit adder                                          : 1
+ 16-bit adder carry out                                : 1
+ 17-bit adder                                          : 1
  18-bit adder carry out                                : 1
  19-bit adder                                          : 1
  2-bit adder                                           : 1
  2-bit subtractor                                      : 1
  20-bit adder                                          : 1
+ 20-bit addsub                                         : 2
  21-bit adder                                          : 2
  3-bit adder                                           : 1
  32-bit adder                                          : 1
- 8-bit adder                                           : 1
+ 8-bit adder                                           : 2
  9-bit subtractor                                      : 2
 # Counters                                             : 2
- 22-bit up counter                                     : 2
-# Registers                                            : 107
- 1-bit register                                        : 88
+ 11-bit up counter                                     : 2
+# Registers                                            : 113
+ 1-bit register                                        : 90
  10-bit register                                       : 1
  11-bit register                                       : 1
  17-bit register                                       : 1
  2-bit register                                        : 2
- 20-bit register                                       : 1
- 3-bit register                                        : 7
+ 20-bit register                                       : 3
+ 3-bit register                                        : 9
  40-bit register                                       : 2
  8-bit register                                        : 4
-# Comparators                                          : 7
+# Comparators                                          : 10
  13-bit comparator less                                : 1
  22-bit comparator less                                : 2
  8-bit comparator greatequal                           : 2
+ 8-bit comparator greater                              : 3
  8-bit comparator less                                 : 2
 
 =========================================================================
@@ -1797,13 +2003,18 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_3> for best encoding.
-Optimizing FSM <readcop_0/display_state/FSM> on signal <display_state[1:2]> with user encoding.
+Optimizing FSM <readcop_0/display_state/FSM> on signal <display_state[1:3]> with user encoding.
 -------------------
  State | Encoding
 -------------------
- 00    | 00
- 01    | 01
- 10    | 10
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+ 111   | 111
 -------------------
 Analyzing FSM <FSM_2> for best encoding.
 Optimizing FSM <readcop_0/state/FSM> on signal <state[1:5]> with one-hot encoding.
@@ -1845,6 +2056,10 @@ Optimizing FSM <readcop_0/dvi/DVIInit/I2CControl/Master/CurrentState/FSM> on sig
  111   | 111
 -------------------
 
+Synthesizing (advanced) Unit <Gray>.
+	Multiplier <Mmult_Scale_mult0002> in block <Gray> and adder/subtractor <Madd_Scale_add0000_Madd> in block <Gray> are combined into a MAC<Maddsub_Scale_mult0002>.
+Unit <Gray> synthesized (advanced).
+
 Synthesizing (advanced) Unit <RGB2YCrCb>.
 	Multiplier <Mmult_Y_tmp_mult0002> in block <RGB2YCrCb> and adder/subtractor <Madd_Y_tmp_add0000> in block <RGB2YCrCb> are combined into a MAC<Maddsub_Y_tmp_mult0002>.
 	Multiplier <Mmult_Cr_tmp_signed_mult0000> in block <RGB2YCrCb> and adder/subtractor <Madd_Cr_tmp_signed> in block <RGB2YCrCb> are combined into a MAC<Maddsub_Cr_tmp_signed_mult0000>.
@@ -1860,31 +2075,37 @@ WARNING:Xst:2677 - Node <LastState_5> of sequential type is unconnected in block
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# MACs                                                 : 3
+# MACs                                                 : 4
+ 8x5-to-16-bit MAC                                     : 1
  8x7-to-19-bit MAC                                     : 1
  9x11-to-21-bit MAC                                    : 2
-# Multipliers                                          : 2
+# Multipliers                                          : 4
  8x10-bit multiplier                                   : 1
+ 8x6-bit multiplier                                    : 1
+ 8x8-bit multiplier                                    : 1
  8x9-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 15
  10-bit adder                                          : 1
  11-bit adder                                          : 1
+ 16-bit adder carry out                                : 1
  18-bit adder carry out                                : 1
  2-bit adder                                           : 1
  2-bit subtractor                                      : 1
  20-bit adder                                          : 1
+ 20-bit addsub                                         : 2
  3-bit adder                                           : 1
  32-bit adder                                          : 1
- 8-bit adder                                           : 1
+ 8-bit adder                                           : 2
  9-bit subtractor                                      : 2
-# Counters                                             : 2
- 22-bit up counter                                     : 2
-# Registers                                            : 291
- Flip-Flops                                            : 291
-# Comparators                                          : 7
+# Counters                                             : 1
+ 11-bit up counter                                     : 1
+# Registers                                            : 340
+ Flip-Flops                                            : 340
+# Comparators                                          : 10
  13-bit comparator less                                : 1
  22-bit comparator less                                : 2
  8-bit comparator greatequal                           : 2
+ 8-bit comparator greater                              : 3
  8-bit comparator less                                 : 2
 
 =========================================================================
@@ -1892,7 +2113,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <Out_16> (without init value) has a constant value of 0 in block <Register_10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Out_16> (without init value) has a constant value of 0 in block <Register_13>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <RgnAX/FSM.State/Out_0> (without init value) has a constant value of 0 in block <PixelCounter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RgnAY/FSM.State/Out_0> (without init value) has a constant value of 0 in block <PixelCounter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <SAReg/Out_0> (without init value) has a constant value of 0 in block <I2CMaster>. This FF/Latch will be trimmed during the optimization process.
@@ -1900,17 +2121,19 @@ WARNING:Xst:1710 - FF/Latch <pixel_ind_0> (without init value) has a constant va
 
 Optimizing unit <system_readcop_0_wrapper> ...
 
-Optimizing unit <RGB2YCrCb> ...
-
-Optimizing unit <Register_7> ...
-
-Optimizing unit <Register_9> ...
+Optimizing unit <Register_1> ...
 
 Optimizing unit <Register_10> ...
 
-Optimizing unit <Register_11> ...
+Optimizing unit <Register_12> ...
+
+Optimizing unit <Register_13> ...
+
+Optimizing unit <Register_14> ...
 
 Optimizing unit <SDR2DDR_2> ...
+
+Optimizing unit <Debouncer> ...
 
 Optimizing unit <Counter_1> ...
 
@@ -1953,8 +2176,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 320
- Flip-Flops                                            : 320
+# Registers                                            : 336
+ Flip-Flops                                            : 336
 
 =========================================================================
 
@@ -1982,29 +2205,31 @@ Design Statistics
 # IOs                              : 291
 
 Cell Usage :
-# BELS                             : 1053
+# BELS                             : 1314
 #      GND                         : 1
 #      INV                         : 10
-#      LUT1                        : 64
-#      LUT2                        : 64
-#      LUT3                        : 51
-#      LUT4                        : 83
-#      LUT5                        : 161
-#      LUT6                        : 218
-#      MUXCY                       : 197
-#      MUXF7                       : 13
+#      LUT1                        : 32
+#      LUT2                        : 89
+#      LUT3                        : 68
+#      LUT4                        : 185
+#      LUT5                        : 144
+#      LUT6                        : 293
+#      MUXCY                       : 240
+#      MUXF7                       : 15
 #      VCC                         : 1
-#      XORCY                       : 190
-# FlipFlops/Latches                : 334
-#      FD                          : 188
-#      FDE                         : 16
-#      FDR                         : 72
-#      FDRE                        : 10
+#      XORCY                       : 236
+# FlipFlops/Latches                : 350
+#      FD                          : 104
+#      FDE                         : 80
+#      FDR                         : 40
+#      FDRE                        : 78
 #      FDRS                        : 3
 #      FDRSE                       : 25
 #      FDS                         : 4
 #      FDSE                        : 2
 #      ODDR                        : 14
+# DSPs                             : 2
+#      DSP48E                      : 2
 # Others                           : 1
 #      fifo_generator_v9_1         : 1
 =========================================================================
@@ -2016,22 +2241,23 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             334  out of  69120     0%  
- Number of Slice LUTs:                  651  out of  69120     0%  
-    Number used as Logic:               651  out of  69120     0%  
+ Number of Slice Registers:             350  out of  69120     0%  
+ Number of Slice LUTs:                  821  out of  69120     1%  
+    Number used as Logic:               821  out of  69120     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    686
-   Number with an unused Flip Flop:     352  out of    686    51%  
-   Number with an unused LUT:            35  out of    686     5%  
-   Number of fully used LUT-FF pairs:   299  out of    686    43%  
-   Number of unique control sets:        25
+ Number of LUT Flip Flop pairs used:    855
+   Number with an unused Flip Flop:     505  out of    855    59%  
+   Number with an unused LUT:            34  out of    855     3%  
+   Number of fully used LUT-FF pairs:   316  out of    855    36%  
+   Number of unique control sets:        24
 
 IO Utilization: 
  Number of IOs:                         291
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
+ Number of DSP48Es:                       2  out of     64     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -2054,8 +2280,9 @@ Clock Information:
 -----------------------------------+-------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                       | Load  |
 -----------------------------------+-------------------------------------------------------------+-------+
-FSL_Clk                            | NONE(readcop_0/dvi/DVIInit/I2CControl/CurrentState_FSM_FFd2)| 195   |
-FSL_S_Clk                          | NONE(readcop_0/state_FSM_FFd2)                              | 139   |
+FSL_Clk                            | NONE(readcop_0/dvi/DVIInit/I2CControl/CurrentState_FSM_FFd2)| 206   |
+FSL_S_Clk                          | NONE(readcop_0/toggle_parse_2/BP[0].D/OutReg/Out_0)         | 144   |
+FSL_M_Data<31>                     | NONE(readcop_0/blk_n_white/Madd_Scale_addsub00011)          | 1     |
 -----------------------------------+-------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -2067,10 +2294,10 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.653ns (Maximum Frequency: 273.748MHz)
-   Minimum input arrival time before clock: 17.396ns
-   Maximum output required time after clock: 2.538ns
-   Maximum combinational path delay: 0.815ns
+   Minimum period: 4.333ns (Maximum Frequency: 230.787MHz)
+   Minimum input arrival time before clock: 19.487ns
+   Maximum output required time after clock: 1.392ns
+   Maximum combinational path delay: 0.681ns
 
 Timing Detail:
 --------------
@@ -2078,72 +2305,93 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FSL_Clk'
-  Clock period: 3.653ns (frequency: 273.748MHz)
-  Total number of paths / destination ports: 3362 / 247
+  Clock period: 3.794ns (frequency: 263.574MHz)
+  Total number of paths / destination ports: 3932 / 306
 -------------------------------------------------------------------------
-Delay:               3.653ns (Levels of Logic = 3)
-  Source:            readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7 (FF)
-  Destination:       readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0 (FF)
+Delay:               3.794ns (Levels of Logic = 3)
+  Source:            readcop_0/dvi/DVIData/PixCnt/XCnt/Register/Out_10 (FF)
+  Destination:       readcop_0/dvi/DVIData/PixCnt/YCnt/Register/Out_0 (FF)
   Source Clock:      FSL_Clk rising
   Destination Clock: FSL_Clk rising
 
-  Data Path: readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7 to readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0
+  Data Path: readcop_0/dvi/DVIData/PixCnt/XCnt/Register/Out_10 to readcop_0/dvi/DVIData/PixCnt/YCnt/Register/Out_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRSE:C->Q            2   0.471   1.074  readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7 (readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7)
-     LUT6:I0->O           10   0.094   0.529  readcop_0/dvi/DVIInit/I2CControl/Master/_or000331 (readcop_0/dvi/DVIInit/I2CControl/Master/CycleCountEnd)
-     LUT3:I2->O            1   0.094   0.710  readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_or0000_SW1 (N44)
-     LUT6:I3->O            8   0.094   0.374  readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_or0000 (readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_or0000)
-     FDRSE:CE                  0.213          readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0
+     FD:C->Q               6   0.471   1.096  readcop_0/dvi/DVIData/PixCnt/XCnt/Register/Out_10 (readcop_0/dvi/DVIData/PixCnt/XCnt/Register/Out_10)
+     LUT6:I0->O            1   0.094   0.480  readcop_0/dvi/DVIData/PixCnt/YReset_SW0_SW0 (N175)
+     LUT6:I5->O            6   0.094   0.507  readcop_0/dvi/DVIData/PixCnt/YReset (readcop_0/dvi/DVIData/PixCnt/YReset)
+     LUT2:I1->O           10   0.094   0.385  readcop_0/dvi/DVIData/PixCnt/_or00011 (readcop_0/dvi/DVIData/PixCnt/_or0001)
+     FDRE:R                    0.573          readcop_0/dvi/DVIData/PixCnt/YCnt/Register/Out_0
     ----------------------------------------
-    Total                      3.653ns (0.966ns logic, 2.687ns route)
-                                       (26.4% logic, 73.6% route)
+    Total                      3.794ns (1.326ns logic, 2.468ns route)
+                                       (34.9% logic, 65.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
-  Clock period: 3.495ns (frequency: 286.144MHz)
-  Total number of paths / destination ports: 4000 / 153
+  Clock period: 4.333ns (frequency: 230.787MHz)
+  Total number of paths / destination ports: 13365 / 242
 -------------------------------------------------------------------------
-Delay:               3.495ns (Levels of Logic = 2)
-  Source:            readcop_0/rst_parse/count_16 (FF)
-  Destination:       readcop_0/state_FSM_FFd2 (FF)
+Delay:               4.333ns (Levels of Logic = 23)
+  Source:            readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_11 (FF)
+  Destination:       readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_19 (FF)
   Source Clock:      FSL_S_Clk rising
   Destination Clock: FSL_S_Clk rising
 
-  Data Path: readcop_0/rst_parse/count_16 to readcop_0/state_FSM_FFd2
+  Data Path: readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_11 to readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.471   1.074  readcop_0/rst_parse/count_16 (readcop_0/rst_parse/count_16)
-     LUT6:I0->O            4   0.094   0.726  readcop_0/rst_parse/out43 (readcop_0/rst_parse/out43)
-     LUT5:I2->O           29   0.094   0.463  readcop_0/state_or00001 (readcop_0/state_or0000)
-     FDR:R                     0.573          readcop_0/latency_counter_0
+     FDRE:C->Q             4   0.471   1.085  readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_11 (readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_11)
+     LUT6:I0->O           21   0.094   0.818  readcop_0/toggle_parse_2/BP[0].D/NextCount_and000011 (readcop_0/toggle_parse_2/BP[0].D/NextCount_and000011)
+     LUT6:I3->O            1   0.094   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_lut<0> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<0> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<1> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<2> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<3> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<4> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<5> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<6> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<7> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<8> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<9> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<10> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<11> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<12> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<13> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<14> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<15> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<16> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<17> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<17>)
+     MUXCY:CI->O           0   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<18> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<18>)
+     XORCY:CI->O           1   0.357   0.480  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_xor<19> (readcop_0/toggle_parse_2/BP[0].D/NextCount_share0000<19>)
+     LUT5:I4->O            1   0.094   0.000  readcop_0/toggle_parse_2/BP[0].D/NextCount<19>1 (readcop_0/toggle_parse_2/BP[0].D/NextCount<19>)
+     FDRE:D                   -0.018          readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_19
     ----------------------------------------
-    Total                      3.495ns (1.232ns logic, 2.263ns route)
-                                       (35.3% logic, 64.7% route)
+    Total                      4.333ns (1.950ns logic, 2.383ns route)
+                                       (45.0% logic, 55.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_Clk'
-  Total number of paths / destination ports: 507935564629 / 67
+  Total number of paths / destination ports: 523146931643 / 67
 -------------------------------------------------------------------------
-Offset:              17.396ns (Levels of Logic = 38)
-  Source:            readcop_0/fifo:dout<12> (PAD)
+Offset:              19.487ns (Levels of Logic = 45)
+  Source:            readcop_0/fifo:dout<17> (PAD)
   Destination:       readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR (FF)
   Destination Clock: FSL_Clk rising
 
-  Data Path: readcop_0/fifo:dout<12> to readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+  Data Path: readcop_0/fifo:dout<17> to readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    fifo_generator_v9_1:dout<12>   19   0.000   1.072  readcop_0/fifo (readcop_0/video_32<12>)
-     LUT5:I0->O            1   0.094   1.069  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd_1011 (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd_101)
-     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_lut<10> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_lut<10>)
-     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<10> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<10>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<11> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<11>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<12>)
-     XORCY:CI->O           1   0.357   0.480  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_xor<13> (readcop_0/color_conversion/Y_tmp_mult0001<13>)
-     LUT2:I1->O            1   0.094   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13>)
+    fifo_generator_v9_1:dout<17>   31   0.000   0.703  readcop_0/fifo (readcop_0/video_32<17>)
+     LUT2:I0->O            7   0.094   1.102  readcop_0/blk_n_white/Mmult_Scale_mult0000_Madd_1031 (readcop_0/blk_n_white/Mmult_Scale_mult0000_Madd_10_bdd5)
+     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_12_G (N258)
+     MUXF7:I1->O           1   0.254   0.789  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_12 (readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_12)
+     LUT4:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<12>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<12>)
+     XORCY:CI->O           1   0.357   0.576  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_xor<13> (readcop_0/color_conversion/Y_tmp_mult0000<13>)
+     LUT2:I0->O            1   0.094   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13>)
      MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<13>)
      XORCY:CI->O           1   0.357   0.576  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_xor<14> (readcop_0/color_conversion/Y_tmp_addsub0001<14>)
      LUT2:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_lut<14> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_lut<14>)
@@ -2151,38 +2399,45 @@ Offset:              17.396ns (Levels of Logic = 38)
      MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>)
      MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<16> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<16>)
      MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<17> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<17>)
-     XORCY:CI->O          32   0.357   0.703  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18> (readcop_0/color_conversion/Y_tmp<8>)
-     LUT3:I1->O            1   0.094   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_lut<0> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<0> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<1> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<2> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<3> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<4> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<5> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<6> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<6>)
-     XORCY:CI->O           7   0.357   1.102  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_xor<7> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_lut<16>)
-     LUT6:I0->O            3   0.094   0.491  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_xor<10>111 (readcop_0/color_conversion/N2)
-     LUT5:I4->O            9   0.094   1.113  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<10>11 (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<10>)
-     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>1111 (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>111)
-     MUXF7:I1->O           3   0.254   0.721  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>111_f7 (readcop_0/color_conversion/N20)
-     LUT6:I3->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_lut<15> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_lut<15>)
-     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<15> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<15>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<16> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<16>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<17> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<17>)
-     MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<18> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<18>)
-     XORCY:CI->O           8   0.357   0.748  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_xor<19> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_19)
-     LUT4:I1->O            3   0.094   1.080  readcop_0/color_conversion/Cb<4>1 (readcop_0/ycrcb_video<4>)
-     LUT6:I0->O            1   0.094   0.789  readcop_0/video<0>2142 (readcop_0/video<0>2142)
-     LUT6:I2->O           34   0.094   1.197  readcop_0/video<0>2190 (readcop_0/video<0>2190)
-     LUT6:I0->O            1   0.094   0.336  readcop_0/video<7>1 (readcop_0/video<7>)
-     ODDR:D2                   0.434          readcop_0/dvi/DVIData/VideoBuf/bit[7].ODDR
+     XORCY:CI->O          24   0.357   0.698  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18> (readcop_0/color_conversion/Y_tmp<8>)
+     LUT3:I1->O            1   0.094   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<0> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<0> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<1> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<2> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<4> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<5> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<6> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<6>)
+     XORCY:CI->O          16   0.357   1.151  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_xor<7> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd2_lut<11>)
+     LUT6:I0->O            1   0.094   0.973  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_931 (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_93)
+     LUT5:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_lut<9> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_lut<9>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<9> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<11> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<12> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<13> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<15> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<16> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<16>)
+     XORCY:CI->O           1   0.357   0.789  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_xor<17> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_173)
+     LUT4:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<17> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<17>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>)
+     MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<18> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<18>)
+     XORCY:CI->O          10   0.357   1.118  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_xor<19> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_19)
+     LUT6:I0->O            1   0.094   0.973  readcop_0/video<0>2174 (readcop_0/video<0>2174)
+     LUT6:I1->O            1   0.094   0.973  readcop_0/video<0>2179 (readcop_0/video<0>2179)
+     LUT6:I1->O           17   0.094   1.061  readcop_0/video<0>2223 (readcop_0/N6)
+     LUT5:I0->O            5   0.094   0.598  readcop_0/video<12>11 (readcop_0/N10)
+     LUT5:I3->O            1   0.094   0.000  readcop_0/video<4>_F (N265)
+     MUXF7:I0->O           1   0.251   0.336  readcop_0/video<4> (readcop_0/video<4>)
+     ODDR:D2                   0.434          readcop_0/dvi/DVIData/VideoBuf/bit[4].ODDR
     ----------------------------------------
-    Total                     17.396ns (5.919ns logic, 11.477ns route)
-                                       (34.0% logic, 66.0% route)
+    Total                     19.487ns (7.071ns logic, 12.416ns route)
+                                       (36.3% logic, 63.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
-  Total number of paths / destination ports: 653 / 147
+  Total number of paths / destination ports: 1109 / 227
 -------------------------------------------------------------------------
 Offset:              3.451ns (Levels of Logic = 4)
   Source:            readcop_0/fifo:wr_data_count<4> (PAD)
@@ -2196,7 +2451,7 @@ Offset:              3.451ns (Levels of Logic = 4)
     fifo_generator_v9_1:wr_data_count<4>    1   0.000   0.789  readcop_0/fifo (readcop_0/data_count<4>)
      LUT4:I0->O            1   0.094   0.480  readcop_0/state_cmp_lt00001_SW0 (N35)
      LUT6:I5->O            9   0.094   0.833  readcop_0/state_cmp_lt00001 (readcop_0/state_cmp_lt0000)
-     LUT6:I2->O            1   0.094   0.973  readcop_0/latency_counter_mux0000<0>_SW4 (N104)
+     LUT6:I2->O            1   0.094   0.973  readcop_0/latency_counter_mux0000<0>_SW4 (N225)
      LUT6:I1->O            1   0.094   0.000  readcop_0/latency_counter_mux0000<0> (readcop_0/latency_counter_mux0000<0>)
      FDR:D                    -0.018          readcop_0/latency_counter_0
     ----------------------------------------
@@ -2207,7 +2462,7 @@ Offset:              3.451ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_Clk'
   Total number of paths / destination ports: 24 / 21
 -------------------------------------------------------------------------
-Offset:              1.387ns (Levels of Logic = 1)
+Offset:              1.392ns (Levels of Logic = 1)
   Source:            readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (FF)
   Destination:       readcop_0/fifo:rd_en (PAD)
   Source Clock:      FSL_Clk rising
@@ -2216,39 +2471,38 @@ Offset:              1.387ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              7   0.471   0.822  readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1)
+     FDS:C->Q              8   0.471   0.827  readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1)
      LUT4:I0->O            0   0.094   0.000  readcop_0/_and00001 (readcop_0/_and0000)
     fifo_generator_v9_1:rd_en        0.000          readcop_0/fifo
     ----------------------------------------
-    Total                      1.387ns (0.565ns logic, 0.822ns route)
-                                       (40.7% logic, 59.3% route)
+    Total                      1.392ns (0.565ns logic, 0.827ns route)
+                                       (40.6% logic, 59.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
-  Total number of paths / destination ports: 110 / 89
+  Total number of paths / destination ports: 91 / 89
 -------------------------------------------------------------------------
-Offset:              2.538ns (Levels of Logic = 2)
-  Source:            readcop_0/rst_parse/count_10 (FF)
+Offset:              1.297ns (Levels of Logic = 1)
+  Source:            readcop_0/toggle_parse_1/BP[0].ED.ED/Register/Out_1 (FF)
   Destination:       readcop_0/fifo:rst (PAD)
   Source Clock:      FSL_S_Clk rising
 
-  Data Path: readcop_0/rst_parse/count_10 to readcop_0/fifo:rst
+  Data Path: readcop_0/toggle_parse_1/BP[0].ED.ED/Register/Out_1 to readcop_0/fifo:rst
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.471   1.074  readcop_0/rst_parse/count_10 (readcop_0/rst_parse/count_10)
-     LUT6:I0->O            4   0.094   0.805  readcop_0/rst_parse/out21 (readcop_0/rst_parse/out21)
-     LUT5:I1->O            0   0.094   0.000  readcop_0/_or00001 (readcop_0/_or0000)
+     FDRE:C->Q             5   0.471   0.732  readcop_0/toggle_parse_1/BP[0].ED.ED/Register/Out_1 (readcop_0/toggle_parse_1/BP[0].ED.ED/Register/Out_1)
+     LUT4:I1->O            0   0.094   0.000  readcop_0/_or00001 (readcop_0/_or0000)
     fifo_generator_v9_1:rst        0.000          readcop_0/fifo
     ----------------------------------------
-    Total                      2.538ns (0.659ns logic, 1.879ns route)
-                                       (26.0% logic, 74.0% route)
+    Total                      1.297ns (0.565ns logic, 0.732ns route)
+                                       (43.6% logic, 56.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 6 / 5
 -------------------------------------------------------------------------
-Delay:               0.815ns (Levels of Logic = 1)
+Delay:               0.681ns (Levels of Logic = 1)
   Source:            readcop_0/fifo:empty (PAD)
   Destination:       readcop_0/fifo:rd_en (PAD)
 
@@ -2256,25 +2510,25 @@ Delay:               0.815ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    fifo_generator_v9_1:empty    3   0.000   0.721  readcop_0/fifo (readcop_0/fifo_empty)
-     LUT4:I1->O            0   0.094   0.000  readcop_0/_and00001 (readcop_0/_and0000)
+    fifo_generator_v9_1:empty    3   0.000   0.587  readcop_0/fifo (readcop_0/fifo_empty)
+     LUT4:I2->O            0   0.094   0.000  readcop_0/_and00001 (readcop_0/_and0000)
     fifo_generator_v9_1:rd_en        0.000          readcop_0/fifo
     ----------------------------------------
-    Total                      0.815ns (0.094ns logic, 0.721ns route)
-                                       (11.5% logic, 88.5% route)
+    Total                      0.681ns (0.094ns logic, 0.587ns route)
+                                       (13.8% logic, 86.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 40.00 secs
-Total CPU time to Xst completion: 39.45 secs
+Total REAL time to Xst completion: 52.00 secs
+Total CPU time to Xst completion: 50.75 secs
  
 --> 
 
 
-Total memory usage is 673260 kilobytes
+Total memory usage is 694408 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   80 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   83 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

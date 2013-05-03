@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> 
@@ -1290,12 +1290,12 @@ Offset:              0.471ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 46.00 secs
-Total CPU time to Xst completion: 43.81 secs
+Total CPU time to Xst completion: 43.97 secs
  
 --> 
 
 
-Total memory usage is 1177264 kilobytes
+Total memory usage is 1177268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  169 (   0 filtered)

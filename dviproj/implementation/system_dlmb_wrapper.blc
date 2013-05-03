@@ -20,7 +20,7 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 496132 kilobytes
+Total memory usage is 496128 kilobytes
 
 Writing NGC file "../system_dlmb_wrapper.ngc" ...
 Total REAL time to NGCBUILD completion:  9 sec

@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 
@@ -1382,10 +1382,10 @@ INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/mpmc_core_0/InitDone_i2_0> in Unit <DDR
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/dqs_rst_n_r> in Unit <DDR2_SDRAM> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/dqs_rst_n_r> 
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_READ_MODULE/sig_sl_rdack_i> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_READ_MODULE/sig_sl_rdack> 
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/sc2wr_sample_cycle_i> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/sc2rd_sample_cycle_i> <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/sc2ad_sample_cycle_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <vgain_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <vgain_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <vgain_0/fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <vgain_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <readcop_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <readcop_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <readcop_0/fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
@@ -1402,10 +1402,10 @@ INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/mpmc_core_0/InitDone_i2_0> in Unit <DDR
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/dqs_rst_n_r> in Unit <DDR2_SDRAM> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/dqs_rst_n_r> 
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_READ_MODULE/sig_sl_rdack_i> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_READ_MODULE/sig_sl_rdack> 
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/sc2wr_sample_cycle_i> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/sc2rd_sample_cycle_i> <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_SINGLES_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/sc2ad_sample_cycle_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <vgain_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <vgain_0/fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <vgain_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <vgain_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <vgain_0/write_vga_signal/fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <readcop_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <readcop_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <readcop_0/fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
@@ -1443,64 +1443,61 @@ Design Statistics
 # IOs                              : 171
 
 Cell Usage :
-# BELS                             : 7988
+# BELS                             : 7783
 #      BUF                         : 10
-#      GND                         : 28
-#      INV                         : 179
-#      LUT1                        : 272
-#      LUT2                        : 784
-#      LUT3                        : 1033
-#      LUT4                        : 916
-#      LUT5                        : 1262
-#      LUT6                        : 1838
+#      GND                         : 22
+#      INV                         : 170
+#      LUT1                        : 179
+#      LUT2                        : 786
+#      LUT3                        : 1077
+#      LUT4                        : 872
+#      LUT5                        : 1244
+#      LUT6                        : 1818
 #      LUT6_2                      : 79
 #      MULT_AND                    : 2
-#      MUXCY                       : 517
-#      MUXCY_L                     : 241
-#      MUXF5                       : 2
-#      MUXF6                       : 1
-#      MUXF7                       : 220
+#      MUXCY                       : 560
+#      MUXCY_L                     : 166
+#      MUXF7                       : 219
 #      OR3                         : 2
-#      VCC                         : 27
-#      XORCY                       : 575
-# FlipFlops/Latches                : 8545
-#      FD                          : 1943
+#      VCC                         : 17
+#      XORCY                       : 560
+# FlipFlops/Latches                : 7838
+#      FD                          : 1600
 #      FD_1                        : 11
-#      FDC                         : 243
+#      FDC                         : 242
 #      FDC_1                       : 5
-#      FDCE                        : 217
+#      FDCE                        : 193
 #      FDCPE                       : 24
 #      FDCPE_1                     : 8
-#      FDE                         : 817
+#      FDE                         : 850
 #      FDE_1                       : 8
-#      FDP                         : 303
-#      FDPE                        : 14
-#      FDR                         : 2123
+#      FDP                         : 45
+#      FDPE                        : 10
+#      FDR                         : 2047
 #      FDR_1                       : 3
-#      FDRE                        : 1466
+#      FDRE                        : 1446
 #      FDRE_1                      : 1
-#      FDRS                        : 105
+#      FDRS                        : 102
 #      FDRSE                       : 408
 #      FDRSE_1                     : 136
-#      FDS                         : 412
+#      FDS                         : 402
 #      FDS_1                       : 2
 #      FDSE                        : 71
 #      IDDR_2CLK                   : 64
-#      LDC                         : 1
 #      ODDR                        : 160
-# RAMS                             : 152
+# RAMS                             : 123
 #      RAM32M                      : 36
 #      RAM32X1D                    : 12
 #      RAMB16                      : 25
 #      RAMB18                      : 1
-#      RAMB36_EXP                  : 78
-# Shift Registers                  : 412
-#      SRL16                       : 289
-#      SRL16E                      : 33
-#      SRLC16E                     : 54
-#      SRLC32E                     : 36
-# Clock Buffers                    : 11
-#      BUFG                        : 10
+#      RAMB36_EXP                  : 49
+# Shift Registers                  : 126
+#      SRL16                       : 33
+#      SRL16E                      : 32
+#      SRLC16E                     : 44
+#      SRLC32E                     : 17
+# Clock Buffers                    : 10
+#      BUFG                        : 9
 #      BUFGP                       : 1
 # IO Buffers                       : 160
 #      IBUF                        : 33
@@ -1508,10 +1505,10 @@ Cell Usage :
 #      IOBUFDS                     : 8
 #      OBUF                        : 51
 #      OBUFDS                      : 2
-# DSPs                             : 3
-#      DSP48E                      : 3
-# Others                           : 94
-#      BSCAN_VIRTEX5               : 2
+# DSPs                             : 5
+#      DSP48E                      : 5
+# Others                           : 93
+#      BSCAN_VIRTEX5               : 1
 #      BUFIO                       : 8
 #      IDELAYCTRL                  : 3
 #      IODELAY                     : 80
@@ -1525,29 +1522,29 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            8545  out of  69120    12%  
- Number of Slice LUTs:                 6943  out of  69120    10%  
-    Number used as Logic:              6363  out of  69120     9%  
-    Number used as Memory:              580  out of  17920     3%  
+ Number of Slice Registers:            7838  out of  69120    11%  
+ Number of Slice LUTs:                 6519  out of  69120     9%  
+    Number used as Logic:              6225  out of  69120     9%  
+    Number used as Memory:              294  out of  17920     1%  
        Number used as RAM:              168
-       Number used as SRL:              412
+       Number used as SRL:              126
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  11991
-   Number with an unused Flip Flop:    3446  out of  11991    28%  
-   Number with an unused LUT:          5048  out of  11991    42%  
-   Number of fully used LUT-FF pairs:  3497  out of  11991    29%  
-   Number of unique control sets:       824
+ Number of LUT Flip Flop pairs used:  11185
+   Number with an unused Flip Flop:    3347  out of  11185    29%  
+   Number with an unused LUT:          4666  out of  11185    41%  
+   Number of fully used LUT-FF pairs:  3172  out of  11185    28%  
+   Number of unique control sets:       771
 
 IO Utilization: 
  Number of IOs:                         171
  Number of bonded IOBs:                 171  out of    640    26%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               92  out of    148    62%  
-    Number using Block RAM only:         92
- Number of BUFG/BUFGCTRLs:               11  out of     32    34%  
- Number of DSP48Es:                       3  out of     64     4%  
+ Number of Block RAM/FIFO:               63  out of    148    42%  
+    Number using Block RAM only:         63
+ Number of BUFG/BUFGCTRLs:               10  out of     32    31%  
+ Number of DSP48Es:                       5  out of     64     7%  
  Number of PLL_ADVs:                      1  out of      6    16%  
 
 ---------------------------
@@ -1571,10 +1568,10 @@ Clock Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                                                                                            | Clock buffer(FF name)                                                                                                         | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
-clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3                                                                                                                                                                                    | BUFG                                                                                                                          | 3897  |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3                                                                                                                                                                                    | BUFG                                                                                                                          | 3908  |
 mdm_0/mdm_0/drck_i                                                                                                                                                                                                                      | BUFG                                                                                                                          | 209   |
 mdm_0/bscan_update1                                                                                                                                                                                                                     | BUFG                                                                                                                          | 42    |
-clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1                                                                                                                                                                                    | BUFG                                                                                                                          | 4272  |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1                                                                                                                                                                                    | BUFG                                                                                                                          | 3363  |
 clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0                                                                                                                                                                                    | BUFG                                                                                                                          | 316   |
 DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)| 1     |
 DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)| 1     |
@@ -1585,91 +1582,77 @@ DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_d
 DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)| 1     |
 DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)| 1     |
 VGA_IN_DATA_CLK                                                                                                                                                                                                                         | BUFGP                                                                                                                         | 214   |
-vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                                                                                                                                                             | BUFG                                                                                                                          | 151   |
-vgain_0/vgain_0/icon/CONTROL0<13>(vgain_0/vgain_0/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                                                                                                                                  | NONE(*)(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC)                                                              | 1     |
-vgain_0/vgain_0/icon/U0/iUPDATE_OUT                                                                                                                                                                                                     | NONE(vgain_0/vgain_0/icon/U0/U_ICON/U_iDATA_CMD)                                                                              | 1     |
+readcop_0/FSL_M_Data<31>                                                                                                                                                                                                                | NONE(readcop_0/readcop_0/blk_n_white/Madd_Scale_addsub00011)                                                                  | 1     |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
-(*) These 9 clock signal(s) are generated by combinatorial logic,
+(*) These 8 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                                                                                                                                                    | Buffer(FF name)                                                                                                                                                                                                       | Load  |
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-vgain_0/vgain_0/ila/N0(vgain_0/vgain_0/ila/XST_GND:G)                                                                                                                                                                                                             | NONE(vgain_0/vgain_0/ila/U0/I_DQ.G_DW[0].U_DQ)                                                                                                                                                                        | 258   |
-vgain_0/vgain_0/ila/N1(vgain_0/vgain_0/ila/XST_VCC:P)                                                                                                                                                                                                             | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)                               | 232   |
-vgain_0/vgain_0/fifo/N0(vgain_0/vgain_0/fifo/XST_GND:G)                                                                                                                                                                                                           | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP)     | 152   |
-readcop_0/readcop_0/fifo/N0(readcop_0/readcop_0/fifo/XST_GND:G)                                                                                                                                                                                                   | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP)| 112   |
-DDR2_SDRAM/SDMA_CTRL6_Sl_MBusy<0>(DDR2_SDRAM/XST_GND:G)                                                                                                                                                                                                           | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifos.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.gen_brams[0].bram)                             | 95    |
-lmb_bram/lmb_bram/net_gnd0(lmb_bram/lmb_bram/XST_GND:G)                                                                                                                                                                                                           | NONE(lmb_bram/lmb_bram/ramb36_0)                                                                                                                                                                                      | 64    |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_0)                                                                                    | 54    |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<1>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_0)                                                                                    | 53    |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_0)                                                                                    | 52    |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<1>(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1:Q)                                                                                         | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_0)                                                                                        | 52    |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)                                                                                         | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_0)                                                                                        | 52    |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)                                                                                         | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_0)                                                                                                | 41    |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)                                                                                         | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/count_0)                                                                                                           | 39    |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i)                                                                                            | 30    |
-mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv(mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv1_INV_0:O)                                                                                                                                                                 | NONE(mdm_0/mdm_0/MDM_Core_I1/Config_Reg_0)                                                                                                                                                                            | 23    |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i:Q)                                                                                        | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_ctl_io/gen_cke[0].u_ff_cke)                                                                                                                | 17    |
-mdm_0/mdm_0/MDM_Core_I1/SEL_inv(mdm_0/mdm_0/MDM_Core_I1/SEL_inv1_INV_0:O)                                                                                                                                                                                         | NONE(mdm_0/mdm_0/MDM_Core_I1/PORT_Selector_0)                                                                                                                                                                         | 12    |
-vgain_0/vgain_0/icon/U0/U_ICON/U_CMD/iSEL_n(vgain_0/vgain_0/icon/U0/U_ICON/U_CMD/U_SEL_n:O)                                                                                                                                                                       | NONE(vgain_0/vgain_0/icon/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                                                                                                                | 10    |
-microblaze_0_to_readcop_0/FSL_Rst(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/POR_FF_I:Q)                                                                                                                                                                 | NONE(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                | 9     |
-microblaze_0_to_vgain_0/FSL_Rst(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/POR_FF_I:Q)                                                                                                                                                                       | NONE(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                    | 9     |
-readcop_0_to_microblaze_0/FSL_Rst(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/POR_FF_I:Q)                                                                                                                                                                 | NONE(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                | 9     |
-vgain_0_to_microblaze_0/FSL_Rst(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/POR_FF_I:Q)                                                                                                                                                                       | NONE(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                    | 9     |
-readcop_0/readcop_0/_or0000(readcop_0/readcop_0/_or00001:O)                                                                                                                                                                                                       | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN)                                                                                                                          | 6     |
-vgain_0/vgain_0/_or0000(vgain_0/vgain_0/_or00001_INV_0:O)                                                                                                                                                                                                         | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN)                                                                                                                              | 6     |
-vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iCLR(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)                                                                                                                                       | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                                                                                                                   | 4     |
-vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iCLR(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)                                                                                                                                     | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                                                                                                                  | 4     |
-vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)                                                                                                                                             | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                                                                                                      | 4     |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)                                                                                   | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                                                                                                                          | 3     |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)                                                                                           | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                                                                                                                              | 3     |
-microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Command_Reg_Rst(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Command_Reg_Rst:Q)                                  | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)                                                                                                    | 2     |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2:Q)                                                                                              | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i)                                                                                             | 2     |
-readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)                                                                                   | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                                                                                                                          | 2     |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2:Q)                                                                                                      | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i)                                                                                                 | 2     |
-vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)                                                                                           | NONE(vgain_0/vgain_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                                                                                                                              | 2     |
-vgain_0/vgain_0/icon/CONTROL0<20>(vgain_0/vgain_0/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE:O)                                                                                                                                                            | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V5.U_CS_GANDX_SRL_V5/G_GAND_DLY1[0].I_IN_RANGE.I_USE_INPUT_REG_NE0.U_GAND_DLY1)               | 2     |
-vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/iARM(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)                                                                                                                                            | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                                                                                                        | 2     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)                                                                                                    | 1     |
-mdm_0/bscan_update1(mdm_0/mdm_0/Use_Virtex5.BSCAN_VIRTEX5_I:UPDATE)                                                                                                                                                                                               | BUFG(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/running_clock)                                                                                                    | 1     |
-mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd_inv(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd_inv1_INV_0:O)                                                                                                                                                 | NONE(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/execute)                                                                                                                                                                  | 1     |
-mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/local_sel_n3(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].LUT_Delay:O)                                                                                                                                          | NONE(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I)                                                                                                                                                                    | 1     |
-microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/continue_from_brk(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/continue_from_brk:Q)                              | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/continue_from_brk_TClk)                                                                                           | 1     |
-microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_cmd_i(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_cmd_i:Q)                                | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk)                                                                                                  | 1     |
-microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/normal_stop_cmd_i(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/normal_stop_cmd_i:Q)                              | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/normal_stop_TClk)                                                                                                 | 1     |
-microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/start_single_step(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/start_single_step:Q)                              | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/single_Step_TClk)                                                                                                 | 1     |
-microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)| NONE(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                  | 1     |
-microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)  | NONE(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                   | 1     |
-microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)        | NONE(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                      | 1     |
-microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)          | NONE(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                       | 1     |
-readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)| NONE(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                  | 1     |
-readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)  | NONE(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                   | 1     |
-vgain_0/vgain_0/icon/CONTROL0<13>(vgain_0/vgain_0/icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                                                                                                                                                            | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                                                                                                        | 1     |
-vgain_0/vgain_0/icon/U0/U_ICON/iSEL_n(vgain_0/vgain_0/icon/U0/U_ICON/U_iSEL_n:O)                                                                                                                                                                                  | NONE(vgain_0/vgain_0/icon/U0/U_ICON/U_iDATA_CMD)                                                                                                                                                                      | 1     |
-vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/ACTRESET_pulse(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)                                                                                                                               | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_RISING)                                                                                                                                                            | 1     |
-vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/iRESET<1>(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                                                                                                                                                       | NONE(vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                                                                                                     | 1     |
-vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)        | NONE(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                      | 1     |
-vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)          | NONE(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                       | 1     |
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                    | Buffer(FF name)                                                                                                                                                                                                                   | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+vgain_0/vgain_0/write_vga_signal/fifo/N0(vgain_0/vgain_0/write_vga_signal/fifo/XST_GND:G)                                                                                                                                                                         | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP)| 152   |
+readcop_0/readcop_0/fifo/N0(readcop_0/readcop_0/fifo/XST_GND:G)                                                                                                                                                                                                   | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP)            | 112   |
+DDR2_SDRAM/SDMA_CTRL6_Sl_MBusy<0>(DDR2_SDRAM/XST_GND:G)                                                                                                                                                                                                           | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifos.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.gen_brams[0].bram)                                         | 95    |
+lmb_bram/lmb_bram/net_gnd0(lmb_bram/lmb_bram/XST_GND:G)                                                                                                                                                                                                           | NONE(lmb_bram/lmb_bram/ramb36_0)                                                                                                                                                                                                  | 64    |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_0)                                                                                                | 54    |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<1>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_0)                                                                                                | 53    |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_0)                                                                                                | 52    |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<1>(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1:Q)                                                       | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_0)                                                                                   | 52    |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)                                                       | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_0)                                                                                   | 52    |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)                                                       | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_0)                                                                                           | 41    |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)                                                       | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/count_0)                                                                                                      | 39    |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)                                                                                 | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i)                                                                                                        | 30    |
+mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv(mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv1_INV_0:O)                                                                                                                                                                 | NONE(mdm_0/mdm_0/MDM_Core_I1/Config_Reg_0)                                                                                                                                                                                        | 23    |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i:Q)                                                                                        | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_ctl_io/gen_cke[0].u_ff_cke)                                                                                                                            | 17    |
+mdm_0/mdm_0/MDM_Core_I1/SEL_inv(mdm_0/mdm_0/MDM_Core_I1/SEL_inv1_INV_0:O)                                                                                                                                                                                         | NONE(mdm_0/mdm_0/MDM_Core_I1/PORT_Selector_0)                                                                                                                                                                                     | 12    |
+microblaze_0_to_readcop_0/FSL_Rst(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/POR_FF_I:Q)                                                                                                                                                                 | NONE(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                            | 9     |
+microblaze_0_to_vgain_0/FSL_Rst(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/POR_FF_I:Q)                                                                                                                                                                       | NONE(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                                | 9     |
+readcop_0_to_microblaze_0/FSL_Rst(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/POR_FF_I:Q)                                                                                                                                                                 | NONE(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                            | 9     |
+vgain_0_to_microblaze_0/FSL_Rst(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/POR_FF_I:Q)                                                                                                                                                                       | NONE(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)                                                                                                | 9     |
+readcop_0/readcop_0/_or0000(readcop_0/readcop_0/_or00001:O)                                                                                                                                                                                                       | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN)                                                                                                                                      | 6     |
+vgain_0/vgain_0/write_vga_signal/_or0000(vgain_0/vgain_0/write_vga_signal/_or00001:O)                                                                                                                                                                             | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN)                                                                                                                         | 6     |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)                                                                                   | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                                                                                                                                      | 3     |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)                                                         | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                                                                                                                         | 3     |
+microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Command_Reg_Rst(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Command_Reg_Rst:Q)                                  | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)                                                                                                                | 2     |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2:Q)                                                                                              | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i)                                                                                                         | 2     |
+readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)                                                                                   | NONE(readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                                                                                                                                      | 2     |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2:Q)                                                                    | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i)                                                                                            | 2     |
+vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)                                                         | NONE(vgain_0/vgain_0/write_vga_signal/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                                                                                                                         | 2     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                              | NONE(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)                                                                                                                | 1     |
+mdm_0/bscan_update1(mdm_0/mdm_0/Use_Virtex5.BSCAN_VIRTEX5_I:UPDATE)                                                                                                                                                                                               | BUFG(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/running_clock)                                                                                                                | 1     |
+mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd_inv(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd_inv1_INV_0:O)                                                                                                                                                 | NONE(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/execute)                                                                                                                                                                              | 1     |
+mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/local_sel_n3(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].LUT_Delay:O)                                                                                                                                          | NONE(mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I)                                                                                                                                                                                | 1     |
+microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/continue_from_brk(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/continue_from_brk:Q)                              | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/continue_from_brk_TClk)                                                                                                       | 1     |
+microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_cmd_i(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_cmd_i:Q)                                | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk)                                                                                                              | 1     |
+microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/normal_stop_cmd_i(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/normal_stop_cmd_i:Q)                              | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/normal_stop_TClk)                                                                                                             | 1     |
+microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/start_single_step(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/start_single_step:Q)                              | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/single_Step_TClk)                                                                                                             | 1     |
+microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)| NONE(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                              | 1     |
+microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)  | NONE(microblaze_0_to_readcop_0/microblaze_0_to_readcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                               | 1     |
+microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)        | NONE(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                                  | 1     |
+microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)          | NONE(microblaze_0_to_vgain_0/microblaze_0_to_vgain_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                                   | 1     |
+readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)| NONE(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                              | 1     |
+readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)  | NONE(readcop_0_to_microblaze_0/readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                               | 1     |
+vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)        | NONE(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)                                                                                                  | 1     |
+vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)          | NONE(vgain_0_to_microblaze_0/vgain_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)                                                                                                   | 1     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 20.643ns (Maximum Frequency: 48.443MHz)
-   Minimum input arrival time before clock: 3.802ns
+   Minimum period: 22.734ns (Maximum Frequency: 43.987MHz)
+   Minimum input arrival time before clock: 3.881ns
    Maximum output required time after clock: 8.043ns
    Maximum combinational path delay: 1.397ns
 
@@ -1679,29 +1662,29 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
-  Clock period: 20.643ns (frequency: 48.443MHz)
-  Total number of paths / destination ports: 2777359257499 / 9859
+  Clock period: 22.734ns (frequency: 43.987MHz)
+  Total number of paths / destination ports: 2873143416393 / 9902
 -------------------------------------------------------------------------
-Delay:               20.643ns (Levels of Logic = 40)
-  Source:            readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
+Delay:               22.734ns (Levels of Logic = 47)
+  Source:            readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
   Destination:       readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR (FF)
   Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
   Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
 
-  Data Path: readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP to readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+  Data Path: readcop_0/readcop_0/fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP to readcop_0/readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB36_EXP:REGCLKBU->DOB7    1   2.180   0.973  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ram_doutb3<7>)
-     LUT6:I1->O           19   0.094   1.072  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_mux<12>1 (dout<12>)
+     RAMB36_EXP:REGCLKBU->DOB3    1   2.180   0.973  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ram_doutb7<3>)
+     LUT6:I1->O           31   0.094   0.703  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_mux<17>1 (dout<17>)
      end scope: 'readcop_0/fifo'
-     LUT5:I0->O            1   0.094   1.069  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd_1011 (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd_101)
-     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_lut<10> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_lut<10>)
-     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<10> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<10>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<11> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<11>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<12>)
-     XORCY:CI->O           1   0.357   0.480  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_xor<13> (readcop_0/color_conversion/Y_tmp_mult0001<13>)
-     LUT2:I1->O            1   0.094   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13>)
+     LUT2:I0->O            7   0.094   1.102  readcop_0/blk_n_white/Mmult_Scale_mult0000_Madd_1031 (readcop_0/blk_n_white/Mmult_Scale_mult0000_Madd_10_bdd5)
+     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_12_G (N258)
+     MUXF7:I1->O           1   0.254   0.789  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_12 (readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd_12)
+     LUT4:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_lut<12>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_cy<12>)
+     XORCY:CI->O           1   0.357   0.576  readcop_0/color_conversion/Mmult_Y_tmp_mult0000_Madd2_xor<13> (readcop_0/color_conversion/Y_tmp_mult0000<13>)
+     LUT2:I0->O            1   0.094   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13>)
      MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<13>)
      XORCY:CI->O           1   0.357   0.576  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_xor<14> (readcop_0/color_conversion/Y_tmp_addsub0001<14>)
      LUT2:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_lut<14> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_lut<14>)
@@ -1709,34 +1692,41 @@ Delay:               20.643ns (Levels of Logic = 40)
      MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>)
      MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<16> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<16>)
      MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<17> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<17>)
-     XORCY:CI->O          32   0.357   0.703  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18> (readcop_0/color_conversion/Y_tmp<8>)
-     LUT3:I1->O            1   0.094   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_lut<0> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<0> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<1> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<2> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<3> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<4> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<5> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<6> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<6>)
-     XORCY:CI->O           7   0.357   1.102  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_xor<7> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_lut<16>)
-     LUT6:I0->O            3   0.094   0.491  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_xor<10>111 (readcop_0/color_conversion/N2)
-     LUT5:I4->O            9   0.094   1.113  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<10>11 (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<10>)
-     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>1111 (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>111)
-     MUXF7:I1->O           3   0.254   0.721  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>111_f7 (readcop_0/color_conversion/N20)
-     LUT6:I3->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_lut<15> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_lut<15>)
-     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<15> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<15>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<16> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<16>)
-     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<17> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<17>)
-     MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<18> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<18>)
-     XORCY:CI->O           8   0.357   0.748  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_xor<19> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_19)
-     LUT4:I1->O            3   0.094   1.080  readcop_0/color_conversion/Cb<4>1 (readcop_0/ycrcb_video<4>)
-     LUT6:I0->O            1   0.094   0.789  readcop_0/video<0>2142 (readcop_0/video<0>2142)
-     LUT6:I2->O           34   0.094   1.197  readcop_0/video<0>2190 (readcop_0/video<0>2190)
-     LUT6:I0->O            1   0.094   0.336  readcop_0/video<7>1 (readcop_0/video<7>)
-     ODDR:D2                   0.434          readcop_0/dvi/DVIData/VideoBuf/bit[7].ODDR
+     XORCY:CI->O          24   0.357   0.698  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18> (readcop_0/color_conversion/Y_tmp<8>)
+     LUT3:I1->O            1   0.094   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<0> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<0> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<1> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<2> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<4> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<5> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<6> (readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_cy<6>)
+     XORCY:CI->O          16   0.357   1.151  readcop_0/color_conversion/Msub_Cr_tmp_signed_addsub0000_xor<7> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd2_lut<11>)
+     LUT6:I0->O            1   0.094   0.973  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_931 (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_93)
+     LUT5:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_lut<9> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_lut<9>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<9> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<11> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<12> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<13> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<15> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<16> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_cy<16>)
+     XORCY:CI->O           1   0.357   0.789  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd4_xor<17> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd_173)
+     LUT4:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<17> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_lut<17>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<17>)
+     MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<18> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_cy<18>)
+     XORCY:CI->O          10   0.357   1.118  readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_Madd5_xor<19> (readcop_0/color_conversion/Maddsub_Cr_tmp_signed_mult0000_19)
+     LUT6:I0->O            1   0.094   0.973  readcop_0/video<0>2174 (readcop_0/video<0>2174)
+     LUT6:I1->O            1   0.094   0.973  readcop_0/video<0>2179 (readcop_0/video<0>2179)
+     LUT6:I1->O           17   0.094   1.061  readcop_0/video<0>2223 (readcop_0/N6)
+     LUT5:I0->O            5   0.094   0.598  readcop_0/video<12>11 (readcop_0/N10)
+     LUT5:I3->O            1   0.094   0.000  readcop_0/video<4>_F (N265)
+     MUXF7:I0->O           1   0.251   0.336  readcop_0/video<4> (readcop_0/video<4>)
+     ODDR:D2                   0.434          readcop_0/dvi/DVIData/VideoBuf/bit[4].ODDR
     ----------------------------------------
-    Total                     20.643ns (8.193ns logic, 12.450ns route)
-                                       (39.7% logic, 60.3% route)
+    Total                     22.734ns (9.345ns logic, 13.389ns route)
+                                       (41.1% logic, 58.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mdm_0/mdm_0/drck_i'
@@ -1793,32 +1783,35 @@ Delay:               3.301ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
-  Clock period: 5.506ns (frequency: 181.633MHz)
-  Total number of paths / destination ports: 26674 / 8802
+  Clock period: 5.348ns (frequency: 186.972MHz)
+  Total number of paths / destination ports: 33869 / 6862
 -------------------------------------------------------------------------
-Delay:               5.506ns (Levels of Logic = 7)
+Delay:               5.348ns (Levels of Logic = 9)
   Source:            DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 (FF)
-  Destination:       readcop_0/readcop_0/pixel_ind_5 (FF)
+  Destination:       DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4 (FF)
   Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
   Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
 
-  Data Path: DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 to readcop_0/readcop_0/pixel_ind_5
+  Data Path: DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 to DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              1   0.471   0.789  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r<10>)
      LUT4:I0->O            1   0.094   0.480  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty94 (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty94)
      LUT5:I4->O            1   0.094   0.576  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty118 (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty118)
-     LUT3:I1->O            8   0.094   1.107  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty136 (PIM1_RdFIFO_Empty)
+     LUT3:I1->O            8   0.094   0.614  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty136 (PIM1_RdFIFO_Empty)
      end scope: 'DDR2_SDRAM'
      begin scope: 'readcop_0'
-     LUT6:I0->O           66   0.094   0.844  readcop_0/pixel_rdf_valid_mux000011 (readcop_0/N4)
-     LUT5:I2->O           19   0.094   0.675  readcop_0/pixel_ind_mux0000<0>2140 (readcop_0/N3)
-     LUT5:I3->O            1   0.094   0.000  readcop_0/pixel_ind_1_rstpot (readcop_0/pixel_ind_1_rstpot)
-     FD:D                     -0.018          readcop_0/pixel_ind_1
+     LUT2:I0->O           38   0.094   0.704  readcop_0/XIL_NPI_RdFIFO_Pop1 (XIL_NPI_RdFIFO_Pop)
+     end scope: 'readcop_0'
+     begin scope: 'DDR2_SDRAM'
+     LUT6:I4->O            1   0.094   0.576  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Result<4>2_SW1 (N706)
+     LUT6:I4->O            1   0.094   0.480  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Result<4> (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Result<4>)
+     LUT5:I4->O            1   0.094   0.000  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4_rstpot (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4_rstpot)
+     FDR:D                    -0.018          DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4
     ----------------------------------------
-    Total                      5.506ns (1.035ns logic, 4.471ns route)
-                                       (18.8% logic, 81.2% route)
+    Total                      5.348ns (1.129ns logic, 4.219ns route)
+                                       (21.1% logic, 78.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0'
@@ -1843,8 +1836,8 @@ Delay:               1.381ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'VGA_IN_DATA_CLK'
-  Clock period: 3.486ns (frequency: 286.880MHz)
-  Total number of paths / destination ports: 3358 / 991
+  Clock period: 3.486ns (frequency: 286.874MHz)
+  Total number of paths / destination ports: 3322 / 992
 -------------------------------------------------------------------------
 Delay:               3.486ns (Levels of Logic = 4)
   Source:            vgain_0/vgain_0/vga_index/h_counter_6 (FF)
@@ -1856,67 +1849,15 @@ Delay:               3.486ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              6   0.471   1.000  vgain_0/vga_index/h_counter_6 (vgain_0/vga_index/h_counter<6>)
-     LUT5:I0->O           12   0.094   0.540  vgain_0/vga_index/Msub_j_xor<7>121 (vgain_0/vga_index/N44)
-     LUT5:I4->O            2   0.094   0.485  vgain_0/vga_index/valid_SW2 (N43)
-     LUT5:I4->O           67   0.094   0.614  vgain_0/vga_index/valid (vgain_0/vga_valid)
-     LUT4:I3->O            1   0.094   0.000  vgain_0/data_84_32_rstpot (vgain_0/data_84_32_rstpot)
-     FD:D                     -0.018          vgain_0/data_84_32
+     FDR:C->Q              5   0.471   0.995  vgain_0/vga_index/h_counter_6 (vgain_0/vga_index/h_counter<6>)
+     LUT5:I0->O            8   0.094   0.518  vgain_0/vga_index/Msub_j_xor<7>121 (vgain_0/vga_index/N44)
+     LUT5:I4->O            8   0.094   0.518  vgain_0/vga_index/valid_SW2 (N31)
+     LUT6:I5->O           35   0.094   0.608  vgain_0/data_84_31_not00011 (vgain_0/data_84_31_not0001)
+     LUT3:I2->O            1   0.094   0.000  vgain_0/data_84_65_rstpot (vgain_0/data_84_65_rstpot)
+     FD:D                     -0.018          vgain_0/data_84_65
     ----------------------------------------
     Total                      3.486ns (0.847ns logic, 2.639ns route)
                                        (24.3% logic, 75.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
-  Clock period: 8.049ns (frequency: 124.239MHz)
-  Total number of paths / destination ports: 3797 / 1001
--------------------------------------------------------------------------
-Delay:               8.049ns (Levels of Logic = 8)
-  Source:            vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[18].u_ramb36/U_RAMB36 (RAM)
-  Destination:       vgain_0/vgain_0/icon/U0/U_ICON/U_TDO_reg (FF)
-  Source Clock:      vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-  Destination Clock: vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-
-  Data Path: vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[18].u_ramb36/U_RAMB36 to vgain_0/vgain_0/icon/U0/U_ICON/U_TDO_reg
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     RAMB36_EXP:REGCLKAL->DOPA0    1   2.190   0.973  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[18].u_ramb36/U_RAMB36 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<170>)
-     LUT6:I1->O            1   0.094   0.973  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914)
-     LUT6:I1->O            1   0.094   0.973  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_145 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_145)
-     LUT6:I1->O            1   0.094   0.973  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_91 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_91)
-     LUT6:I1->O            1   0.094   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_41 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_4)
-     MUXF7:I0->O           1   0.251   0.576  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_2_f7 (U0/I_YES_D.U_ILA/iDATA_DOUT)
-     LUT3:I1->O            1   0.094   0.576  U0/I_YES_D.U_ILA/U_DOUT (CONTROL<3>)
-     end scope: 'vgain_0/ila'
-     begin scope: 'vgain_0/icon'
-     LUT6:I4->O            1   0.094   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O11 (U0/U_ICON/iTDO_next)
-     FDE:D                    -0.018          U0/U_ICON/U_TDO_reg
-    ----------------------------------------
-    Total                      8.049ns (3.005ns logic, 5.044ns route)
-                                       (37.3% logic, 62.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'vgain_0/vgain_0/icon/U0/iUPDATE_OUT'
-  Clock period: 1.392ns (frequency: 718.391MHz)
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               1.392ns (Levels of Logic = 1)
-  Source:            vgain_0/vgain_0/icon/U0/U_ICON/U_iDATA_CMD (FF)
-  Destination:       vgain_0/vgain_0/icon/U0/U_ICON/U_iDATA_CMD (FF)
-  Source Clock:      vgain_0/vgain_0/icon/U0/iUPDATE_OUT rising
-  Destination Clock: vgain_0/vgain_0/icon/U0/iUPDATE_OUT rising
-
-  Data Path: vgain_0/vgain_0/icon/U0/U_ICON/U_iDATA_CMD to vgain_0/vgain_0/icon/U0/U_ICON/U_iDATA_CMD
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              3   0.471   0.347  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
-     INV:I->O              1   0.238   0.336  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
-     FDC:D                    -0.018          U0/U_ICON/U_iDATA_CMD
-    ----------------------------------------
-    Total                      1.392ns (0.709ns logic, 0.683ns route)
-                                       (50.9% logic, 49.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'mdm_0/mdm_0/drck_i'
@@ -1947,43 +1888,64 @@ Offset:              2.750ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              1.981ns (Levels of Logic = 3)
-  Source:            IIC_SDA_VIDEO (PAD)
-  Destination:       readcop_0/readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0 (FF)
+Offset:              1.733ns (Levels of Logic = 3)
+  Source:            fpga_0_rst_1_sys_rst_pin (PAD)
+  Destination:       proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1 (FF)
   Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
 
-  Data Path: IIC_SDA_VIDEO to readcop_0/readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0
+  Data Path: fpga_0_rst_1_sys_rst_pin to proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   0.818   1.069  iobuf_1 (readcop_0_IIC_SDA_VIDEO_I)
-     begin scope: 'readcop_0'
-     LUT6:I0->O            1   0.094   0.000  readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_mux0000<0> (readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_mux0000<0>)
-     FDRSE:D                  -0.018          readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0
+     IBUF:I->O             2   0.818   0.341  fpga_0_rst_1_sys_rst_pin_IBUF (fpga_0_rst_1_sys_rst_pin_IBUF)
+     begin scope: 'proc_sys_reset_0'
+     INV:I->O              1   0.238   0.336  proc_sys_reset_0/EXT_LPF/exr_d1_or000011_INV_0 (proc_sys_reset_0/EXT_LPF/exr_d1_or00001)
+     FDS:D                    -0.018          proc_sys_reset_0/EXT_LPF/exr_d1
     ----------------------------------------
-    Total                      1.981ns (0.912ns logic, 1.069ns route)
-                                       (46.0% logic, 54.0% route)
+    Total                      1.733ns (1.056ns logic, 0.677ns route)
+                                       (60.9% logic, 39.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
-  Total number of paths / destination ports: 300 / 300
+  Total number of paths / destination ports: 756 / 296
 -------------------------------------------------------------------------
-Offset:              2.414ns (Levels of Logic = 3)
-  Source:            GPIO_COMPSW_1 (PAD)
-  Destination:       readcop_0/readcop_0/rst_parse/count_21 (FF)
+Offset:              3.881ns (Levels of Logic = 24)
+  Source:            GPIO_COMPSW_2 (PAD)
+  Destination:       readcop_0/readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_19 (FF)
   Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
 
-  Data Path: GPIO_COMPSW_1 to readcop_0/readcop_0/rst_parse/count_21
+  Data Path: GPIO_COMPSW_2 to readcop_0/readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.818   0.336  GPIO_COMPSW_1_IBUF (GPIO_COMPSW_1_IBUF)
+     IBUF:I->O            41   0.818   1.198  GPIO_COMPSW_2_IBUF (GPIO_COMPSW_2_IBUF)
      begin scope: 'readcop_0'
-     INV:I->O             22   0.238   0.449  readcop_0/GPIO_COMPSW_1_inv1_INV_0 (readcop_0/GPIO_COMPSW_1_inv)
-     FDR:R                     0.573          readcop_0/rst_parse/count_0
+     LUT6:I0->O            1   0.094   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_lut<0> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<0> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<1> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<2> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<3> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<4> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<5> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<6> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<7> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<8> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<9> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<10> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<11> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<12> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<13> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<14> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<15> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<16> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<17> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<17>)
+     MUXCY:CI->O           0   0.026   0.000  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<18> (readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_cy<18>)
+     XORCY:CI->O           1   0.357   0.480  readcop_0/toggle_parse_2/BP[0].D/Maddsub_NextCount_share0000_xor<19> (readcop_0/toggle_parse_2/BP[0].D/NextCount_share0000<19>)
+     LUT5:I4->O            1   0.094   0.000  readcop_0/toggle_parse_2/BP[0].D/NextCount<19>1 (readcop_0/toggle_parse_2/BP[0].D/NextCount<19>)
+     FDRE:D                   -0.018          readcop_0/toggle_parse_2/BP[0].D/CntReg/Out_19
     ----------------------------------------
-    Total                      2.414ns (1.629ns logic, 0.785ns route)
-                                       (67.5% logic, 32.5% route)
+    Total                      3.881ns (2.203ns logic, 1.678ns route)
+                                       (56.8% logic, 43.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/dqs_ibuf'
@@ -2160,71 +2122,46 @@ Offset:              1.788ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'VGA_IN_DATA_CLK'
-  Total number of paths / destination ports: 102 / 73
+  Total number of paths / destination ports: 104 / 73
 -------------------------------------------------------------------------
-Offset:              2.840ns (Levels of Logic = 4)
-  Source:            VGA_IN_HSOUT (PAD)
-  Destination:       vgain_0/vgain_0/vga_index/h_counter_3 (FF)
+Offset:              2.783ns (Levels of Logic = 4)
+  Source:            VGA_IN_VSOUT (PAD)
+  Destination:       vgain_0/vgain_0/vga_index/h_counter_4 (FF)
   Destination Clock: VGA_IN_DATA_CLK rising
 
-  Data Path: VGA_IN_HSOUT to vgain_0/vgain_0/vga_index/h_counter_3
+  Data Path: VGA_IN_VSOUT to vgain_0/vgain_0/vga_index/h_counter_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   0.818   1.124  VGA_IN_HSOUT_IBUF (VGA_IN_HSOUT_IBUF)
+     IBUF:I->O            17   0.818   0.664  VGA_IN_VSOUT_IBUF (VGA_IN_VSOUT_IBUF)
      begin scope: 'vgain_0'
-     LUT6:I0->O            1   0.094   0.710  vgain_0/vga_index/h_counter_mux0000<7>_SW4 (N87)
-     LUT5:I2->O            1   0.094   0.000  vgain_0/vga_index/h_counter_mux0000<7> (vgain_0/vga_index/h_counter_mux0000<7>)
-     FDR:D                    -0.018          vgain_0/vga_index/h_counter_3
+     LUT2:I0->O            9   0.094   1.113  vgain_0/vga_index/h_counter_mux0000<4>11 (vgain_0/vga_index/N01)
+     LUT6:I0->O            1   0.094   0.000  vgain_0/vga_index/h_counter_mux0000<6>2 (vgain_0/vga_index/h_counter_mux0000<6>)
+     FDR:D                    -0.018          vgain_0/vga_index/h_counter_4
     ----------------------------------------
-    Total                      2.840ns (1.006ns logic, 1.834ns route)
-                                       (35.4% logic, 64.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
-  Total number of paths / destination ports: 200 / 190
--------------------------------------------------------------------------
-Offset:              3.802ns (Levels of Logic = 5)
-  Source:            vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
-  Destination:       vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE (FF)
-  Destination Clock: vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-
-  Data Path: vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to vgain_0/vgain_0/ila/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    BSCAN_VIRTEX5:SHIFT    3   0.000   0.491  U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
-     LUT2:I1->O           32   0.094   0.916  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
-     LUT4:I0->O            2   0.094   0.581  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
-     end scope: 'vgain_0/icon'
-     begin scope: 'vgain_0/ila'
-     LUT2:I0->O            1   0.094   0.336  U0/I_YES_D.U_ILA/U_STAT/U_STATCMD (U0/I_YES_D.U_ILA/U_STAT/iSTATCMD_CE)
-     INV:I->O             10   0.238   0.385  U0/I_YES_D.U_ILA/U_STAT/U_STATCMD_n (U0/I_YES_D.U_ILA/U_STAT/iSTATCMD_CE_n)
-     FDRE:R                    0.573          U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
-    ----------------------------------------
-    Total                      3.802ns (1.093ns logic, 2.709ns route)
-                                       (28.7% logic, 71.3% route)
+    Total                      2.783ns (1.006ns logic, 1.777ns route)
+                                       (36.1% logic, 63.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
   Total number of paths / destination ports: 263 / 260
 -------------------------------------------------------------------------
-Offset:              4.171ns (Levels of Logic = 3)
-  Source:            readcop_0/readcop_0/dvi/DVIInit/I2CControl/Master/CurrentState_FSM_FFd1 (FF)
+Offset:              4.101ns (Levels of Logic = 3)
+  Source:            readcop_0/readcop_0/dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1 (FF)
   Destination:       IIC_SCL_VIDEO (PAD)
   Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
 
-  Data Path: readcop_0/readcop_0/dvi/DVIInit/I2CControl/Master/CurrentState_FSM_FFd1 to IIC_SCL_VIDEO
+  Data Path: readcop_0/readcop_0/dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1 to IIC_SCL_VIDEO
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            21   0.471   0.818  readcop_0/dvi/DVIInit/I2CControl/Master/CurrentState_FSM_FFd1 (readcop_0/dvi/DVIInit/I2CControl/Master/CurrentState_FSM_FFd1)
+     FDRE:C->Q             8   0.471   0.748  readcop_0/dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1 (readcop_0/dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out<1>)
      LUT3:I0->O            1   0.094   0.336  readcop_0/dvi/DVIInit/I2CControl/Master/SCL_T1 (IIC_SCL_VIDEO_T)
      end scope: 'readcop_0'
      IOBUF:T->IO               2.452          iobuf_0 (IIC_SCL_VIDEO)
     ----------------------------------------
-    Total                      4.171ns (3.017ns logic, 1.154ns route)
-                                       (72.3% logic, 27.7% route)
+    Total                      4.101ns (3.017ns logic, 1.084ns route)
+                                       (73.6% logic, 26.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
@@ -2239,7 +2176,7 @@ Offset:              3.980ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q           140   0.471   0.483  readcop_0/dvi_rst (readcop_0/dvi_rst)
+     FDRE:C->Q           136   0.471   0.483  readcop_0/dvi_rst (readcop_0/dvi_rst)
      INV:I->O              1   0.238   0.336  readcop_0/dvi/DVIData/DVI_RESET_B1_INV_0 (DVI_RESET_B)
      end scope: 'readcop_0'
      OBUF:I->O                 2.452          DVI_RESET_B_OBUF (DVI_RESET_B)
@@ -2485,25 +2422,6 @@ Offset:              6.408ns (Levels of Logic = 11)
                                        (20.0% logic, 80.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              0.471ns (Levels of Logic = 0)
-  Source:            vgain_0/vgain_0/icon/U0/U_ICON/U_TDO_reg (FF)
-  Destination:       vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
-  Source Clock:      vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-
-  Data Path: vgain_0/vgain_0/icon/U0/U_ICON/U_TDO_reg to vgain_0/vgain_0/icon/U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              0   0.471   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
-    BSCAN_VIRTEX5:TDO          0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_V5.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS
-    ----------------------------------------
-    Total                      0.471ns (0.471ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
-
-=========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 203 / 203
 -------------------------------------------------------------------------
@@ -2526,13 +2444,13 @@ Delay:               1.397ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 647.00 secs
-Total CPU time to Xst completion: 642.58 secs
+Total REAL time to Xst completion: 576.00 secs
+Total CPU time to Xst completion: 573.72 secs
  
 --> 
 
 
-Total memory usage is 823976 kilobytes
+Total memory usage is 807312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 1221 (   0 filtered)

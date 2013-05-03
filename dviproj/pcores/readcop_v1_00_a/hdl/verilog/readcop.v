@@ -259,10 +259,20 @@ reg [63:0] rdf_dout;
 reg pixel_rdf_valid;
 reg [2:0] dram_data_counter;
 wire rst;
-Debouncer rst_parse(
+/*Debouncer rst_parse(
       .clk(FSL_S_Clk),
       .in(GPIO_COMPSW_1),
-      .out(rst));
+      .out(rst));*/
+      ButtonParse #(
+			.Width(				1),
+			.DebWidth(			20),
+			.EdgeOutWidth(		1)
+		) toggle_parse_1(	
+			.Clock(				FSL_S_Clk),
+			.Reset(				1'b0),
+			.Enable(			1'b1),
+			.In(				GPIO_COMPSW_1),
+			.Out(				rst));
 reg [19:0] pixel_ind;
 assign ADDR_MB = 32'h90000000 + pixel_ind*4;
 
@@ -367,21 +377,32 @@ always @(posedge FSL_Clk) begin
 	end
 end*/
 	  wire toggle_display;
-  Debouncer toggle_parse(
+ /* Debouncer toggle_parse(
       .clk(FSL_S_Clk),
       .in(GPIO_COMPSW_2),
-      .out(toggle_display));
-	localparam RGB   = 2'd0,
-						 YCRCB = 2'd1,
-						 MASK  = 2'd2;
-	reg [1:0] display_state;
-	reg [1:0] next_display_state;
+      .out(toggle_display)); */
+      ButtonParse #(
+			.Width(				1),
+			.DebWidth(			20),
+			.EdgeOutWidth(		1)
+		) toggle_parse_2(	
+			.Clock(				FSL_S_Clk),
+			.Reset(				1'b0),
+			.Enable(			1'b1),
+			.In(				GPIO_COMPSW_2),
+			.Out(				toggle_display));
+	localparam RGB   = 3'd0, YCRCB = 3'd1, MASK  = 3'd2, RED = 3'd3, GREEN = 3'd4, BLUE = 3'd5, GRAY = 3'd6, BACKGROUND = 3'd7;
+	reg [2:0] display_state;
+	reg [2:0] next_display_state;
 	wire [23:0] rgb_video;
 	wire [23:0] ycrcb_video;
 	wire [23:0] mask_video;
+	wire [23:0] gray_video;
+	wire [23:0] background_video;
 	wire [31:0] video_32;
 	assign rgb_video = video_32[23:0];
 	assign video_valid = ~fifo_empty & video_ready;
+	
 fifo_generator_v9_1 fifo(
     	.rst(rst || ~XIL_NPI_InitDone),
     	.wr_clk(FSL_S_Clk),
@@ -398,7 +419,9 @@ fifo_generator_v9_1 fifo(
 	wire mask;
 	SkinMask skin_mask(ycrcb_video, mask);
 	assign mask_video = {24{mask}};
-	
+	Gray blk_n_white(rgb_video, gray_video);
+	reg [10:0] j, i;
+	Background background(rgb_video, background_video, j);
 	always@(posedge FSL_S_Clk) begin
 		if (rst) display_state <= RGB;
 		else display_state <= next_display_state;
@@ -417,11 +440,59 @@ fifo_generator_v9_1 fifo(
 			end
 			MASK: begin
 				video = mask_video;
+				if (toggle_display) next_display_state = RED;
+			end
+			RED: begin
+				video = {rgb_video[23:16], 16'd0};
+				if (toggle_display) next_display_state = GREEN;
+			end
+			GREEN: begin
+				video = {8'd0, rgb_video[15:8], 8'd0};
+				if (toggle_display) next_display_state = BLUE;
+			end
+			BLUE: begin
+				video = {16'd0, rgb_video[7:0]};
+				if (toggle_display) next_display_state = GRAY;
+			end
+			GRAY: begin
+				video = gray_video;
+				if (toggle_display) next_display_state = BACKGROUND;
+			end
+			BACKGROUND: begin
+				video = background_video;
 				if (toggle_display) next_display_state = RGB;
 			end
 			default: next_display_state = RGB;
 		endcase
 	end
+
+	
+	
+	always@(posedge FSL_Clk) begin
+		if (dvi_rst)
+			begin
+				j <= 0;
+				i <= 0;
+			end
+		else
+			begin
+				if (video_ready) begin
+				 	if ((j == 1023) && (i == 767)) begin
+						j <= 0;
+						i <= 0;
+		      		end else if (j == 1023) begin
+						j <= 0;
+						i <= i + 1;
+		      		end else begin
+						j <= j + 1; 
+						i <= i;
+		      		end
+        		end else begin
+        	j <= j;
+        	i <= i;
+        		end
+        	end
+        end
  
 DVI #(
     .ClockFreq(                 75000000),
@@ -460,7 +531,7 @@ dvi(
 
 endmodule
 
- module fifo_generator_v9_1(
+module fifo_generator_v9_1(
   rst,
   wr_clk,
   rd_clk,
