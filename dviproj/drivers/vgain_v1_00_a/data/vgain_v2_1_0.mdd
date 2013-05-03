@@ -1,0 +1,16 @@
+##############################################################################
+## Filename:          /home/cc/cs150/sp13/class/cs150-ax/dviproj/drivers/vgain_v1_00_a/data/vgain_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Sat Apr  6 14:15:53 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER vgain_v1_00_a
+
+  OPTION supported_peripherals = (vgain_v1_00_a);
+  OPTION depends = (common_v1_00_a);
+  OPTION DESC = new FSL core;
+  OPTION copyfiles = all;
+
+END DRIVER

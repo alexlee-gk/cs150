@@ -1,0 +1,7 @@
+INFILE=/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation/system.ncd
+OUTFILE=/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation/system.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=/home/cc/cs150/sp13/class/cs150-ax/dviproj/implementation
+LICENSE=ISE
+USER_INFO=__174112198_174112199_174416789

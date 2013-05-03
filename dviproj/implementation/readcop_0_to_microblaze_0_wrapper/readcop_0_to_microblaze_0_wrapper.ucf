@@ -1,0 +1,2 @@
+INST "readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram*" TNM = "readcop_0_to_microblaze_0_fsl"; 
+TIMESPEC "TS_ASYNC_FIFO_readcop_0_to_microblaze_0" = FROM "readcop_0_to_microblaze_0_fsl" 16000 ps DATAPATHONLY; 

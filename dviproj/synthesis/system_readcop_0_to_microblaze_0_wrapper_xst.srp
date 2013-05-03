@@ -1,0 +1,492 @@
+Release 14.1 - xst P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_readcop_0_to_microblaze_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc5vlx110tff1136-1
+Output File Name                   : "../implementation/system_readcop_0_to_microblaze_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_readcop_0_to_microblaze_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_srlfifo.vhd" in Library fsl_v20_v2_11_e.
+Entity <SRL_FIFO> compiled.
+Entity <SRL_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_sync_dpram.vhd" in Library fsl_v20_v2_11_e.
+Entity <Sync_DPRAM> compiled.
+Entity <Sync_DPRAM> (Architecture <syn>) compiled.
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_sync_bram.vhd" in Library fsl_v20_v2_11_e.
+Entity <Sync_BRAM> compiled.
+Entity <Sync_BRAM> (Architecture <syn>) compiled.
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/sync_fifo.vhd" in Library fsl_v20_v2_11_e.
+Entity <Sync_FIFO> compiled.
+Entity <Sync_FIFO> (Architecture <VHDL_RTL>) compiled.
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/async_fifo.vhd" in Library fsl_v20_v2_11_e.
+Entity <Async_FIFO> compiled.
+Entity <Async_FIFO> (Architecture <VHDL_RTL>) compiled.
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/async_fifo_bram.vhd" in Library fsl_v20_v2_11_e.
+Entity <Async_FIFO_BRAM> compiled.
+Entity <Async_FIFO_BRAM> (Architecture <IMP>) compiled.
+Compiling vhdl file "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/fsl_v20.vhd" in Library fsl_v20_v2_11_e.
+Entity <fsl_v20> compiled.
+Entity <fsl_v20> (Architecture <IMP>) compiled.
+Compiling vhdl file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/hdl/system_readcop_0_to_microblaze_0_wrapper.vhd" in Library work.
+Entity <system_readcop_0_to_microblaze_0_wrapper> compiled.
+Entity <system_readcop_0_to_microblaze_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system_readcop_0_to_microblaze_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <fsl_v20> in library <fsl_v20_v2_11_e> (architecture <IMP>) with generics.
+	C_ASYNC_CLKS = 1
+	C_EXT_RESET_HIGH = 1
+	C_FSL_DEPTH = 16
+	C_FSL_DWIDTH = 32
+	C_IMPL_STYLE = 0
+	C_READ_CLOCK_PERIOD = 16000
+	C_USE_CONTROL = 1
+
+Analyzing hierarchy for entity <Async_FIFO> in library <fsl_v20_v2_11_e> (architecture <VHDL_RTL>) with generics.
+	MemSize = 16
+	Protect = true
+	WordSize = 33
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system_readcop_0_to_microblaze_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <system_readcop_0_to_microblaze_0_wrapper> analyzed. Unit <system_readcop_0_to_microblaze_0_wrapper> generated.
+
+Analyzing generic Entity <fsl_v20> in library <fsl_v20_v2_11_e> (Architecture <IMP>).
+	C_ASYNC_CLKS = 1
+	C_EXT_RESET_HIGH = 1
+	C_FSL_DEPTH = 16
+	C_FSL_DWIDTH = 32
+	C_IMPL_STYLE = 0
+	C_READ_CLOCK_PERIOD = 16000
+	C_USE_CONTROL = 1
+    Set user-defined property "INIT =  FFFF" for instance <POR_SRL_I> in unit <fsl_v20>.
+    Set user-defined property "INIT =  1" for instance <POR_FF_I> in unit <fsl_v20>.
+Entity <fsl_v20> analyzed. Unit <fsl_v20> generated.
+
+Analyzing generic Entity <Async_FIFO> in library <fsl_v20_v2_11_e> (Architecture <VHDL_RTL>).
+	MemSize = 16
+	Protect = true
+	WordSize = 33
+Entity <Async_FIFO> analyzed. Unit <Async_FIFO> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Async_FIFO>.
+    Related source file is "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/async_fifo.vhd".
+WARNING:Xst:646 - Signal <DataOut1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16x33-bit dual-port RAM <Mram_Memory> for signal <Memory>.
+    Found 1-bit register for signal <Dir_Latched<0>>.
+    Found 1-bit register for signal <Empty_Out<0>>.
+    Found 4-bit comparator equal for signal <Equal<0>>.
+    Found 1-bit register for signal <Full_Out<0>>.
+    Found 4-bit register for signal <Read_Ptr>.
+    Found 4-bit register for signal <Write_Ptr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Async_FIFO> synthesized.
+
+
+Synthesizing Unit <fsl_v20>.
+    Related source file is "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/fsl_v20.vhd".
+WARNING:Xst:647 - Input <FSL_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <fsl_v20> synthesized.
+
+
+Synthesizing Unit <system_readcop_0_to_microblaze_0_wrapper>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/hdl/system_readcop_0_to_microblaze_0_wrapper.vhd".
+Unit <system_readcop_0_to_microblaze_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x33-bit dual-port RAM                               : 1
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 4-bit register                                        : 2
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Async_FIFO>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Memory> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 33-bit                    |          |
+    |     clkA           | connected to signal <WrClk>         | rise     |
+    |     weA            | connected to signal <WE>            | high     |
+    |     addrA          | connected to signal <Write_Ptr>     |          |
+    |     diA            | connected to signal <DataIn>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 33-bit                    |          |
+    |     addrB          | connected to signal <Read_Ptr>      |          |
+    |     doB            | connected to signal <DataOut>       |          |
+    -----------------------------------------------------------------------
+Unit <Async_FIFO> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x33-bit dual-port distributed RAM                   : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit Async_FIFO : the following signal(s) form a combinatorial loop: Direction_0_or0000.
+
+Optimizing unit <system_readcop_0_to_microblaze_0_wrapper> ...
+
+Optimizing unit <Async_FIFO> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_readcop_0_to_microblaze_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 78
+
+Cell Usage :
+# BELS                             : 20
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 4
+#      LUT4                        : 10
+#      LUT6                        : 3
+#      VCC                         : 1
+# FlipFlops/Latches                : 12
+#      FDCE                        : 9
+#      FDP                         : 2
+#      FDS                         : 1
+# RAMS                             : 8
+#      RAM32M                      : 5
+#      RAM32X1D                    : 3
+# Shift Registers                  : 1
+#      SRL16                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              12  out of  69120     0%  
+ Number of Slice LUTs:                   45  out of  69120     0%  
+    Number used as Logic:                18  out of  69120     0%  
+    Number used as Memory:               27  out of  17920     0%  
+       Number used as RAM:               26
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     46
+   Number with an unused Flip Flop:      34  out of     46    73%  
+   Number with an unused LUT:             1  out of     46     2%  
+   Number of fully used LUT-FF pairs:    11  out of     46    23%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          78
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                     | Load  |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------+-------+
+FSL_M_Clk                          | NONE(readcop_0_to_microblaze_0/POR_FF_I)                                                                  | 16    |
+FSL_S_Clk                          | NONE(readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)| 5     |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                | Buffer(FF name)                                                                                             | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+FSL_Rst(readcop_0_to_microblaze_0/POR_FF_I:Q)                                                                                                                                                                 | NONE(readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Dir_Latched_0)| 9     |
+readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I(readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_I_0_and0000:O)| NONE(readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)  | 1     |
+readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I(readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_I_0_and0000:O)  | NONE(readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0)   | 1     |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 1.889ns (Maximum Frequency: 529.381MHz)
+   Minimum input arrival time before clock: 0.899ns
+   Maximum output required time after clock: 2.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_M_Clk'
+  Clock period: 1.889ns (frequency: 529.381MHz)
+  Total number of paths / destination ports: 53 / 41
+-------------------------------------------------------------------------
+Delay:               1.889ns (Levels of Logic = 0)
+  Source:            readcop_0_to_microblaze_0/POR_SRL_I (FF)
+  Destination:       readcop_0_to_microblaze_0/POR_FF_I (FF)
+  Source Clock:      FSL_M_Clk rising
+  Destination Clock: FSL_M_Clk rising
+
+  Data Path: readcop_0_to_microblaze_0/POR_SRL_I to readcop_0_to_microblaze_0/POR_FF_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16:CLK->Q          1   1.889   0.000  readcop_0_to_microblaze_0/POR_SRL_I (readcop_0_to_microblaze_0/srl_time_out)
+     FDS:D                    -0.018          readcop_0_to_microblaze_0/POR_FF_I
+    ----------------------------------------
+    Total                      1.889ns (1.889ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
+  Clock period: 1.621ns (frequency: 616.903MHz)
+  Total number of paths / destination ports: 20 / 8
+-------------------------------------------------------------------------
+Delay:               1.621ns (Levels of Logic = 1)
+  Source:            readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0 (FF)
+  Destination:       readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3 (FF)
+  Source Clock:      FSL_S_Clk rising
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0 to readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.471   0.491  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0 (readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0)
+     LUT2:I1->O            4   0.094   0.352  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_0_and00001 (readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read)
+     FDCE:CE                   0.213          readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_0
+    ----------------------------------------
+    Total                      1.621ns (0.778ns logic, 0.843ns route)
+                                       (48.0% logic, 52.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_M_Clk'
+  Total number of paths / destination ports: 47 / 47
+-------------------------------------------------------------------------
+Offset:              0.899ns (Levels of Logic = 1)
+  Source:            FSL_M_Write (PAD)
+  Destination:       readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Write_Ptr_3 (FF)
+  Destination Clock: FSL_M_Clk rising
+
+  Data Path: FSL_M_Write to readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Write_Ptr_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O            4   0.094   0.352  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Write_0_and00001 (readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Write)
+     FDCE:CE                   0.213          readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Write_Ptr_0
+    ----------------------------------------
+    Total                      0.899ns (0.547ns logic, 0.352ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.899ns (Levels of Logic = 1)
+  Source:            FSL_S_Read (PAD)
+  Destination:       readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3 (FF)
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: FSL_S_Read to readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O            4   0.094   0.352  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_0_and00001 (readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read)
+     FDCE:CE                   0.213          readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_0
+    ----------------------------------------
+    Total                      0.899ns (0.547ns logic, 0.352ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 139 / 36
+-------------------------------------------------------------------------
+Offset:              1.948ns (Levels of Logic = 2)
+  Source:            readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2 (FF)
+  Destination:       FSL_Control_IRQ (PAD)
+  Source Clock:      FSL_S_Clk rising
+
+  Data Path: readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2 to FSL_Control_IRQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            25   0.471   0.462  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2 (readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Read_Ptr_2)
+     RAM32M:ADDRA2->DOA0    1   0.345   0.576  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram_Memory1 (FSL_S_Control)
+     LUT2:I0->O            0   0.094   0.000  readcop_0_to_microblaze_0/FSL_Control_IRQ1 (FSL_Control_IRQ)
+    ----------------------------------------
+    Total                      1.948ns (0.910ns logic, 1.038ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_M_Clk'
+  Total number of paths / destination ports: 38 / 37
+-------------------------------------------------------------------------
+Offset:              2.310ns (Levels of Logic = 1)
+  Source:            readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram_Memory1 (RAM)
+  Destination:       FSL_Control_IRQ (PAD)
+  Source Clock:      FSL_M_Clk rising
+
+  Data Path: readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram_Memory1 to FSL_Control_IRQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32M:WCLK->DOA0     1   1.640   0.576  readcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Mram_Memory1 (FSL_S_Control)
+     LUT2:I0->O            0   0.094   0.000  readcop_0_to_microblaze_0/FSL_Control_IRQ1 (FSL_Control_IRQ)
+    ----------------------------------------
+    Total                      2.310ns (1.734ns logic, 0.576ns route)
+                                       (75.1% logic, 24.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.28 secs
+ 
+--> 
+
+
+Total memory usage is 684032 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

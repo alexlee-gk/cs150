@@ -1,0 +1,2280 @@
+Release 14.1 - xst P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ax/dviproj/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_readcop_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc5vlx110tff1136-1
+Output File Name                   : "../implementation/system_readcop_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_readcop_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v" in library readcop_v1_00_a
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v" in library readcop_v1_00_a
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v" line 43 Macro 'MACROSAFE' redefined
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v" line 69 Macro 'MACROSAFE' redefined
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Counter.v" in library readcop_v1_00_a
+Module <CountCompare> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountRegion.v" in library readcop_v1_00_a
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+Module <Counter> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/DVI.v" in library readcop_v1_00_a
+Module <CountRegion> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/DVIData.v" in library readcop_v1_00_a
+Module <DVI> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/DVIInitial.v" in library readcop_v1_00_a
+Module <DVIData> compiled
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CDRAMMaster.constants"
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.constants"
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Debouncer.v" in library readcop_v1_00_a
+Module <DVIInitial> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFOInitial.v" in library readcop_v1_00_a
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFOInitial.v" line 43 Macro 'MACROSAFE' redefined
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v" line 69 Macro 'MACROSAFE' redefined
+Module <Debouncer> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFORegControl.v" in library readcop_v1_00_a
+Module <FIFOInitial> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFORegister.v" in library readcop_v1_00_a
+Module <FIFORegControl> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CDRAMMaster.v" in library readcop_v1_00_a
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+Module <FIFORegister> compiled
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CDRAMMaster.constants"
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.constants"
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.v" in library readcop_v1_00_a
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.v" line 44 Macro 'MACROSAFE' redefined
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v" line 69 Macro 'MACROSAFE' redefined
+Module <I2CDRAMMaster> compiled
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.constants"
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/IORegister.v" in library readcop_v1_00_a
+Module <I2CMaster> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/PixelCounter.v" in library readcop_v1_00_a
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/PixelCounter.v" line 44 Macro 'MACROSAFE' redefined
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+WARNING:HDLCompilers:38 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v" line 69 Macro 'MACROSAFE' redefined
+Module <IORegister> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/PixelFeeder.v" in library readcop_v1_00_a
+Module <PixelCounter> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/readcop.v" in library readcop_v1_00_a
+Module <PixelFeeder> compiled
+Module <readcop> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v" in library readcop_v1_00_a
+Module <fifo_generator_v9_1> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SDR2DDR.v" in library readcop_v1_00_a
+Compiling verilog include file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Const.v"
+Module <Register> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v" in library readcop_v1_00_a
+Module <SDR2DDR> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/RGB2YCrCb.v" in library readcop_v1_00_a
+Module <ShiftRegister> compiled
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SkinMask.v" in library readcop_v1_00_a
+Module <RGB2YCrCb> compiled
+Module <SkinMask> compiled
+Compiling verilog file "../hdl/system_readcop_0_wrapper.v" in library work
+Module <system_readcop_0_wrapper> compiled
+No errors in compilation
+Analysis of file <"system_readcop_0_wrapper_xst.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <system_readcop_0_wrapper> in library <work>.
+
+Analyzing hierarchy for module <readcop> in library <readcop_v1_00_a> with parameters.
+	C_PI_ADDR_WIDTH = "00000000000000000000000000100000"
+	C_PI_BE_WIDTH = "00000000000000000000000000001000"
+	C_PI_DATA_WIDTH = "00000000000000000000000001000000"
+	C_PI_RDWDADDR_WIDTH = "00000000000000000000000000000100"
+	FTDATA = "000100"
+	INIT = "000001"
+	INIT2 = "100000"
+	MASK = "10"
+	RDADDR = "000010"
+	RGB = "00"
+	WAITEMP = "001000"
+	WAITLAT = "010000"
+	YCRCB = "01"
+
+Analyzing hierarchy for module <Debouncer> in library <readcop_v1_00_a>.
+
+Analyzing hierarchy for module <RGB2YCrCb> in library <readcop_v1_00_a>.
+
+Analyzing hierarchy for module <SkinMask> in library <readcop_v1_00_a>.
+
+Analyzing hierarchy for module <DVI> in library <readcop_v1_00_a> with parameters.
+	BackH = "00000000000000000000000010010000"
+	BackV = "00000000000000000000000000011101"
+	ClockFreq = "00000100011110000110100011000000"
+	FrontH = "00000000000000000000000000011000"
+	FrontV = "00000000000000000000000000000011"
+	Height = "00000000000000000000001100100110"
+	I2CAddress = "1110110"
+	I2CRate = "00000000000000011000011010100000"
+	PulseH = "00000000000000000000000010001000"
+	PulseV = "00000000000000000000000000000110"
+	Width = "00000000000000000000010100110000"
+
+Analyzing hierarchy for module <DVIData> in library <readcop_v1_00_a> with parameters.
+	BackH = "00000000000000000000000010010000"
+	BackV = "00000000000000000000000000011101"
+	FrontH = "00000000000000000000000000011000"
+	FrontV = "00000000000000000000000000000011"
+	Height = "00000000000000000000001100100110"
+	PulseH = "00000000000000000000000010001000"
+	PulseV = "00000000000000000000000000000110"
+	Width = "00000000000000000000010100110000"
+
+Analyzing hierarchy for module <DVIInitial> in library <readcop_v1_00_a> with parameters.
+	ClockFreq = "00000100011110000110100011000000"
+	I2CAddress = "1110110"
+	I2CDCMD_CWidth = "00000000000000000000000000000001"
+	I2CDCMD_Read = "1"
+	I2CDCMD_Write = "0"
+	I2CInitVals = "1100000000001001000001100010011010100000"
+	I2CMCMD_CWidth = "00000000000000000000000000000010"
+	I2CMCMD_Read = "01"
+	I2CMCMD_Restart = "11"
+	I2CMCMD_Write = "10"
+	I2CRate = "00000000000000011000011010100000"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "X"
+	ResetValue = "0"
+	SetValue = "1"
+	Width = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <SDR2DDR> in library <readcop_v1_00_a> with parameters.
+	DDRWidth = "00000000000000000000000000000010"
+	Interleave = "00000000000000000000000000000001"
+	SDRWidth = "00000000000000000000000000000100"
+
+Analyzing hierarchy for module <IORegister> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	ResetValue = "000"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <SDR2DDR> in library <readcop_v1_00_a> with parameters.
+	DDRWidth = "00000000000000000000000000001100"
+	Interleave = "00000000000000000000000000000000"
+	SDRWidth = "00000000000000000000000000011000"
+
+Analyzing hierarchy for module <PixelCounter> in library <readcop_v1_00_a> with parameters.
+	ActiveH = "00000000000000000000010000000000"
+	ActiveV = "00000000000000000000001100000000"
+	BackH = "00000000000000000000000010010000"
+	BackV = "00000000000000000000000000011101"
+	FrontH = "00000000000000000000000000011000"
+	FrontV = "00000000000000000000000000000011"
+	Height = "00000000000000000000001100100110"
+	PulseH = "00000000000000000000000010001000"
+	PulseV = "00000000000000000000000000000110"
+	Width = "00000000000000000000010100110000"
+	XWidth = "00000000000000000000000000001011"
+	YWidth = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <FIFOInitial> in library <readcop_v1_00_a> with parameters.
+	A0Width = "00000000000000000000000000000011"
+	A1Width = "00000000000000000000000000000011"
+	Depth = "00000000000000000000000000000101"
+	ShiftBased = "00000000000000000000000000000001"
+	Value = "0100100100100001001100110011010000110110"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <FIFOInitial> in library <readcop_v1_00_a> with parameters.
+	A0Width = "00000000000000000000000000000011"
+	A1Width = "00000000000000000000000000000011"
+	Depth = "00000000000000000000000000000101"
+	ShiftBased = "00000000000000000000000000000001"
+	Value = "1100000000001001000001100010011010100000"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <I2CDRAMMaster> in library <readcop_v1_00_a> with parameters.
+	CAWidth = "00000000000000000000000000001000"
+	ClockFreq = "00000100011110000110100011000000"
+	DWidth = "00000000000000000000000000001000"
+	I2CDCMD_CWidth = "00000000000000000000000000000001"
+	I2CDCMD_Read = "1"
+	I2CDCMD_Write = "0"
+	I2CMCMD_CWidth = "00000000000000000000000000000010"
+	I2CMCMD_Read = "01"
+	I2CMCMD_Restart = "11"
+	I2CMCMD_Write = "10"
+	I2CRate = "00000000000000011000011010100000"
+	LRWidth = "00000000000000000000000000010001"
+	SAWidth = "00000000000000000000000000000111"
+	STATE_Address = "010"
+	STATE_Idle = "000"
+	STATE_ReAddress = "101"
+	STATE_Read = "110"
+	STATE_Restart = "100"
+	STATE_SAddress = "001"
+	STATE_Stop = "111"
+	STATE_Write = "011"
+	SWidth = "00000000000000000000000000000011"
+	SingleSlave = "00000000000000000000000000000001"
+	SlaveAddress = "1110110"
+	WACWidth = "00000000000000000000000000000001"
+	WAWidth = "00000000000000000000000000001000"
+	WAWords = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <Counter> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Down = "00000000000000000000000000000000"
+	Initial = "XXXXXXXXXXX"
+	Limited = "00000000000000000000000000000000"
+	ResetValue = "00000000000"
+	SetValue = "11111111111"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001011"
+	CWidthCheck = "00000000000000000000000000001011"
+	Compare = "00000000000000000000010100101111"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <Counter> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Down = "00000000000000000000000000000000"
+	Initial = "XXXXXXXXXX"
+	Limited = "00000000000000000000000000000000"
+	ResetValue = "0000000000"
+	SetValue = "1111111111"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001010"
+	CWidthCheck = "00000000000000000000000000001010"
+	Compare = "00000000000000000000001100100101"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <CountRegion> in library <readcop_v1_00_a> with parameters.
+	EnableActive = "1"
+	EnablePost = "1"
+	EnablePre = "0"
+	End = "00000000000000000000010000000000"
+	Start = "00000000000000000000000000000000"
+	UseMagnitude = "0"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <CountRegion> in library <readcop_v1_00_a> with parameters.
+	EnableActive = "1"
+	EnablePost = "1"
+	EnablePre = "0"
+	End = "00000000000000000000001100000000"
+	Start = "00000000000000000000000000000000"
+	UseMagnitude = "0"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <CountRegion> in library <readcop_v1_00_a> with parameters.
+	EnableActive = "1"
+	EnablePost = "1"
+	EnablePre = "1"
+	End = "00000000000000000000010010100000"
+	Start = "00000000000000000000010000011000"
+	UseMagnitude = "0"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <CountRegion> in library <readcop_v1_00_a> with parameters.
+	EnableActive = "1"
+	EnablePost = "1"
+	EnablePre = "1"
+	End = "00000000000000000000001100001001"
+	Start = "00000000000000000000001100000011"
+	UseMagnitude = "0"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "0"
+	ResetValue = "0"
+	SetValue = "1"
+	Width = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <ShiftRegister> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "0100100100100001001100110011010000110110"
+	PWidth = "00000000000000000000000000101000"
+	ResetValue = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+	Reverse = "00000000000000000000000000000000"
+	SWidth = "00000000000000000000000000001000"
+	SetValue = "1111111111111111111111111111111111111111"
+
+Analyzing hierarchy for module <ShiftRegister> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "111110"
+	PWidth = "00000000000000000000000000000110"
+	ResetValue = "XXXXX"
+	Reverse = "00000000000000000000000000000000"
+	SWidth = "00000000000000000000000000000001"
+	SetValue = "111111"
+
+Analyzing hierarchy for module <ShiftRegister> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "1100000000001001000001100010011010100000"
+	PWidth = "00000000000000000000000000101000"
+	ResetValue = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+	Reverse = "00000000000000000000000000000000"
+	SWidth = "00000000000000000000000000001000"
+	SetValue = "1111111111111111111111111111111111111111"
+
+Analyzing hierarchy for module <I2CMaster> in library <readcop_v1_00_a> with parameters.
+	ClockFreq = "00000100011110000110100011000000"
+	CycleMax = "00000000000000000000000010111100"
+	CycleWidth = "00000000000000000000000000001000"
+	I2CMCMD_CWidth = "00000000000000000000000000000010"
+	I2CMCMD_Read = "01"
+	I2CMCMD_Restart = "11"
+	I2CMCMD_Write = "10"
+	I2CRate = "00000000000000011000011010100000"
+	STATE_CheckAck = "011"
+	STATE_NOP = "000"
+	STATE_Read = "100"
+	STATE_Restart = "111"
+	STATE_SendAck = "101"
+	STATE_Start = "001"
+	STATE_Stop = "110"
+	STATE_Write = "010"
+	STATE_X = "XXX"
+
+Analyzing hierarchy for module <FIFORegister> in library <readcop_v1_00_a> with parameters.
+	BWLatency = "00000000000000000000000000000000"
+	Conservative = "00000000000000000000000000000000"
+	FWLatency = "00000000000000000000000000000001"
+	Initial = "XXXXXXXXXXXXXXXXX"
+	InitialValid = "0"
+	ResetValid = "0"
+	ResetValue = "00000000000000000"
+	Width = "00000000000000000000000000010001"
+
+Analyzing hierarchy for module <FIFORegister> in library <readcop_v1_00_a> with parameters.
+	BWLatency = "00000000000000000000000000000000"
+	Conservative = "00000000000000000000000000000000"
+	FWLatency = "00000000000000000000000000000001"
+	Initial = "XXXXXXXX"
+	InitialValid = "0"
+	ResetValid = "0"
+	ResetValue = "00000000"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXXXXXXXXXX"
+	ResetValue = "00000000000"
+	SetValue = "11111111111"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXXXXXXXXX"
+	ResetValue = "0000000000"
+	SetValue = "1111111111"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	ResetValue = "010"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001010"
+	CWidthCheck = "00000000000000000000000000001010"
+	Compare = "00000000000000000000001111111111"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001010"
+	CWidthCheck = "00000000000000000000000000001010"
+	Compare = "00000000000000000000001011111111"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	ResetValue = "001"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001011"
+	CWidthCheck = "00000000000000000000000000001011"
+	Compare = "00000000000000000000010000010111"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001011"
+	CWidthCheck = "00000000000000000000000000001011"
+	Compare = "00000000000000000000010010011111"
+	Width = "00000000000000000000000000001011"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001010"
+	CWidthCheck = "00000000000000000000000000001010"
+	Compare = "00000000000000000000001100000010"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001010"
+	CWidthCheck = "00000000000000000000000000001010"
+	Compare = "00000000000000000000001100001000"
+	Width = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "0100100100100001001100110011010000110110"
+	ResetValue = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+	SetValue = "1111111111111111111111111111111111111111"
+	Width = "00000000000000000000000000101000"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "111110"
+	ResetValue = "XXXXX"
+	SetValue = "111111"
+	Width = "00000000000000000000000000000110"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "1100000000001001000001100010011010100000"
+	ResetValue = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+	SetValue = "1111111111111111111111111111111111111111"
+	Width = "00000000000000000000000000101000"
+
+Analyzing hierarchy for module <ShiftRegister> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	PWidth = "00000000000000000000000000000011"
+	ResetValue = "000"
+	Reverse = "00000000000000000000000000000000"
+	SWidth = "00000000000000000000000000000001"
+	SetValue = "111"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "X"
+	ResetValue = "0"
+	SetValue = "1"
+	Width = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <ShiftRegister> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXXXXXXX"
+	PWidth = "00000000000000000000000000001000"
+	ResetValue = "00000000"
+	Reverse = "00000000000000000000000000000000"
+	SWidth = "00000000000000000000000000000001"
+	SetValue = "11111111"
+
+Analyzing hierarchy for module <Counter> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Down = "00000000000000000000000000000000"
+	Initial = "XXXXXXXX"
+	Limited = "00000000000000000000000000000000"
+	ResetValue = "00000000"
+	SetValue = "11111111"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <CountCompare> in library <readcop_v1_00_a> with parameters.
+	CWidth = "00000000000000000000000000001000"
+	CWidthCheck = "00000000000000000000000000001000"
+	Compare = "00000000000000000000000010111011"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <Counter> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Down = "00000000000000000000000000000000"
+	Initial = "XX"
+	Limited = "00000000000000000000000000000000"
+	ResetValue = "00"
+	SetValue = "11"
+	Width = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <Counter> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Down = "00000000000000000000000000000000"
+	Initial = "XXX"
+	Limited = "00000000000000000000000000000000"
+	ResetValue = "000"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXXXXXXXXXXXXXXXX"
+	ResetValue = "00000000000000000"
+	SetValue = "11111111111111111"
+	Width = "00000000000000000000000000010001"
+
+Analyzing hierarchy for module <FIFORegControl> in library <readcop_v1_00_a> with parameters.
+	BWLatency = "00000000000000000000000000000000"
+	FWLatency = "00000000000000000000000000000001"
+	InitialValid = "0"
+	ResetValid = "0"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXXXXXXX"
+	ResetValue = "00000000"
+	SetValue = "11111111"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	ResetValue = "000"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXXXXXXX"
+	ResetValue = "00000000"
+	SetValue = "11111111"
+	Width = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XX"
+	ResetValue = "00"
+	SetValue = "11"
+	Width = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "XXX"
+	ResetValue = "000"
+	SetValue = "111"
+	Width = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <Register> in library <readcop_v1_00_a> with parameters.
+	AsyncReset = "00000000000000000000000000000000"
+	AsyncSet = "00000000000000000000000000000000"
+	Initial = "0"
+	ResetValue = "0"
+	SetValue = "1"
+	Width = "00000000000000000000000000000001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <system_readcop_0_wrapper>.
+Module <system_readcop_0_wrapper> is correct for synthesis.
+ 
+Analyzing module <readcop> in library <readcop_v1_00_a>.
+	C_PI_ADDR_WIDTH = 32'b00000000000000000000000000100000
+	C_PI_BE_WIDTH = 32'b00000000000000000000000000001000
+	C_PI_DATA_WIDTH = 32'b00000000000000000000000001000000
+	C_PI_RDWDADDR_WIDTH = 32'b00000000000000000000000000000100
+	FTDATA = 6'b000100
+	INIT = 6'b000001
+	INIT2 = 6'b100000
+	MASK = 2'b10
+	RDADDR = 6'b000010
+	RGB = 2'b00
+	WAITEMP = 6'b001000
+	WAITLAT = 6'b010000
+	YCRCB = 2'b01
+WARNING:Xst:2211 - "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/readcop.v" line 385: Instantiating black box module <fifo_generator_v9_1>.
+Module <readcop> is correct for synthesis.
+ 
+Analyzing module <Debouncer> in library <readcop_v1_00_a>.
+Module <Debouncer> is correct for synthesis.
+ 
+Analyzing module <RGB2YCrCb> in library <readcop_v1_00_a>.
+Module <RGB2YCrCb> is correct for synthesis.
+ 
+Analyzing module <SkinMask> in library <readcop_v1_00_a>.
+Module <SkinMask> is correct for synthesis.
+ 
+Analyzing module <DVI> in library <readcop_v1_00_a>.
+	BackH = 32'sb00000000000000000000000010010000
+	BackV = 32'sb00000000000000000000000000011101
+	ClockFreq = 32'sb00000100011110000110100011000000
+	FrontH = 32'sb00000000000000000000000000011000
+	FrontV = 32'sb00000000000000000000000000000011
+	Height = 32'sb00000000000000000000001100100110
+	I2CAddress = 7'b1110110
+	I2CRate = 32'sb00000000000000011000011010100000
+	PulseH = 32'sb00000000000000000000000010001000
+	PulseV = 32'sb00000000000000000000000000000110
+	Width = 32'sb00000000000000000000010100110000
+Module <DVI> is correct for synthesis.
+ 
+Analyzing module <DVIData> in library <readcop_v1_00_a>.
+	BackH = 32'sb00000000000000000000000010010000
+	BackV = 32'sb00000000000000000000000000011101
+	FrontH = 32'sb00000000000000000000000000011000
+	FrontV = 32'sb00000000000000000000000000000011
+	Height = 32'sb00000000000000000000001100100110
+	PulseH = 32'sb00000000000000000000000010001000
+	PulseV = 32'sb00000000000000000000000000000110
+	Width = 32'sb00000000000000000000010100110000
+Module <DVIData> is correct for synthesis.
+ 
+Analyzing module <Register.1> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 1'bX
+	ResetValue = 1'b0
+	SetValue = 1'b1
+	Width = 32'sb00000000000000000000000000000001
+Module <Register.1> is correct for synthesis.
+ 
+Analyzing module <SDR2DDR.1> in library <readcop_v1_00_a>.
+	DDRWidth = 32'sb00000000000000000000000000000010
+	Interleave = 32'sb00000000000000000000000000000001
+	SDRWidth = 32'sb00000000000000000000000000000100
+Module <SDR2DDR.1> is correct for synthesis.
+ 
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[0].ODDR> in unit <SDR2DDR.1>.
+    Set user-defined property "INIT =  0" for instance <bit[0].ODDR> in unit <SDR2DDR.1>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[0].ODDR> in unit <SDR2DDR.1>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[1].ODDR> in unit <SDR2DDR.1>.
+    Set user-defined property "INIT =  0" for instance <bit[1].ODDR> in unit <SDR2DDR.1>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[1].ODDR> in unit <SDR2DDR.1>.
+Analyzing module <IORegister> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	ResetValue = 3'b000
+	SetValue = 3'b111
+	Width = 32'sb00000000000000000000000000000011
+Module <IORegister> is correct for synthesis.
+ 
+Analyzing module <SDR2DDR.2> in library <readcop_v1_00_a>.
+	DDRWidth = 32'sb00000000000000000000000000001100
+	Interleave = 32'sb00000000000000000000000000000000
+	SDRWidth = 32'sb00000000000000000000000000011000
+Module <SDR2DDR.2> is correct for synthesis.
+ 
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[0].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[0].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[0].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[1].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[1].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[1].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[2].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[2].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[2].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[3].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[3].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[3].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[4].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[4].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[4].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[5].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[5].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[5].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[6].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[6].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[6].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[7].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[7].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[7].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[8].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[8].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[8].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[9].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[9].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[9].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[10].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[10].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[10].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE" for instance <bit[11].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "INIT =  0" for instance <bit[11].ODDR> in unit <SDR2DDR.2>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <bit[11].ODDR> in unit <SDR2DDR.2>.
+Analyzing module <PixelCounter> in library <readcop_v1_00_a>.
+	ActiveH = 32'sb00000000000000000000010000000000
+	ActiveV = 32'sb00000000000000000000001100000000
+	BackH = 32'sb00000000000000000000000010010000
+	BackV = 32'sb00000000000000000000000000011101
+	FrontH = 32'sb00000000000000000000000000011000
+	FrontV = 32'sb00000000000000000000000000000011
+	Height = 32'sb00000000000000000000001100100110
+	PulseH = 32'sb00000000000000000000000010001000
+	PulseV = 32'sb00000000000000000000000000000110
+	Width = 32'sb00000000000000000000010100110000
+	XWidth = 32'sb00000000000000000000000000001011
+	YWidth = 32'sb00000000000000000000000000001010
+Module <PixelCounter> is correct for synthesis.
+ 
+Analyzing module <Counter.1> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Down = 32'sb00000000000000000000000000000000
+	Initial = 11'bXXXXXXXXXXX
+	Limited = 32'sb00000000000000000000000000000000
+	ResetValue = 11'b00000000000
+	SetValue = 11'b11111111111
+	Width = 32'sb00000000000000000000000000001011
+Module <Counter.1> is correct for synthesis.
+ 
+Analyzing module <Register.3> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 11'bXXXXXXXXXXX
+	ResetValue = 11'b00000000000
+	SetValue = 11'b11111111111
+	Width = 32'sb00000000000000000000000000001011
+Module <Register.3> is correct for synthesis.
+ 
+Analyzing module <CountCompare.1> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001011
+	CWidthCheck = 32'sb00000000000000000000000000001011
+	Compare = 32'sb00000000000000000000010100101111
+	Width = 32'sb00000000000000000000000000001011
+Module <CountCompare.1> is correct for synthesis.
+ 
+Analyzing module <Counter.2> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Down = 32'sb00000000000000000000000000000000
+	Initial = 10'bXXXXXXXXXX
+	Limited = 32'sb00000000000000000000000000000000
+	ResetValue = 10'b0000000000
+	SetValue = 10'b1111111111
+	Width = 32'sb00000000000000000000000000001010
+Module <Counter.2> is correct for synthesis.
+ 
+Analyzing module <Register.4> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 10'bXXXXXXXXXX
+	ResetValue = 10'b0000000000
+	SetValue = 10'b1111111111
+	Width = 32'sb00000000000000000000000000001010
+Module <Register.4> is correct for synthesis.
+ 
+Analyzing module <CountCompare.2> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001010
+	CWidthCheck = 32'sb00000000000000000000000000001010
+	Compare = 32'sb00000000000000000000001100100101
+	Width = 32'sb00000000000000000000000000001010
+Module <CountCompare.2> is correct for synthesis.
+ 
+Analyzing module <CountRegion.1> in library <readcop_v1_00_a>.
+	EnableActive = 1'b1
+	EnablePost = 1'b1
+	EnablePre = 1'b0
+	End = 32'sb00000000000000000000010000000000
+	Start = 32'sb00000000000000000000000000000000
+	UseMagnitude = 1'b0
+	Width = 32'sb00000000000000000000000000001011
+Module <CountRegion.1> is correct for synthesis.
+ 
+Analyzing module <Register.5> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	ResetValue = 3'b010
+	SetValue = 3'b111
+	Width = 32'sb00000000000000000000000000000011
+Module <Register.5> is correct for synthesis.
+ 
+Analyzing module <CountCompare.3> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001010
+	CWidthCheck = 32'sb00000000000000000000000000001010
+	Compare = 32'sb00000000000000000000001111111111
+	Width = 32'sb00000000000000000000000000001011
+Module <CountCompare.3> is correct for synthesis.
+ 
+Analyzing module <CountRegion.2> in library <readcop_v1_00_a>.
+	EnableActive = 1'b1
+	EnablePost = 1'b1
+	EnablePre = 1'b0
+	End = 32'sb00000000000000000000001100000000
+	Start = 32'sb00000000000000000000000000000000
+	UseMagnitude = 1'b0
+	Width = 32'sb00000000000000000000000000001010
+Module <CountRegion.2> is correct for synthesis.
+ 
+Analyzing module <CountCompare.4> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001010
+	CWidthCheck = 32'sb00000000000000000000000000001010
+	Compare = 32'sb00000000000000000000001011111111
+	Width = 32'sb00000000000000000000000000001010
+Module <CountCompare.4> is correct for synthesis.
+ 
+Analyzing module <CountRegion.3> in library <readcop_v1_00_a>.
+	EnableActive = 1'b1
+	EnablePost = 1'b1
+	EnablePre = 1'b1
+	End = 32'sb00000000000000000000010010100000
+	Start = 32'sb00000000000000000000010000011000
+	UseMagnitude = 1'b0
+	Width = 32'sb00000000000000000000000000001011
+Module <CountRegion.3> is correct for synthesis.
+ 
+Analyzing module <Register.6> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	ResetValue = 3'b001
+	SetValue = 3'b111
+	Width = 32'sb00000000000000000000000000000011
+Module <Register.6> is correct for synthesis.
+ 
+Analyzing module <CountCompare.5> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001011
+	CWidthCheck = 32'sb00000000000000000000000000001011
+	Compare = 32'sb00000000000000000000010000010111
+	Width = 32'sb00000000000000000000000000001011
+Module <CountCompare.5> is correct for synthesis.
+ 
+Analyzing module <CountCompare.6> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001011
+	CWidthCheck = 32'sb00000000000000000000000000001011
+	Compare = 32'sb00000000000000000000010010011111
+	Width = 32'sb00000000000000000000000000001011
+Module <CountCompare.6> is correct for synthesis.
+ 
+Analyzing module <CountRegion.4> in library <readcop_v1_00_a>.
+	EnableActive = 1'b1
+	EnablePost = 1'b1
+	EnablePre = 1'b1
+	End = 32'sb00000000000000000000001100001001
+	Start = 32'sb00000000000000000000001100000011
+	UseMagnitude = 1'b0
+	Width = 32'sb00000000000000000000000000001010
+Module <CountRegion.4> is correct for synthesis.
+ 
+Analyzing module <CountCompare.7> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001010
+	CWidthCheck = 32'sb00000000000000000000000000001010
+	Compare = 32'sb00000000000000000000001100000010
+	Width = 32'sb00000000000000000000000000001010
+Module <CountCompare.7> is correct for synthesis.
+ 
+Analyzing module <CountCompare.8> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001010
+	CWidthCheck = 32'sb00000000000000000000000000001010
+	Compare = 32'sb00000000000000000000001100001000
+	Width = 32'sb00000000000000000000000000001010
+Module <CountCompare.8> is correct for synthesis.
+ 
+Analyzing module <DVIInitial> in library <readcop_v1_00_a>.
+	ClockFreq = 32'sb00000100011110000110100011000000
+	I2CAddress = 7'b1110110
+	I2CDCMD_CWidth = 32'sb00000000000000000000000000000001
+	I2CDCMD_Read = 1'b1
+	I2CDCMD_Write = 1'b0
+	I2CInitVals = 40'b1100000000001001000001100010011010100000
+	I2CMCMD_CWidth = 32'sb00000000000000000000000000000010
+	I2CMCMD_Read = 2'b01
+	I2CMCMD_Restart = 2'b11
+	I2CMCMD_Write = 2'b10
+	I2CRate = 32'sb00000000000000011000011010100000
+Module <DVIInitial> is correct for synthesis.
+ 
+Analyzing module <FIFOInitial.1> in library <readcop_v1_00_a>.
+	A0Width = 32'sb00000000000000000000000000000011
+	A1Width = 32'sb00000000000000000000000000000011
+	Depth = 32'sb00000000000000000000000000000101
+	ShiftBased = 32'sb00000000000000000000000000000001
+	Value = 40'b0100100100100001001100110011010000110110
+	Width = 32'sb00000000000000000000000000001000
+Module <FIFOInitial.1> is correct for synthesis.
+ 
+Analyzing module <Register.2> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 1'b0
+	ResetValue = 1'b0
+	SetValue = 1'b1
+	Width = 32'sb00000000000000000000000000000001
+Module <Register.2> is correct for synthesis.
+ 
+Analyzing module <ShiftRegister.1> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 40'b0100100100100001001100110011010000110110
+	PWidth = 32'sb00000000000000000000000000101000
+	ResetValue = 40'bXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	Reverse = 32'sb00000000000000000000000000000000
+	SWidth = 32'sb00000000000000000000000000001000
+	SetValue = 40'b1111111111111111111111111111111111111111
+Module <ShiftRegister.1> is correct for synthesis.
+ 
+Analyzing module <Register.7> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 40'b0100100100100001001100110011010000110110
+	ResetValue = 40'bXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	SetValue = 40'b1111111111111111111111111111111111111111
+	Width = 32'sb00000000000000000000000000101000
+Module <Register.7> is correct for synthesis.
+ 
+Analyzing module <ShiftRegister.2> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 6'b111110
+	PWidth = 32'sb00000000000000000000000000000110
+	ResetValue = 5'bXXXXX
+	Reverse = 32'sb00000000000000000000000000000000
+	SWidth = 32'sb00000000000000000000000000000001
+	SetValue = 6'b111111
+Module <ShiftRegister.2> is correct for synthesis.
+ 
+Analyzing module <Register.8> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 6'b111110
+	ResetValue = 5'bXXXXX
+	SetValue = 6'b111111
+	Width = 32'sb00000000000000000000000000000110
+Module <Register.8> is correct for synthesis.
+ 
+Analyzing module <FIFOInitial.2> in library <readcop_v1_00_a>.
+	A0Width = 32'sb00000000000000000000000000000011
+	A1Width = 32'sb00000000000000000000000000000011
+	Depth = 32'sb00000000000000000000000000000101
+	ShiftBased = 32'sb00000000000000000000000000000001
+	Value = 40'b1100000000001001000001100010011010100000
+	Width = 32'sb00000000000000000000000000001000
+Module <FIFOInitial.2> is correct for synthesis.
+ 
+Analyzing module <ShiftRegister.3> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 40'b1100000000001001000001100010011010100000
+	PWidth = 32'sb00000000000000000000000000101000
+	ResetValue = 40'bXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	Reverse = 32'sb00000000000000000000000000000000
+	SWidth = 32'sb00000000000000000000000000001000
+	SetValue = 40'b1111111111111111111111111111111111111111
+Module <ShiftRegister.3> is correct for synthesis.
+ 
+Analyzing module <Register.9> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 40'b1100000000001001000001100010011010100000
+	ResetValue = 40'bXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	SetValue = 40'b1111111111111111111111111111111111111111
+	Width = 32'sb00000000000000000000000000101000
+Module <Register.9> is correct for synthesis.
+ 
+Analyzing module <I2CDRAMMaster> in library <readcop_v1_00_a>.
+	CAWidth = 32'sb00000000000000000000000000001000
+	ClockFreq = 32'sb00000100011110000110100011000000
+	DWidth = 32'sb00000000000000000000000000001000
+	I2CDCMD_CWidth = 32'sb00000000000000000000000000000001
+	I2CDCMD_Read = 1'b1
+	I2CDCMD_Write = 1'b0
+	I2CMCMD_CWidth = 32'sb00000000000000000000000000000010
+	I2CMCMD_Read = 2'b01
+	I2CMCMD_Restart = 2'b11
+	I2CMCMD_Write = 2'b10
+	I2CRate = 32'sb00000000000000011000011010100000
+	LRWidth = 32'sb00000000000000000000000000010001
+	SAWidth = 32'sb00000000000000000000000000000111
+	STATE_Address = 3'b010
+	STATE_Idle = 3'b000
+	STATE_ReAddress = 3'b101
+	STATE_Read = 3'b110
+	STATE_Restart = 3'b100
+	STATE_SAddress = 3'b001
+	STATE_Stop = 3'b111
+	STATE_Write = 3'b011
+	SWidth = 32'sb00000000000000000000000000000011
+	SingleSlave = 32'sb00000000000000000000000000000001
+	SlaveAddress = 7'b1110110
+	WACWidth = 32'sb00000000000000000000000000000001
+	WAWidth = 32'sb00000000000000000000000000001000
+	WAWords = 32'sb00000000000000000000000000000001
+Module <I2CDRAMMaster> is correct for synthesis.
+ 
+Analyzing module <I2CMaster> in library <readcop_v1_00_a>.
+	ClockFreq = 32'sb00000100011110000110100011000000
+	CycleMax = 32'sb00000000000000000000000010111100
+	CycleWidth = 32'sb00000000000000000000000000001000
+	I2CMCMD_CWidth = 32'sb00000000000000000000000000000010
+	I2CMCMD_Read = 2'b01
+	I2CMCMD_Restart = 2'b11
+	I2CMCMD_Write = 2'b10
+	I2CRate = 32'sb00000000000000011000011010100000
+	STATE_CheckAck = 3'b011
+	STATE_NOP = 3'b000
+	STATE_Read = 3'b100
+	STATE_Restart = 3'b111
+	STATE_SendAck = 3'b101
+	STATE_Start = 3'b001
+	STATE_Stop = 3'b110
+	STATE_Write = 3'b010
+	STATE_X = 3'bXXX
+Module <I2CMaster> is correct for synthesis.
+ 
+Analyzing module <ShiftRegister.4> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	PWidth = 32'sb00000000000000000000000000000011
+	ResetValue = 3'b000
+	Reverse = 32'sb00000000000000000000000000000000
+	SWidth = 32'sb00000000000000000000000000000001
+	SetValue = 3'b111
+Module <ShiftRegister.4> is correct for synthesis.
+ 
+Analyzing module <Register.12> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	ResetValue = 3'b000
+	SetValue = 3'b111
+	Width = 32'sb00000000000000000000000000000011
+Module <Register.12> is correct for synthesis.
+ 
+Analyzing module <ShiftRegister.5> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 8'bXXXXXXXX
+	PWidth = 32'sb00000000000000000000000000001000
+	ResetValue = 8'b00000000
+	Reverse = 32'sb00000000000000000000000000000000
+	SWidth = 32'sb00000000000000000000000000000001
+	SetValue = 8'b11111111
+Module <ShiftRegister.5> is correct for synthesis.
+ 
+Analyzing module <Register.13> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 8'bXXXXXXXX
+	ResetValue = 8'b00000000
+	SetValue = 8'b11111111
+	Width = 32'sb00000000000000000000000000001000
+Module <Register.13> is correct for synthesis.
+ 
+Analyzing module <Counter.3> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Down = 32'sb00000000000000000000000000000000
+	Initial = 8'bXXXXXXXX
+	Limited = 32'sb00000000000000000000000000000000
+	ResetValue = 8'b00000000
+	SetValue = 8'b11111111
+	Width = 32'sb00000000000000000000000000001000
+Module <Counter.3> is correct for synthesis.
+ 
+Analyzing module <CountCompare.9> in library <readcop_v1_00_a>.
+	CWidth = 32'sb00000000000000000000000000001000
+	CWidthCheck = 32'sb00000000000000000000000000001000
+	Compare = 32'sb00000000000000000000000010111011
+	Width = 32'sb00000000000000000000000000001000
+Module <CountCompare.9> is correct for synthesis.
+ 
+Analyzing module <Counter.4> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Down = 32'sb00000000000000000000000000000000
+	Initial = 2'bXX
+	Limited = 32'sb00000000000000000000000000000000
+	ResetValue = 2'b00
+	SetValue = 2'b11
+	Width = 32'sb00000000000000000000000000000010
+Module <Counter.4> is correct for synthesis.
+ 
+Analyzing module <Register.14> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 2'bXX
+	ResetValue = 2'b00
+	SetValue = 2'b11
+	Width = 32'sb00000000000000000000000000000010
+Module <Register.14> is correct for synthesis.
+ 
+Analyzing module <Counter.5> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Down = 32'sb00000000000000000000000000000000
+	Initial = 3'bXXX
+	Limited = 32'sb00000000000000000000000000000000
+	ResetValue = 3'b000
+	SetValue = 3'b111
+	Width = 32'sb00000000000000000000000000000011
+Module <Counter.5> is correct for synthesis.
+ 
+Analyzing module <FIFORegister.1> in library <readcop_v1_00_a>.
+	BWLatency = 32'sb00000000000000000000000000000000
+	Conservative = 32'sb00000000000000000000000000000000
+	FWLatency = 32'sb00000000000000000000000000000001
+	Initial = 17'bXXXXXXXXXXXXXXXXX
+	InitialValid = 1'b0
+	ResetValid = 1'b0
+	ResetValue = 17'b00000000000000000
+	Width = 32'sb00000000000000000000000000010001
+Module <FIFORegister.1> is correct for synthesis.
+ 
+Analyzing module <Register.10> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 17'bXXXXXXXXXXXXXXXXX
+	ResetValue = 17'b00000000000000000
+	SetValue = 17'b11111111111111111
+	Width = 32'sb00000000000000000000000000010001
+Module <Register.10> is correct for synthesis.
+ 
+Analyzing module <FIFORegControl> in library <readcop_v1_00_a>.
+	BWLatency = 32'sb00000000000000000000000000000000
+	FWLatency = 32'sb00000000000000000000000000000001
+	InitialValid = 1'b0
+	ResetValid = 1'b0
+Module <FIFORegControl> is correct for synthesis.
+ 
+Analyzing module <Register.15> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 1'b0
+	ResetValue = 1'b0
+	SetValue = 1'b1
+	Width = 32'sb00000000000000000000000000000001
+Module <Register.15> is correct for synthesis.
+ 
+Analyzing module <FIFORegister.2> in library <readcop_v1_00_a>.
+	BWLatency = 32'sb00000000000000000000000000000000
+	Conservative = 32'sb00000000000000000000000000000000
+	FWLatency = 32'sb00000000000000000000000000000001
+	Initial = 8'bXXXXXXXX
+	InitialValid = 1'b0
+	ResetValid = 1'b0
+	ResetValue = 8'b00000000
+	Width = 32'sb00000000000000000000000000001000
+Module <FIFORegister.2> is correct for synthesis.
+ 
+Analyzing module <Register.11> in library <readcop_v1_00_a>.
+	AsyncReset = 32'sb00000000000000000000000000000000
+	AsyncSet = 32'sb00000000000000000000000000000000
+	Initial = 8'bXXXXXXXX
+	ResetValue = 8'b00000000
+	SetValue = 8'b11111111
+	Width = 32'sb00000000000000000000000000001000
+Module <Register.11> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Debouncer.v".
+    Found 22-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Debouncer> synthesized.
+
+
+Synthesizing Unit <RGB2YCrCb>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/RGB2YCrCb.v".
+    Found 22-bit comparator less for signal <Cb_tmp$cmp_lt0000> created at line 29.
+    Found 21-bit adder for signal <Cb_tmp_signed>.
+    Found 9-bit subtractor for signal <Cb_tmp_signed$addsub0000> created at line 28.
+    Found 9x11-bit multiplier for signal <Cb_tmp_signed$mult0000> created at line 28.
+    Found 22-bit comparator less for signal <Cr_tmp$cmp_lt0000> created at line 23.
+    Found 21-bit adder for signal <Cr_tmp_signed>.
+    Found 9-bit subtractor for signal <Cr_tmp_signed$addsub0000> created at line 22.
+    Found 9x11-bit multiplier for signal <Cr_tmp_signed$mult0000> created at line 22.
+    Found 19-bit adder for signal <Y_tmp$add0000> created at line 17.
+    Found 18-bit adder carry out for signal <Y_tmp$addsub0001> created at line 17.
+    Found 8x9-bit multiplier for signal <Y_tmp$mult0000> created at line 17.
+    Found 8x10-bit multiplier for signal <Y_tmp$mult0001> created at line 17.
+    Found 8x7-bit multiplier for signal <Y_tmp$mult0002> created at line 17.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   5 Multiplier(s).
+	inferred   2 Comparator(s).
+Unit <RGB2YCrCb> synthesized.
+
+
+Synthesizing Unit <SkinMask>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SkinMask.v".
+WARNING:Xst:646 - Signal <Y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit comparator greatequal for signal <mask$cmp_ge0000> created at line 12.
+    Found 8-bit comparator greatequal for signal <mask$cmp_ge0001> created at line 12.
+    Found 8-bit comparator less for signal <mask$cmp_lt0000> created at line 12.
+    Found 8-bit comparator less for signal <mask$cmp_lt0001> created at line 12.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <SkinMask> synthesized.
+
+
+Synthesizing Unit <Register_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 1-bit register for signal <Out<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_1> synthesized.
+
+
+Synthesizing Unit <IORegister>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/IORegister.v".
+    Found 3-bit register for signal <Out>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <IORegister> synthesized.
+
+
+Synthesizing Unit <CountCompare_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_1> synthesized.
+
+
+Synthesizing Unit <CountCompare_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<4:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_2> synthesized.
+
+
+Synthesizing Unit <Register_3>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 11-bit register for signal <Out>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <Register_3> synthesized.
+
+
+Synthesizing Unit <Register_4>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 10-bit register for signal <Out>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <Register_4> synthesized.
+
+
+Synthesizing Unit <Register_5>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 3-bit register for signal <Out>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <Register_5> synthesized.
+
+
+Synthesizing Unit <CountCompare_3>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_3> synthesized.
+
+
+Synthesizing Unit <CountCompare_4>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_4> synthesized.
+
+
+Synthesizing Unit <Register_6>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 3-bit register for signal <Out>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <Register_6> synthesized.
+
+
+Synthesizing Unit <CountCompare_5>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<9:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_5> synthesized.
+
+
+Synthesizing Unit <CountCompare_6>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<9:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<6:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_6> synthesized.
+
+
+Synthesizing Unit <CountCompare_7>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<7:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_7> synthesized.
+
+
+Synthesizing Unit <CountCompare_8>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_8> synthesized.
+
+
+Synthesizing Unit <Register_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 1-bit register for signal <Out<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_2> synthesized.
+
+
+Synthesizing Unit <Register_7>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 40-bit register for signal <Out>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+Unit <Register_7> synthesized.
+
+
+Synthesizing Unit <Register_8>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 6-bit register for signal <Out>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <Register_8> synthesized.
+
+
+Synthesizing Unit <Register_9>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 40-bit register for signal <Out>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+Unit <Register_9> synthesized.
+
+
+Synthesizing Unit <CountCompare_9>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountCompare.v".
+WARNING:Xst:647 - Input <Count<6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Count<2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <CountCompare_9> synthesized.
+
+
+Synthesizing Unit <Register_12>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 3-bit register for signal <Out>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <Register_12> synthesized.
+
+
+Synthesizing Unit <Register_13>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 8-bit register for signal <Out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Register_13> synthesized.
+
+
+Synthesizing Unit <Register_14>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 2-bit register for signal <Out>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Register_14> synthesized.
+
+
+Synthesizing Unit <Register_10>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 17-bit register for signal <Out>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <Register_10> synthesized.
+
+
+Synthesizing Unit <Register_15>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 1-bit register for signal <Out<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Register_15> synthesized.
+
+
+Synthesizing Unit <Register_11>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Register.v".
+    Found 8-bit register for signal <Out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Register_11> synthesized.
+
+
+Synthesizing Unit <SDR2DDR_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SDR2DDR.v".
+Unit <SDR2DDR_1> synthesized.
+
+
+Synthesizing Unit <SDR2DDR_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/SDR2DDR.v".
+Unit <SDR2DDR_2> synthesized.
+
+
+Synthesizing Unit <Counter_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Counter.v".
+    Found 11-bit adder for signal <RegIn>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_1> synthesized.
+
+
+Synthesizing Unit <Counter_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Counter.v".
+    Found 10-bit adder for signal <RegIn>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_2> synthesized.
+
+
+Synthesizing Unit <CountRegion_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountRegion.v".
+Unit <CountRegion_1> synthesized.
+
+
+Synthesizing Unit <CountRegion_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountRegion.v".
+Unit <CountRegion_2> synthesized.
+
+
+Synthesizing Unit <CountRegion_3>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountRegion.v".
+Unit <CountRegion_3> synthesized.
+
+
+Synthesizing Unit <CountRegion_4>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/CountRegion.v".
+Unit <CountRegion_4> synthesized.
+
+
+Synthesizing Unit <ShiftRegister_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v".
+Unit <ShiftRegister_1> synthesized.
+
+
+Synthesizing Unit <ShiftRegister_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v".
+Unit <ShiftRegister_2> synthesized.
+
+
+Synthesizing Unit <ShiftRegister_3>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v".
+Unit <ShiftRegister_3> synthesized.
+
+
+Synthesizing Unit <ShiftRegister_4>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v".
+Unit <ShiftRegister_4> synthesized.
+
+
+Synthesizing Unit <ShiftRegister_5>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/ShiftRegister.v".
+Unit <ShiftRegister_5> synthesized.
+
+
+Synthesizing Unit <Counter_3>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Counter.v".
+    Found 8-bit adder for signal <RegIn>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_3> synthesized.
+
+
+Synthesizing Unit <Counter_4>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Counter.v".
+    Found 2-bit adder for signal <RegIn>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_4> synthesized.
+
+
+Synthesizing Unit <Counter_5>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/Counter.v".
+    Found 3-bit adder for signal <RegIn>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_5> synthesized.
+
+
+Synthesizing Unit <FIFORegControl>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFORegControl.v".
+Unit <FIFORegControl> synthesized.
+
+
+Synthesizing Unit <PixelCounter>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/PixelCounter.v".
+Unit <PixelCounter> synthesized.
+
+
+Synthesizing Unit <FIFOInitial_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFOInitial.v".
+Unit <FIFOInitial_1> synthesized.
+
+
+Synthesizing Unit <FIFOInitial_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFOInitial.v".
+Unit <FIFOInitial_2> synthesized.
+
+
+Synthesizing Unit <I2CMaster>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CMaster.v".
+WARNING:Xst:647 - Input <AckReady> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SCL_I> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <CurrentState> of Case statement line 354 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <CurrentState> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_0> for signal <CurrentState>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 31                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 9                                              |
+    | Clock              | Clock                     (rising_edge)        |
+    | Clock enable       | NextOp                    (positive)           |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <LastState>.
+    Found 8-bit register for signal <LastState>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   8 D-type flip-flop(s).
+Unit <I2CMaster> synthesized.
+
+
+Synthesizing Unit <FIFORegister_1>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFORegister.v".
+WARNING:Xst:646 - Signal <Full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <FIFORegister_1> synthesized.
+
+
+Synthesizing Unit <FIFORegister_2>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/FIFORegister.v".
+WARNING:Xst:646 - Signal <Full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <FIFORegister_2> synthesized.
+
+
+Synthesizing Unit <DVIData>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/DVIData.v".
+Unit <DVIData> synthesized.
+
+
+Synthesizing Unit <I2CDRAMMaster>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/I2CDRAMMaster.v".
+WARNING:Xst:1780 - Signal <WACount> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <I2CTransferComplete> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <AddressOutReady> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <CurrentState> of Case statement line 403 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <CurrentState> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_1> for signal <CurrentState>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 23                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 11                                             |
+    | Clock              | Clock                     (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <I2CDRAMMaster> synthesized.
+
+
+Synthesizing Unit <DVIInitial>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/DVIInitial.v".
+Unit <DVIInitial> synthesized.
+
+
+Synthesizing Unit <DVI>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/DVI.v".
+WARNING:Xst:646 - Signal <InitDone> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <DVI> synthesized.
+
+
+Synthesizing Unit <readcop>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/hdl/verilog/readcop.v".
+WARNING:Xst:647 - Input <XIL_NPI_WrFIFO_Empty> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <system_dcm_locked> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FSL_S_Data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_WrFIFO_Push> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FSL_M_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FSL_S_Read> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FSL_S_Exists> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_RdWdAddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_RdFIFO_Flush> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FSL_S_Control> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FSL_M_Full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_WrFIFO_Data> is never assigned. Tied to value 0000000000000000000000000000000000000000000000000000000000000000.
+WARNING:Xst:1305 - Output <FSL_M_Write> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <FSL_M_Control> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <XIL_NPI_WrFIFO_AlmostFull> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FSL_M_Data> is never assigned. Tied to value 00000000000000000000000000000000.
+WARNING:Xst:646 - Signal <video_32<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pixel_af_wr_en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <fifo_size> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fifo_full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dvi_rst_counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dram_data_counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DATA_MB> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 6                                              |
+    | Clock              | FSL_S_Clk                 (rising_edge)        |
+    | Reset              | state$or0000              (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000001                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <display_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | FSL_S_Clk                 (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <ADDR_MB>.
+    Found 1-bit register for signal <dvi_rst>.
+    Found 1-bit register for signal <dvi_rst_pending>.
+    Found 2-bit register for signal <latency_counter>.
+    Found 2-bit subtractor for signal <latency_counter$share0000> created at line 285.
+    Found 20-bit register for signal <pixel_ind>.
+    Found 20-bit adder for signal <pixel_ind$share0000> created at line 285.
+    Found 1-bit register for signal <pixel_rdf_valid>.
+    Found 64-bit register for signal <rdf_dout>.
+    Found 13-bit comparator less for signal <state$cmp_lt0000> created at line 288.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred  89 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <readcop> synthesized.
+
+
+Synthesizing Unit <system_readcop_0_wrapper>.
+    Related source file is "../hdl/system_readcop_0_wrapper.v".
+Unit <system_readcop_0_wrapper> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 5
+ 8x10-bit multiplier                                   : 1
+ 8x7-bit multiplier                                    : 1
+ 8x9-bit multiplier                                    : 1
+ 9x11-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 14
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 18-bit adder carry out                                : 1
+ 19-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 20-bit adder                                          : 1
+ 21-bit adder                                          : 2
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 2
+# Counters                                             : 2
+ 22-bit up counter                                     : 2
+# Registers                                            : 107
+ 1-bit register                                        : 88
+ 10-bit register                                       : 1
+ 11-bit register                                       : 1
+ 17-bit register                                       : 1
+ 2-bit register                                        : 2
+ 20-bit register                                       : 1
+ 3-bit register                                        : 7
+ 40-bit register                                       : 2
+ 8-bit register                                        : 4
+# Comparators                                          : 7
+ 13-bit comparator less                                : 1
+ 22-bit comparator less                                : 2
+ 8-bit comparator greatequal                           : 2
+ 8-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <readcop_0/display_state/FSM> on signal <display_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <readcop_0/state/FSM> on signal <state[1:5]> with one-hot encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000001 | 00001
+ 000010 | 00010
+ 000100 | 00100
+ 001000 | 01000
+ 010000 | 10000
+--------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <readcop_0/dvi/DVIInit/I2CControl/CurrentState/FSM> on signal <CurrentState[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 110   | 101
+ 111   | 100
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <readcop_0/dvi/DVIInit/I2CControl/Master/CurrentState/FSM> on signal <CurrentState[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+ 111   | 111
+-------------------
+
+Synthesizing (advanced) Unit <RGB2YCrCb>.
+	Multiplier <Mmult_Y_tmp_mult0002> in block <RGB2YCrCb> and adder/subtractor <Madd_Y_tmp_add0000> in block <RGB2YCrCb> are combined into a MAC<Maddsub_Y_tmp_mult0002>.
+	Multiplier <Mmult_Cr_tmp_signed_mult0000> in block <RGB2YCrCb> and adder/subtractor <Madd_Cr_tmp_signed> in block <RGB2YCrCb> are combined into a MAC<Maddsub_Cr_tmp_signed_mult0000>.
+	Multiplier <Mmult_Cb_tmp_signed_mult0000> in block <RGB2YCrCb> and adder/subtractor <Madd_Cb_tmp_signed> in block <RGB2YCrCb> are combined into a MAC<Maddsub_Cb_tmp_signed_mult0000>.
+Unit <RGB2YCrCb> synthesized (advanced).
+WARNING:Xst:2677 - Node <LastState_0> of sequential type is unconnected in block <I2CMaster>.
+WARNING:Xst:2677 - Node <LastState_2> of sequential type is unconnected in block <I2CMaster>.
+WARNING:Xst:2677 - Node <LastState_3> of sequential type is unconnected in block <I2CMaster>.
+WARNING:Xst:2677 - Node <LastState_4> of sequential type is unconnected in block <I2CMaster>.
+WARNING:Xst:2677 - Node <LastState_5> of sequential type is unconnected in block <I2CMaster>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 3
+ 8x7-to-19-bit MAC                                     : 1
+ 9x11-to-21-bit MAC                                    : 2
+# Multipliers                                          : 2
+ 8x10-bit multiplier                                   : 1
+ 8x9-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 11
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 18-bit adder carry out                                : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 2
+# Counters                                             : 2
+ 22-bit up counter                                     : 2
+# Registers                                            : 291
+ Flip-Flops                                            : 291
+# Comparators                                          : 7
+ 13-bit comparator less                                : 1
+ 22-bit comparator less                                : 2
+ 8-bit comparator greatequal                           : 2
+ 8-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Out_16> (without init value) has a constant value of 0 in block <Register_10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RgnAX/FSM.State/Out_0> (without init value) has a constant value of 0 in block <PixelCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RgnAY/FSM.State/Out_0> (without init value) has a constant value of 0 in block <PixelCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SAReg/Out_0> (without init value) has a constant value of 0 in block <I2CMaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pixel_ind_0> (without init value) has a constant value of 0 in block <readcop>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <system_readcop_0_wrapper> ...
+
+Optimizing unit <RGB2YCrCb> ...
+
+Optimizing unit <Register_7> ...
+
+Optimizing unit <Register_9> ...
+
+Optimizing unit <Register_10> ...
+
+Optimizing unit <Register_11> ...
+
+Optimizing unit <SDR2DDR_2> ...
+
+Optimizing unit <Counter_1> ...
+
+Optimizing unit <Counter_2> ...
+
+Optimizing unit <ShiftRegister_5> ...
+
+Optimizing unit <Counter_3> ...
+
+Optimizing unit <PixelCounter> ...
+
+Optimizing unit <FIFOInitial_1> ...
+
+Optimizing unit <FIFOInitial_2> ...
+
+Optimizing unit <I2CMaster> ...
+
+Optimizing unit <DVIData> ...
+
+Optimizing unit <I2CDRAMMaster> ...
+
+Optimizing unit <readcop> ...
+WARNING:Xst:1710 - FF/Latch <readcop_0/dvi/DVIInit/I2CControl/CurrentState_FSM_FFd1> (without init value) has a constant value of 0 in block <system_readcop_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Cntrl/FullReg/Out_0> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_7> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_6> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_5> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_4> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_3> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_2> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_1> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+WARNING:Xst:2677 - Node <readcop_0/dvi/DVIInit/I2CControl/DOBuff/Value/Out_0> of sequential type is unconnected in block <system_readcop_0_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 320
+ Flip-Flops                                            : 320
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_readcop_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 291
+
+Cell Usage :
+# BELS                             : 1053
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 64
+#      LUT2                        : 64
+#      LUT3                        : 51
+#      LUT4                        : 83
+#      LUT5                        : 161
+#      LUT6                        : 218
+#      MUXCY                       : 197
+#      MUXF7                       : 13
+#      VCC                         : 1
+#      XORCY                       : 190
+# FlipFlops/Latches                : 334
+#      FD                          : 188
+#      FDE                         : 16
+#      FDR                         : 72
+#      FDRE                        : 10
+#      FDRS                        : 3
+#      FDRSE                       : 25
+#      FDS                         : 4
+#      FDSE                        : 2
+#      ODDR                        : 14
+# Others                           : 1
+#      fifo_generator_v9_1         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             334  out of  69120     0%  
+ Number of Slice LUTs:                  651  out of  69120     0%  
+    Number used as Logic:               651  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    686
+   Number with an unused Flip Flop:     352  out of    686    51%  
+   Number with an unused LUT:            35  out of    686     5%  
+   Number of fully used LUT-FF pairs:   299  out of    686    43%  
+   Number of unique control sets:        25
+
+IO Utilization: 
+ Number of IOs:                         291
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                       | Load  |
+-----------------------------------+-------------------------------------------------------------+-------+
+FSL_Clk                            | NONE(readcop_0/dvi/DVIInit/I2CControl/CurrentState_FSM_FFd2)| 195   |
+FSL_S_Clk                          | NONE(readcop_0/state_FSM_FFd2)                              | 139   |
+-----------------------------------+-------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.653ns (Maximum Frequency: 273.748MHz)
+   Minimum input arrival time before clock: 17.396ns
+   Maximum output required time after clock: 2.538ns
+   Maximum combinational path delay: 0.815ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_Clk'
+  Clock period: 3.653ns (frequency: 273.748MHz)
+  Total number of paths / destination ports: 3362 / 247
+-------------------------------------------------------------------------
+Delay:               3.653ns (Levels of Logic = 3)
+  Source:            readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7 (FF)
+  Destination:       readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0 (FF)
+  Source Clock:      FSL_Clk rising
+  Destination Clock: FSL_Clk rising
+
+  Data Path: readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7 to readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q            2   0.471   1.074  readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7 (readcop_0/dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_7)
+     LUT6:I0->O           10   0.094   0.529  readcop_0/dvi/DVIInit/I2CControl/Master/_or000331 (readcop_0/dvi/DVIInit/I2CControl/Master/CycleCountEnd)
+     LUT3:I2->O            1   0.094   0.710  readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_or0000_SW1 (N44)
+     LUT6:I3->O            8   0.094   0.374  readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_or0000 (readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/_or0000)
+     FDRSE:CE                  0.213          readcop_0/dvi/DVIInit/I2CControl/Master/SDAShft/SHIFT.Register/Out_0
+    ----------------------------------------
+    Total                      3.653ns (0.966ns logic, 2.687ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
+  Clock period: 3.495ns (frequency: 286.144MHz)
+  Total number of paths / destination ports: 4000 / 153
+-------------------------------------------------------------------------
+Delay:               3.495ns (Levels of Logic = 2)
+  Source:            readcop_0/rst_parse/count_16 (FF)
+  Destination:       readcop_0/state_FSM_FFd2 (FF)
+  Source Clock:      FSL_S_Clk rising
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: readcop_0/rst_parse/count_16 to readcop_0/state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   1.074  readcop_0/rst_parse/count_16 (readcop_0/rst_parse/count_16)
+     LUT6:I0->O            4   0.094   0.726  readcop_0/rst_parse/out43 (readcop_0/rst_parse/out43)
+     LUT5:I2->O           29   0.094   0.463  readcop_0/state_or00001 (readcop_0/state_or0000)
+     FDR:R                     0.573          readcop_0/latency_counter_0
+    ----------------------------------------
+    Total                      3.495ns (1.232ns logic, 2.263ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_Clk'
+  Total number of paths / destination ports: 507935564629 / 67
+-------------------------------------------------------------------------
+Offset:              17.396ns (Levels of Logic = 38)
+  Source:            readcop_0/fifo:dout<12> (PAD)
+  Destination:       readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR (FF)
+  Destination Clock: FSL_Clk rising
+
+  Data Path: readcop_0/fifo:dout<12> to readcop_0/dvi/DVIData/VideoBuf/bit[11].ODDR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    fifo_generator_v9_1:dout<12>   19   0.000   1.072  readcop_0/fifo (readcop_0/video_32<12>)
+     LUT5:I0->O            1   0.094   1.069  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd_1011 (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd_101)
+     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_lut<10> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_lut<10>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<10> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<11> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<12> (readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_cy<12>)
+     XORCY:CI->O           1   0.357   0.480  readcop_0/color_conversion/Mmult_Y_tmp_mult0001_Madd2_xor<13> (readcop_0/color_conversion/Y_tmp_mult0001<13>)
+     LUT2:I1->O            1   0.094   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_lut<13>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<13> (readcop_0/color_conversion/Madd_Y_tmp_addsub0001_cy<13>)
+     XORCY:CI->O           1   0.357   0.576  readcop_0/color_conversion/Madd_Y_tmp_addsub0001_xor<14> (readcop_0/color_conversion/Y_tmp_addsub0001<14>)
+     LUT2:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_lut<14> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_lut<14>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<14> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<16> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<16>)
+     MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<17> (readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_cy<17>)
+     XORCY:CI->O          32   0.357   0.703  readcop_0/color_conversion/Maddsub_Y_tmp_mult0002_Madd_xor<18> (readcop_0/color_conversion/Y_tmp<8>)
+     LUT3:I1->O            1   0.094   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_lut<0> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<0> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<1> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<2> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<3> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<4> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<5> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<6> (readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_cy<6>)
+     XORCY:CI->O           7   0.357   1.102  readcop_0/color_conversion/Msub_Cb_tmp_signed_addsub0000_xor<7> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_lut<16>)
+     LUT6:I0->O            3   0.094   0.491  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_xor<10>111 (readcop_0/color_conversion/N2)
+     LUT5:I4->O            9   0.094   1.113  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<10>11 (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<10>)
+     LUT6:I0->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>1111 (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>111)
+     MUXF7:I1->O           3   0.254   0.721  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd1_cy<16>111_f7 (readcop_0/color_conversion/N20)
+     LUT6:I3->O            1   0.094   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_lut<15> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_lut<15>)
+     MUXCY:S->O            1   0.372   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<15> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<16> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<17> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<17>)
+     MUXCY:CI->O           0   0.026   0.000  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<18> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_cy<18>)
+     XORCY:CI->O           8   0.357   0.748  readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_Madd2_xor<19> (readcop_0/color_conversion/Maddsub_Cb_tmp_signed_mult0000_19)
+     LUT4:I1->O            3   0.094   1.080  readcop_0/color_conversion/Cb<4>1 (readcop_0/ycrcb_video<4>)
+     LUT6:I0->O            1   0.094   0.789  readcop_0/video<0>2142 (readcop_0/video<0>2142)
+     LUT6:I2->O           34   0.094   1.197  readcop_0/video<0>2190 (readcop_0/video<0>2190)
+     LUT6:I0->O            1   0.094   0.336  readcop_0/video<7>1 (readcop_0/video<7>)
+     ODDR:D2                   0.434          readcop_0/dvi/DVIData/VideoBuf/bit[7].ODDR
+    ----------------------------------------
+    Total                     17.396ns (5.919ns logic, 11.477ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 653 / 147
+-------------------------------------------------------------------------
+Offset:              3.451ns (Levels of Logic = 4)
+  Source:            readcop_0/fifo:wr_data_count<4> (PAD)
+  Destination:       readcop_0/latency_counter_0 (FF)
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: readcop_0/fifo:wr_data_count<4> to readcop_0/latency_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    fifo_generator_v9_1:wr_data_count<4>    1   0.000   0.789  readcop_0/fifo (readcop_0/data_count<4>)
+     LUT4:I0->O            1   0.094   0.480  readcop_0/state_cmp_lt00001_SW0 (N35)
+     LUT6:I5->O            9   0.094   0.833  readcop_0/state_cmp_lt00001 (readcop_0/state_cmp_lt0000)
+     LUT6:I2->O            1   0.094   0.973  readcop_0/latency_counter_mux0000<0>_SW4 (N104)
+     LUT6:I1->O            1   0.094   0.000  readcop_0/latency_counter_mux0000<0> (readcop_0/latency_counter_mux0000<0>)
+     FDR:D                    -0.018          readcop_0/latency_counter_0
+    ----------------------------------------
+    Total                      3.451ns (0.376ns logic, 3.075ns route)
+                                       (10.9% logic, 89.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_Clk'
+  Total number of paths / destination ports: 24 / 21
+-------------------------------------------------------------------------
+Offset:              1.387ns (Levels of Logic = 1)
+  Source:            readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (FF)
+  Destination:       readcop_0/fifo:rd_en (PAD)
+  Source Clock:      FSL_Clk rising
+
+  Data Path: readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 to readcop_0/fifo:rd_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              7   0.471   0.822  readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (readcop_0/dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1)
+     LUT4:I0->O            0   0.094   0.000  readcop_0/_and00001 (readcop_0/_and0000)
+    fifo_generator_v9_1:rd_en        0.000          readcop_0/fifo
+    ----------------------------------------
+    Total                      1.387ns (0.565ns logic, 0.822ns route)
+                                       (40.7% logic, 59.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 110 / 89
+-------------------------------------------------------------------------
+Offset:              2.538ns (Levels of Logic = 2)
+  Source:            readcop_0/rst_parse/count_10 (FF)
+  Destination:       readcop_0/fifo:rst (PAD)
+  Source Clock:      FSL_S_Clk rising
+
+  Data Path: readcop_0/rst_parse/count_10 to readcop_0/fifo:rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   1.074  readcop_0/rst_parse/count_10 (readcop_0/rst_parse/count_10)
+     LUT6:I0->O            4   0.094   0.805  readcop_0/rst_parse/out21 (readcop_0/rst_parse/out21)
+     LUT5:I1->O            0   0.094   0.000  readcop_0/_or00001 (readcop_0/_or0000)
+    fifo_generator_v9_1:rst        0.000          readcop_0/fifo
+    ----------------------------------------
+    Total                      2.538ns (0.659ns logic, 1.879ns route)
+                                       (26.0% logic, 74.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6 / 5
+-------------------------------------------------------------------------
+Delay:               0.815ns (Levels of Logic = 1)
+  Source:            readcop_0/fifo:empty (PAD)
+  Destination:       readcop_0/fifo:rd_en (PAD)
+
+  Data Path: readcop_0/fifo:empty to readcop_0/fifo:rd_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    fifo_generator_v9_1:empty    3   0.000   0.721  readcop_0/fifo (readcop_0/fifo_empty)
+     LUT4:I1->O            0   0.094   0.000  readcop_0/_and00001 (readcop_0/_and0000)
+    fifo_generator_v9_1:rd_en        0.000          readcop_0/fifo
+    ----------------------------------------
+    Total                      0.815ns (0.094ns logic, 0.721ns route)
+                                       (11.5% logic, 88.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 40.00 secs
+Total CPU time to Xst completion: 39.45 secs
+ 
+--> 
+
+
+Total memory usage is 673260 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   80 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

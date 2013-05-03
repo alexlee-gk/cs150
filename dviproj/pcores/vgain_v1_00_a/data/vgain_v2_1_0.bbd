@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/data/readcop_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Sat Apr 13 17:28:09 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+chipscope_ila.ngc, chipscope_icon.ngc, fifo_generator_v9_4.ngc

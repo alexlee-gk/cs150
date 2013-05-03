@@ -1,0 +1,29 @@
+##############################################################################
+## Filename:          /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/readcop_v1_00_a/data/readcop_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sat Apr 13 17:28:09 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib readcop_v1_00_a Const verilog
+lib readcop_v1_00_a CountCompare verilog
+lib readcop_v1_00_a Counter verilog
+lib readcop_v1_00_a CountRegion verilog
+lib readcop_v1_00_a DVI verilog
+lib readcop_v1_00_a DVIData verilog
+lib readcop_v1_00_a DVIInitial verilog
+lib readcop_v1_00_a Debouncer verilog
+lib readcop_v1_00_a FIFOInitial verilog
+lib readcop_v1_00_a FIFORegControl verilog
+lib readcop_v1_00_a FIFORegister verilog
+lib readcop_v1_00_a I2CDRAMMaster verilog
+lib readcop_v1_00_a I2CMaster verilog
+lib readcop_v1_00_a IORegister verilog
+lib readcop_v1_00_a PixelCounter verilog
+lib readcop_v1_00_a PixelFeeder verilog
+lib readcop_v1_00_a readcop verilog
+lib readcop_v1_00_a Register verilog
+lib readcop_v1_00_a SDR2DDR verilog
+lib readcop_v1_00_a ShiftRegister verilog
+lib readcop_v1_00_a RGB2YCrCb verilog
+lib readcop_v1_00_a SkinMask verilog
+

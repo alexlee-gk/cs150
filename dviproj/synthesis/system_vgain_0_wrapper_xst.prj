@@ -1,0 +1,4 @@
+verilog vgain_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/vgain.v
+verilog vgain_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/Debouncer.v
+verilog vgain_v1_00_a /home/cc/cs150/sp13/class/cs150-ax/dviproj/pcores/vgain_v1_00_a/hdl/verilog/VGAIndex.v
+verilog work ../hdl/system_vgain_0_wrapper.v

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="bootloop" key="dviproj_hw_platform-microblaze_0-initElf"/>
+	<item value="/home/cc/cs150/sp13/class/cs150-ax/dviproj/workspace/dviproj_hw_platform/system.bit" key="dviproj_hw_platform-bitFile"/>
+	<item value="/home/cc/cs150/sp13/class/cs150-ax/dviproj/workspace/dviproj_hw_platform/system_bd.bmm" key="dviproj_hw_platform-bmmFile"/>
+</section>

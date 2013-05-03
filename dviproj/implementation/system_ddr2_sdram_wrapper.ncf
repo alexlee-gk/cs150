@@ -1,0 +1,3 @@
+INST "DDR2_SDRAM/*gen_instantiate_idelayctrls[0].idelayctrl0"    LOC = "IDELAYCTRL_X0Y6";
+INST "DDR2_SDRAM/*gen_instantiate_idelayctrls[1].idelayctrl0"    LOC = "IDELAYCTRL_X0Y2";
+INST "DDR2_SDRAM/*gen_instantiate_idelayctrls[2].idelayctrl0"    LOC = "IDELAYCTRL_X0Y1";
