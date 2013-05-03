@@ -1,0 +1,60 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE FALSE
+SET_PREFERENCE devicefamily virtex5
+SET_PREFERENCE device xc5vfx100t
+SET_PREFERENCE speedgrade -1
+SET_PREFERENCE package ff1136
+SET_PREFERENCE verilogsim true
+SET_PREFERENCE vhdlsim false
+SET_PREFERENCE simulationfiles Structural
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE outputdirectory /home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/blob_analysis_lutram2/src/lutram_512x75/
+SET_PREFERENCE workingdirectory /home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/blob_analysis_lutram2/src/lutram_512x75/tmp/
+SET_PREFERENCE subworkingdirectory /home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/blob_analysis_lutram2/src/lutram_512x75/tmp/_cg/
+SET_PREFERENCE transientdirectory /home/cc/cs150/sp13/class/cs150-bh/cs150/tests/hardware/blob_analysis_lutram2/src/lutram_512x75/tmp/_cg/_dbg/
+SET_PREFERENCE designentry Verilog
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE addpads false
+SET_PREFERENCE projectname coregen
+SET_PREFERENCE formalverification false
+SET_PREFERENCE asysymbol false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE createndf false
+SET_PREFERENCE removerpms false
+SET_PARAMETER depth 512
+SET_PARAMETER data_width 75
+SET_PARAMETER Component_Name lutram_512x75
+SET_PARAMETER memory_type dual_port_ram
+SET_PARAMETER input_options non_registered
+SET_PARAMETER input_clock_enable false
+SET_PARAMETER qualify_we_with_i_ce false
+SET_PARAMETER dual_port_address non_registered
+SET_PARAMETER simple_dual_port_address non_registered
+SET_PARAMETER output_options non_registered
+SET_PARAMETER Pipeline_Stages 0
+SET_PARAMETER common_output_clk false
+SET_PARAMETER single_port_output_clock_enable false
+SET_PARAMETER common_output_ce false
+SET_PARAMETER dual_port_output_clock_enable false
+SET_PARAMETER simple_dual_port_output_clock_enable false
+SET_PARAMETER coefficient_file no_coe_file_loaded
+SET_PARAMETER default_data_radix 16
+SET_PARAMETER default_data 0
+SET_PARAMETER reset_qspo false
+SET_PARAMETER reset_qdpo false
+SET_PARAMETER reset_qsdpo false
+SET_PARAMETER sync_reset_qspo false
+SET_PARAMETER sync_reset_qdpo false
+SET_PARAMETER sync_reset_qsdpo false
+SET_PARAMETER ce_overrides ce_overrides_sync_controls
+SET_CORE_NAME Distributed Memory Generator
+SET_CORE_VERSION 7.1
+SET_CORE_VLNV xilinx.com:ip:dist_mem_gen:7.1
+SET_CORE_CLASS com.xilinx.ip.dist_mem_gen_v7_1.dist_mem_gen_v7_1
+SET_CORE_PATH /opt/Xilinx/14.1/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/dist_mem_gen_v7_1
+SET_CORE_GUIPATH /opt/Xilinx/14.1/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/dist_mem_gen_v7_1/gui/dist_mem_gen_v7_1.tcl
+SET_CORE_DATASHEET /opt/Xilinx/14.1/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/dist_mem_gen_v7_1/doc/dist_mem_gen_ds322.pdf
+ADD_CORE_DOCUMENT </opt/Xilinx/14.1/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/dist_mem_gen_v7_1/doc/dist_mem_gen_ds322.pdf><dist_mem_gen_ds322.pdf>
+ADD_CORE_DOCUMENT </opt/Xilinx/14.1/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/dist_mem_gen_v7_1/doc/dist_mem_gen_v7_1_vinfo.html><dist_mem_gen_v7_1_vinfo.html>

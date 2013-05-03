@@ -1,3 +1,5 @@
+`include "blob.vh"
+
 module ml505top (
   input  [4:0]  GPIO_COMPSW,
   output [7:0]  GPIO_LED,
@@ -18,7 +20,6 @@ module ml505top (
       .out(rst));
 	
 	wire [10:0] vga_i, vga_j;
-	reg [10:0] vga_i_delayed;
 	wire vga_valid;
 	wire pre_pre_row;
 	wire pre_frame;
@@ -60,15 +61,10 @@ module ml505top (
 						 PRE_ROW     = 3'd3,
 						 ROW         = 3'd4;
 
-	//reg start_row;
-	//wire finish_row;
-	//blobAnalysisTwoPartialLines(start_row, finish_row, rl_code0, rl_code_label0,
-	//					rl_code1, rl_code_label1,
-	//					i, (ind+1)>>1, 1024);
-	
 	reg [10:0] ind;
 	reg [10:0] ind0, ind1;
 	
+	// rl_code is valid for indices = 0,1,2,...,(valid_ind-1)*2; i.e. valid when (ind+2) <= valid_ind)
 	wire [10:0] valid_ind;
 	assign valid_ind = ((ind+1)>>1);
 	
@@ -79,24 +75,27 @@ module ml505top (
 
 	//reg [10:0] rl_code0 [1039:0];
 	//reg [10:0] rl_code1 [1039:0];
-	reg [10:0] rl_code0 [15:0];
-	reg [10:0] rl_code1 [15:0];
-	reg [8:0]  rl_code_label0 [11:0];
-	reg [8:0]  rl_code_label1 [11:0];
+	//reg [10:0] rl_code0 [127:0];
+	//reg [10:0] rl_code1 [127:0];
+	//reg [8:0]  rl_code_label0 [7:0];
+	//reg [8:0]  rl_code_label1 [7:0];
 	
-	wire [8:0] next_rl_code_label0, next_rl_code_label1;
-	assign next_rl_code_label0 = rl_code_label0[rlcl_ind-1]+1;
-	assign next_rl_code_label1 = rl_code_label1[rlcl_ind-1]+1;
-	
+	//wire [8:0] next_rl_code_label0, next_rl_code_label1;
+	//assign next_rl_code_label0 = rl_code_label0[rlcl_ind-1]+1;
+	//assign next_rl_code_label1 = rl_code_label1[rlcl_ind-1]+1;
 	
 	wire [10:0] s0, e0, s0_next;
 	wire [10:0] s1, e1, s1_next;
+	/*
 	assign s0      = rl_code0[ind0*2];
 	assign e0      = rl_code0[ind0*2+1];
 	assign s0_next = rl_code0[ind0*2+2];
 	assign s1      = rl_code1[ind1*2];
 	assign e1      = rl_code1[ind1*2+1];
 	assign s1_next = rl_code1[ind1*2+2];
+	*/
+	wire [10:0] curr_rl_code0;
+	//assign curr_rl_code0 = rl_code0[ind-1];
 	
 	wire rl_code0_end, rl_code1_end;
 	assign rl_code0_end = (s0 == 2047);
@@ -107,19 +106,12 @@ module ml505top (
 
 	reg [2:0] state;
 
-	reg [10:0] row_ind;
 	wire analyze_two_partial_lines;
 	wire proceed_ind;
 	assign proceed_ind = ((((odd_row)?ind1:ind0) + 2) <= valid_ind);
 	assign analyze_two_partial_lines = !(vga_i == 0) & (state == ROW) & proceed_ind & !(rl_code0_end & rl_code1_end);
-	//assign analyze_two_partial_lines = (( ((odd_row)?ind1:ind0) + 2) <= valid_ind) & 
-	//	!((s0_next == 2047) & (s1_next == 2047)) & !(row_ind==0) & (state==ROW);
 
 	reg [10:0] rl_code_ind;
-	
-	always@(posedge VGA_IN_DATA_CLK) begin
-		vga_i_delayed <= vga_i;
-	end
 		
 	always@(posedge VGA_IN_DATA_CLK) begin
 		if (rst) begin
@@ -133,8 +125,8 @@ module ml505top (
 					end
 				end
 				PRE_FRAME: begin // 1
-					rl_code0[rl_code_ind] <= 2000;
-					rl_code1[rl_code_ind] <= 2000;
+					//rl_code0[rl_code_ind] <= 2000;
+					//rl_code1[rl_code_ind] <= 2000;
 					rl_code_ind <= rl_code_ind + 1;
 					if (pre_pre_row & pre_frame)
 						state <= PRE_ROW;
@@ -151,16 +143,16 @@ module ml505top (
 					state <= ROW;
 				end
 				ROW: begin // 4
-					row_ind <= vga_i;
 					if (vga_j<1024) begin
+						/*
 						if (!prev_mask_pixel & mask_pixel) begin
 							if (odd_row)  rl_code1[ind] <= vga_j;
 							else          rl_code0[ind] <= vga_j;
-							if (odd_row)  begin
-								rl_code_label1[rlcl_ind] <= (rlcl_ind > 0) ? next_rl_code_label1 : 0;
-							end else begin
-								rl_code_label0[rlcl_ind] <= (rlcl_ind > 0) ? next_rl_code_label0 : 0;
-							end
+							//if (odd_row)  begin
+							//	rl_code_label1[rlcl_ind] <= (rlcl_ind > 0) ? next_rl_code_label1 : 0;
+							//end else begin
+							//	rl_code_label0[rlcl_ind] <= (rlcl_ind > 0) ? next_rl_code_label0 : 0;
+							//end
 						end
 						if (prev_mask_pixel & !mask_pixel) begin
 							if (odd_row)  rl_code1[ind] <= vga_j-1;
@@ -175,6 +167,7 @@ module ml505top (
 								else          rl_code0[ind] <= vga_j;
 							end
 						end
+						*/
 						
 						if ((!prev_mask_pixel & mask_pixel) & (mask_pixel & (vga_j==1023)))
 							ind <= ind+2;
@@ -185,14 +178,13 @@ module ml505top (
 					
 						prev_mask_pixel <= mask_pixel; 
 					end else if (vga_j==1024 || vga_j==1025) begin
-						if (odd_row)  rl_code1[ind] <= 2047;
-						else          rl_code0[ind] <= 2047;
+						//if (odd_row)  rl_code1[ind] <= 2047;
+						//else          rl_code0[ind] <= 2047;
 						ind <= ind+1;
 					end else begin
 						ind <= ind+2;
 					end
 
-					///*
 					if (analyze_two_partial_lines) begin
 						if (rl_code1_end) begin
 							ind0 <= ind0+1;
@@ -205,7 +197,10 @@ module ml505top (
 								ind1 <= ind1+1;
 						end
 					end
-					if ((proceed_ind & rl_code0_end & rl_code1_end) | pre_pre_row) begin
+					
+					if ( ((vga_i==0) & (ind>0) & (curr_rl_code0 == 2047)) | 
+							 (!(vga_i==0) & proceed_ind & rl_code0_end & rl_code1_end) | 
+							 pre_pre_row) begin
 						if (vga_i == 768) begin
 							rl_code_ind <= 0;
 							state <= PRE_FRAME;
@@ -214,41 +209,246 @@ module ml505top (
 							else state <= PRE_PRE_ROW;
 						end
 					end
-					//*/
-					/*
-					if (analyze_two_partial_lines) begin
-						if ((s1==2047) || (s1_next==2047)) begin
-							ind0 <= ind0+1;
-						end else if ((s0==2047) || (s0_next==2047)) begin
-							ind1 <= ind1+1;
-						end else begin
-							if (s0_next <= s1_next)
-								ind0 <= ind0+1;
-							else
-								ind1 <= ind1+1;
-						end
-					end
-					if ((((s0==2047) || (s0_next==2047)) & ((s1==2047) || (s1_next==2047))) | pre_pre_row) begin
-						if (vga_i == 768) begin
-							rl_code_ind <= 0;
-							state <= PRE_FRAME;
-						end else begin
-							if (pre_pre_row) state <= PRE_ROW;
-							else state <= PRE_PRE_ROW;
-						end
-					end
-					*/
 				end
 				default:
 					state <= IDLE;
 			endcase
 		end
 	end
+	
+	
+	reg rl_code0_we;
+	reg [10:0] rl_code0_addr;
+	reg [10:0] rl_code0_din;
+	reg rl_code1_we;
+	reg [10:0] rl_code1_addr;
+	reg [10:0] rl_code1_din;
+	always@(*) begin
+		rl_code0_we = 1'b0;
+		rl_code0_addr = 11'b0;
+		rl_code0_din = 11'b0;
+		rl_code1_we = 1'b0;
+		rl_code1_addr = 11'b0;
+		rl_code1_din = 11'b0;
+		if (rst) begin
+		end else begin
+			case (state)
+				IDLE: begin // 0
+				end
+				PRE_FRAME: begin // 1
+					rl_code0_we = 1;
+					rl_code0_addr = rl_code_ind;
+					rl_code0_din = 2000;
+					rl_code1_we = 1;
+					rl_code1_addr = rl_code_ind;
+					rl_code1_din = 2000;
+				end
+				PRE_PRE_ROW: begin // 2
+				end
+				PRE_ROW: begin // 3
+				end
+				ROW: begin // 4
+					if (vga_j<1024) begin
+						if (!prev_mask_pixel & mask_pixel) begin
+							if (odd_row) begin
+								rl_code1_we = 1;
+								rl_code1_addr = ind;
+								rl_code1_din = vga_j;
+							end else begin
+								rl_code0_we = 1;
+								rl_code0_addr = ind;
+								rl_code0_din = vga_j;
+							end
+						end
+						if (prev_mask_pixel & !mask_pixel) begin
+							if (odd_row) begin
+								rl_code1_we = 1;
+								rl_code1_addr = ind;
+								rl_code1_din = vga_j-1;
+							end else begin
+								rl_code0_we = 1;
+								rl_code0_addr = ind;
+								rl_code0_din = vga_j-1;
+							end
+						end
+						if (mask_pixel & (vga_j==1023)) begin
+							if (!prev_mask_pixel & mask_pixel) begin
+								if (odd_row) begin
+									rl_code1_we = 1;
+									rl_code1_addr = ind+1;
+									rl_code1_din = vga_j;
+								end else begin
+									rl_code0_we = 1;
+									rl_code0_addr = ind+1;
+									rl_code0_din = vga_j;
+								end
+							end else begin
+								if (odd_row) begin
+									rl_code1_we = 1;
+									rl_code1_addr = ind;
+									rl_code1_din = vga_j;
+								end else begin
+									rl_code0_we = 1;
+									rl_code0_addr = ind;
+									rl_code0_din = vga_j;
+								end
+							end
+						end
+						
+					end else if (vga_j==1024 || vga_j==1025) begin
+						if (odd_row) begin
+							rl_code1_we = 1;
+							rl_code1_addr = ind;
+							rl_code1_din = 2047;
+						end else begin
+							rl_code0_we = 1;
+							rl_code0_addr = ind;
+							rl_code0_din = 2047;
+						end
+					end
+				end
+			endcase
+		end
+	end
+	
+	/*
+	always@(posedge VGA_IN_DATA_CLK) begin
+		if (rl_code0_we)
+			rl_code0[rl_code0_addr] <= rl_code0_din;
+		if (rl_code1_we)
+			rl_code1[rl_code1_addr] <= rl_code1_din;
+	end
+	*/
+	
+	lutram_1040x11 rl_code0_s0(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code0_we), 
+		.a(rl_code0_addr), 
+		.d(rl_code0_din), 
+		.dpra(ind0*2),
+		.dpo(s0)
+	);
+	lutram_1040x11 rl_code0_e0(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code0_we), 
+		.a(rl_code0_addr), 
+		.d(rl_code0_din), 
+		.dpra(ind0*2+1),
+		.dpo(e0)
+	);
+	lutram_1040x11 rl_code0_s0_next(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code0_we), 
+		.a(rl_code0_addr), 
+		.d(rl_code0_din), 
+		.dpra(ind0*2+2),
+		.dpo(s0_next)
+	);
+	lutram_1040x11 rl_code1_s1(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code1_we), 
+		.a(rl_code1_addr), 
+		.d(rl_code1_din), 
+		.dpra(ind1*2),
+		.dpo(s1)
+	);
+	lutram_1040x11 rl_code1_e1(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code1_we), 
+		.a(rl_code1_addr), 
+		.d(rl_code1_din), 
+		.dpra(ind1*2+1),
+		.dpo(e1)
+	);
+	lutram_1040x11 rl_code1_s1_next(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code1_we), 
+		.a(rl_code1_addr), 
+		.d(rl_code1_din), 
+		.dpra(ind1*2+2),
+		.dpo(s1_next)
+	);
+	lutram_1040x11 rl_code0_curr(
+		.clk(VGA_IN_DATA_CLK), 
+		.we(rl_code0_we), 
+		.a(rl_code0_addr), 
+		.d(rl_code0_din), 
+		.dpra(ind-1),
+		.dpo(curr_rl_code0)
+	);
+	
 
-  wire rl_code_label0_we;
+	wire rl_code_label0_we;
+	wire [8:0] rl_code_label0_addr;
+	wire [8:0] rl_code_label0_din;
+	wire rl_code_label1_we;
+	wire [8:0] rl_code_label1_addr;
+	wire [8:0] rl_code_label1_din;
+	assign rl_code_label0_we = !rst & (state == ROW) & (vga_j<1024) & (!prev_mask_pixel & mask_pixel) & !odd_row;
+	assign rl_code_label0_addr = rlcl_ind;
+	assign rl_code_label0_din = 9'b0;
+	assign rl_code_label1_we = !rst & (state == ROW) & (vga_j<1024) & (!prev_mask_pixel & mask_pixel) & odd_row;
+	assign rl_code_label1_addr = rlcl_ind;
+	assign rl_code_label1_din = 9'b0;
+	
   wire [74:0] blob;
-  assign rl_code_label0_we = ((state == ROW) & (vga_j<1024) & (!prev_mask_pixel & mask_pixel) & !odd_row);
-  //foo foo_instance(VGA_IN_DATA_CLK, s0, e0, s0_next, ind0, rl_code_label0_we, rlcl_ind, 9'b0, blob);
+  wire [8:0] rl_code_label0_ind0;
+  wire [8:0] rl_code_label1_ind1;
+  wire [3:0] case_cond; //TODO
+  
+  wire rl_code_label0_wea;
+	wire [8:0] rl_code_label0_addra;
+	wire [8:0] rl_code_label0_dina;
+	wire rl_code_label1_wea;
+	wire [8:0] rl_code_label1_addra;
+	wire [8:0] rl_code_label1_dina;
+
+	wire blobs_wea;
+	wire [8:0] blobs_addra;
+	wire [`BLOB_WIDTH-1:0] blobs_dina;
+	wire blobs_web;
+	wire [8:0] blobs_addrb;
+	wire [`BLOB_WIDTH-1:0] blobs_dinb;
+  
+	blobAnalysisTwoPartialLines blob_analysis_two_partial_lines(
+		.clk(VGA_IN_DATA_CLK),
+		.rst(rst | (state == PRE_FRAME)),
+
+		.analyze_two_partial_lines(analyze_two_partial_lines & !((s0==2047 & s1_next==2047) | (s1==2047 & s0_next==2047)) ),
+		.s0(odd_row?s0:s1),
+		.e0(odd_row?e0:e1),
+		.ind0(odd_row?ind0[8:0]:ind1[8:0]),
+		.s1(odd_row?s1:s0),
+		.e1(odd_row?e1:e0),
+		.ind1(odd_row?ind1[8:0]:ind0[8:0]),
+	
+		.rl_code_label0_web(rl_code_label0_we),
+		.rl_code_label0_addrb(rl_code_label0_addr),
+		.rl_code_label0_dinb(rl_code_label0_din),
+		.rl_code_label1_web(rl_code_label1_we),
+		.rl_code_label1_addrb(rl_code_label1_addr),
+		.rl_code_label1_dinb(rl_code_label1_din),
+	
+		.row1(vga_i),
+		.opt_blob(blob),
+		
+		.rl_code_label0_ind0(rl_code_label0_ind0),
+		.rl_code_label1_ind1(rl_code_label1_ind1),
+		.case_cond(case_cond),
+		
+		.rl_code_label0_wea(rl_code_label0_wea),
+		.rl_code_label0_addra(rl_code_label0_addra),
+		.rl_code_label0_dina(rl_code_label0_dina),
+		.rl_code_label1_wea(rl_code_label1_wea),
+		.rl_code_label1_addra(rl_code_label1_addra),
+		.rl_code_label1_dina(rl_code_label1_dina),
+		.blobs_wea(blobs_wea),
+		.blobs_addra(blobs_addra),
+		.blobs_dina(blobs_dina),
+		.blobs_web(blobs_web),
+		.blobs_addrb(blobs_addrb),
+		.blobs_dinb(blobs_dinb)
+	);
 
   assign GPIO_LED = {4'b1111, rst, rst, rst, rst};
 
@@ -260,14 +460,35 @@ module ml505top (
 	chipscope_ila ila(
 	.CONTROL(chipscope_control),
 	.CLK(VGA_IN_DATA_CLK),
-	.DATA({658'b0,
+	.DATA({410'b0,
+	
+				 rl_code_label0_wea,
+				 rl_code_label0_addra,
+				 rl_code_label0_dina,
+				 rl_code_label1_wea,
+				 rl_code_label1_addra,
+				 rl_code_label1_dina,
+				 blobs_wea,
+				 blobs_addra,
+				 blobs_dina,
+				 blobs_web,
+				 blobs_addrb,
+				 blobs_dinb,
+	
+				 case_cond,
+				 
+				 rl_code_label0_addr,
+				 rl_code_label0_din,
+				 rl_code_label1_addr,
+				 rl_code_label1_din,
+
 				 pre_frame,
 				 proceed_ind,
 	
 				 state,
 				 blob,
-				 rl_code_label0_we,       
-	       1'b0,
+				 rl_code_label0_we,
+				 rl_code_label1_we,
 	       
 				 analyze_two_partial_lines,
 				 s0, e0, s0_next, 
@@ -286,14 +507,17 @@ module ml505top (
 				 // 2*11*5+2*9*2 = 146
 				 // 11+2+11+11+1 = 36
 				 
-				 rl_code0[0], rl_code0[1], rl_code0[2], rl_code0[3], rl_code0[4], 
-				 rl_code1[0], rl_code1[1], rl_code1[2], rl_code1[3], rl_code1[4], 
+				 110'd0,
+				 //rl_code0[0], rl_code0[1], rl_code0[2], rl_code0[3], rl_code0[4], 
+				 //rl_code1[0], rl_code1[1], rl_code1[2], rl_code1[3], rl_code1[4], 
 				 
 				 //rl_code0_at_0, rl_code0_at_1, rl_code0_at_2, rl_code0_at_3, rl_code0_at_4, 
 				 //rl_code1_at_0, rl_code1_at_1, rl_code1_at_2, rl_code1_at_3, rl_code1_at_4, 
 				 
-				 rl_code_label0[0], rl_code_label0[1], 
-				 rl_code_label1[0], rl_code_label1[1], 
+				 rl_code_label0_ind0, rl_code_label0_ind0,
+				 rl_code_label1_ind1, rl_code_label1_ind1,
+				 //rl_code_label0[0], rl_code_label0[1], 
+				 //rl_code_label1[0], rl_code_label1[1], 
 				 
 				 ind, 2'b0, vga_i, vga_j, mask_pixel}),
 	.TRIG0(v_counter),

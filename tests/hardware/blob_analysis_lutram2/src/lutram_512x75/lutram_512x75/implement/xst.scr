@@ -1,0 +1,14 @@
+
+run
+-ifmt VHDL
+-ent lutram_512x75_exdes 
+-p xc5vfx100t-ff1136-1
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn lutram_512x75_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain
